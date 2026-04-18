@@ -320,6 +320,7 @@ window.TALLER_CONFIG = {
     {q:"El plazo evaluación MINVU post-postulación es:",opts:["1 día","2 a 4 meses típicamente","5 años","Indefinido"],correct:1,whyCorrect:"Ventana operativa.",whyWrong:["Imposible.","","Fuera.","Finito."]},
     {q:"La notificación de resultado DS1 se hace por:",opts:["WhatsApp","Nómina oficial minvu.cl y SERVIU regional","Llamada","Ninguna"],correct:1,whyCorrect:"Canales oficiales.",whyWrong:["No oficial.","","No oficial.","Hay notificación."]},
     {q:"El DS49 es compatible con leasing:",opts:["Sí","No combina con leasing ni crédito","Solo leasing","Solo crédito"],correct:1,whyCorrect:"Es subsidio directo.",whyWrong:["No.","","No.","No."]},
+    {q:"El SII entrega exención de impuesto territorial a la primera vivienda cuando:",opts:["Nunca se otorga","El avalúo fiscal está bajo el tope de exención definido por el DFL 1/1998 y leyes de presupuesto anuales","Siempre en todas las viviendas","Solo cuando el corredor lo solicita a SERVIU"],correct:1,whyCorrect:"El beneficio DFL 2 (y exención parcial del territorial) se activa automáticamente cuando el avalúo fiscal queda bajo el tope vigente del año. Es un beneficio real a explicar al comprador con DS1.",whyWrong:["La exención sí existe por ley.","","Hay requisitos y topes.","El SII aplica la exención, no SERVIU."]},
   ],
   goldRules: [
     {n:1,title:"Domina los 5 tramos principales",text:"DS49 (vulnerable) · DS1 T1 (medio-vulnerable UF 1.600) · DS1 T2 (medio UF 2.200) · DS1 T3 (medio UF 2.600) · DS19 (proyectos integración)."},

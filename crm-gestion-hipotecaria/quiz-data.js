@@ -312,7 +312,6 @@ window.TALLER_CONFIG = {
     {q:"La tasación bancaria la realiza:",opts:["Corredor","Tasador independiente CMF contratado por banco","Cliente","Vendedor"],correct:1,whyCorrect:"Tasación oficial para crédito.",whyWrong:["Estima.","","No contrata.","No puede."]},
     {q:"Si vicio redhibitorio post-entrega, el comprador puede:",opts:["Nada","Iniciar acciones por vicios ocultos (Art. 1.858 CC)","Devolver nulo","Pagar más"],correct:1,whyCorrect:"Protección legal.",whyWrong:["Existe.","","Hay acciones.","Contra derecho."]},
     {q:"El comprobante domicilio válido es:",opts:["Cualquier papel","Boleta servicio últimos 3 meses","Nada","Solo luz"],correct:1,whyCorrect:"Estándar bancario.",whyWrong:["No cualquiera.","","Obligatorio.","Más amplio."]},
-    {q:"Un cliente que negocia rebaja de comisión al 1,5%:",opts:["Se rechaza","El corredor puede ceder puntualmente o mantener estándar según criterio","Doble","Nada"],correct:1,whyCorrect:"Decisión comercial legítima.",whyWrong:["Rígido.","","Absurdo.","Responde."]},
     {q:"El acta de entrega incluye idealmente:",opts:["Llave","Acta + llaves + documentos técnicos + estado cuentas","Nada","WhatsApp"],correct:1,whyCorrect:"Entrega profesional.",whyWrong:["Incompleto.","","No válido.","Informal."]},
   ],
   goldRules: [

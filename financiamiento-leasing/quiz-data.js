@@ -604,7 +604,6 @@ window.TALLER_CONFIG = {
     {q:"En caso de siniestro total, la aseguradora paga:",opts:["Al deudor","Al banco (acreedor preferente) hasta saldo; excedente al deudor","Al Fisco","Al corredor"],correct:1,whyCorrect:"Cláusula estándar de acreedor preferente.",whyWrong:["No primero.","","No es parte.","No es parte."]},
     {q:"La carpeta tributaria SII se descarga en:",opts:["Banco","sii.cl con ClaveTributaria","Notaría","MINVU"],correct:1,whyCorrect:"Documento electrónico inmediato.",whyWrong:["El banco la recibe.","","No la emite.","No la emite."]},
     {q:"Combinando DS1 + leasing en tramos 2/3, el beneficio es:",opts:["Ninguno","Usar subsidio para financiar CAAPC, bajando pie efectivo del cliente","Tasa 0","Vivienda gratuita"],correct:1,whyCorrect:"Tanner y Caja Los Andes tienen convenios formales con MINVU para esta combinación.",whyWrong:["Existe beneficio.","","No hay tasa 0.","Requiere pago."]},
-    {q:"La estrategia del corredor con 3 ofertas bancarias distintas es:",opts:["Tomar la más rápida","Comparar CAE y usar ofertas menores como palanca para negociar con el banco preferido","Tomar la primera","Alfabético"],correct:1,whyCorrect:"Palanca de negociación profesional.",whyWrong:["Velocidad no es único criterio.","","Subóptimo.","Irrelevante."]},
     {q:"La suma asegurada mínima del seguro de incendio es:",opts:["UF 1","Valor de tasación o saldo del crédito","UF 10","Costo pintura"],correct:1,whyCorrect:"Evita infraseguro.",whyWrong:["Infraseguro grave.","","Infraseguro grave.","Irrelevante."]},
   ],
   goldRules: [
