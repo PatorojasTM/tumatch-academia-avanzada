@@ -1595,3 +1595,261 @@ body:has(#testModeBar){padding-top:44px}
   .tv-opt{padding:10px 12px}
   .tv-opt-reason{font-size:12.5px}
 }
+
+/* ==========================================================
+   AJUSTES UX v2 · Fuentes más grandes · Lockout box con mensaje
+   Botón siguiente módulo prominente · Review final · Responsive
+   ========================================================== */
+
+/* ------ Fuentes base: subir 1-2px manteniendo diseño ------ */
+body{font-size:16.5px;line-height:1.7}
+.sec-desc{font-size:17.5px !important;line-height:1.65 !important}
+.sec-h2{font-size:30px !important;line-height:1.25 !important}
+.hero-lead{font-size:clamp(18px, 2.1vw, 22.5px) !important;line-height:1.6 !important}
+.hero-title{font-size:clamp(40px, 6vw, 64px) !important;line-height:1.1 !important}
+.quiz-q-text{font-size:19px !important;line-height:1.55 !important;font-weight:600}
+.quiz-q-label{font-size:13px !important;letter-spacing:1.8px !important}
+.quiz-opt{font-size:16px !important;padding:16px 18px !important;line-height:1.5 !important}
+.quiz-opt .opt-letter{font-size:15px !important}
+.quiz-title{font-size:19px !important;line-height:1.3 !important}
+.quiz-sub{font-size:15px !important;line-height:1.55 !important}
+.barrio-table th{font-size:13.5px !important}
+.barrio-table td{font-size:15.5px !important;line-height:1.55 !important}
+.checklist li{font-size:16px !important;line-height:1.6 !important;padding:5px 0 !important}
+.tip-title{font-size:17px !important}
+.tip-text{font-size:15.5px !important;line-height:1.55 !important}
+.info-box .info-text{font-size:16px !important;line-height:1.6 !important}
+.prop-body-intro{font-size:14px !important}
+.prop-item strong{font-size:14px !important}
+.prop-item span{font-size:15px !important;line-height:1.55 !important}
+.quiz-feedback-title{font-size:16px !important;font-weight:800 !important}
+.qfb-correct{font-size:15.5px !important;line-height:1.6 !important;padding:14px 16px !important}
+.qfb-wrong-list{font-size:15px !important;line-height:1.6 !important}
+.qfb-wrong-item{font-size:14.5px !important;line-height:1.55 !important}
+.mod-t-title{font-size:17px !important}
+.mod-t-keys span{font-size:12.5px !important}
+.hub-card-title{font-size:23px !important;line-height:1.25 !important}
+.hub-card-sub{font-size:16.5px !important;line-height:1.6 !important}
+.final-test-intro h2{font-size:32px !important}
+.final-test-intro p{font-size:17px !important;line-height:1.6 !important}
+.gold-rule-title{font-size:17px !important}
+.gold-rule-text{font-size:15.5px !important;line-height:1.6 !important}
+.crm-msg h3{font-size:24px !important}
+.crm-msg p{font-size:17px !important;line-height:1.65 !important}
+
+/* ------ Botones grandes ------ */
+.btn-big{
+  padding:18px 34px !important;
+  font-size:17px !important;
+  font-weight:800 !important;
+  letter-spacing:.5px !important;
+  border-radius:12px !important;
+  box-shadow:0 6px 20px rgba(232,93,74,.25);
+  text-transform:none !important;
+}
+.btn-big:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(232,93,74,.35)}
+.btn-small{font-size:13.5px !important;padding:9px 16px !important}
+
+/* ------ Lockout box ------ */
+.lockout-box{
+  background:linear-gradient(135deg, rgba(232,93,74,.08), rgba(232,48,122,.08));
+  border:2px solid rgba(232,93,74,.35);
+  border-radius:22px;
+  padding:44px 36px;
+  text-align:center;
+  margin:24px 0;
+  box-shadow:0 8px 32px rgba(13,27,42,.08);
+}
+[data-theme="dark"] .lockout-box{
+  background:linear-gradient(135deg, rgba(232,93,74,.14), rgba(232,48,122,.12));
+  border-color:rgba(232,93,74,.5);
+  box-shadow:0 8px 32px rgba(0,0,0,.35);
+}
+.lockout-icon{font-size:56px;margin-bottom:16px;display:block}
+.lockout-title{
+  font-family:'Cinzel',serif;
+  font-size:24px;
+  font-weight:800;
+  color:var(--ui-text);
+  margin-bottom:18px;
+  line-height:1.3;
+  letter-spacing:.5px;
+}
+.lockout-text{
+  font-family:'EB Garamond',serif;
+  font-size:18px;
+  font-style:italic;
+  color:var(--ui-text-soft);
+  line-height:1.65;
+  max-width:620px;
+  margin:0 auto 24px;
+}
+.lockout-timer{
+  font-family:'DM Mono','Cinzel',monospace;
+  font-size:64px;
+  font-weight:800;
+  color:var(--coral);
+  letter-spacing:3px;
+  margin:18px 0;
+  text-shadow:0 2px 12px rgba(232,93,74,.15);
+}
+[data-theme="dark"] .lockout-timer{color:#FF8A75;text-shadow:0 2px 16px rgba(255,138,117,.25)}
+.lockout-hint{
+  font-size:14.5px;
+  color:var(--ui-text-muted);
+  font-style:italic;
+  margin-top:14px;
+  max-width:540px;
+  margin-left:auto;margin-right:auto;
+}
+
+/* ------ Quiz done grande ------ */
+.quiz-done.quiz-done-big{padding:40px 30px}
+.quiz-done.quiz-done-big .quiz-done-icon{font-size:60px;display:block;margin-bottom:12px}
+.quiz-done.quiz-done-big .quiz-done-title{
+  font-family:'Cinzel',serif;
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:14px;
+  line-height:1.2;
+}
+.quiz-done.quiz-done-big .quiz-score{margin:18px auto 18px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.quiz-done.quiz-done-big .quiz-score-n{font-size:42px;font-weight:900;color:var(--coral);font-family:'Cinzel',serif;line-height:1}
+.quiz-done.quiz-done-big .quiz-score-lbl{font-size:14px;color:var(--ui-text-muted);letter-spacing:1px;text-transform:uppercase;font-weight:700}
+.quiz-done.quiz-done-big .quiz-done-text{
+  font-family:'EB Garamond',serif;
+  font-size:17.5px;
+  color:var(--ui-text-soft);
+  line-height:1.6;
+  max-width:540px;
+  margin:0 auto 24px;
+  font-style:italic;
+}
+.quiz-done.quiz-done-big .quiz-done-sub{margin-top:16px}
+
+/* ------ Wrong tracker ------ */
+.wrong-tracker{
+  background:rgba(232,93,74,.1);
+  border-left:4px solid var(--coral);
+  padding:14px 18px;
+  border-radius:10px;
+  font-size:15px;
+  color:var(--ui-text);
+  margin:14px 0 18px;
+  font-weight:600;
+}
+[data-theme="dark"] .wrong-tracker{background:rgba(232,93,74,.18)}
+.quiz-wrong-tally{
+  font-size:14.5px;
+  color:var(--coralDk);
+  margin:12px 0 14px;
+  font-weight:700;
+}
+[data-theme="dark"] .quiz-wrong-tally{color:#FFA896}
+
+/* ------ Prueba final ------ */
+.final-brief{
+  background:var(--ui-surface);
+  border:1.5px solid var(--ui-border-soft);
+  border-left:4px solid var(--coral);
+  padding:18px 22px;
+  border-radius:12px;
+  font-size:15.5px;
+  line-height:1.6;
+  color:var(--ui-text);
+  margin-bottom:20px;
+  font-family:'EB Garamond',serif;
+}
+.final-brief strong{font-family:'DM Sans',sans-serif;color:var(--coralDk);letter-spacing:.3px}
+[data-theme="dark"] .final-brief strong{color:#FF8A75}
+.quiz-gate-final{padding:28px !important;margin-top:22px !important}
+.quiz-q-label-final{color:var(--coral) !important;font-weight:800 !important;text-transform:uppercase}
+.quiz-q-label.ok{color:var(--green) !important}
+.quiz-q-label.ko{color:var(--red) !important}
+.quiz-q-text-final{font-size:18.5px !important;font-weight:600 !important;margin-bottom:20px !important}
+.final-submit-wrap{margin-top:32px;display:flex;justify-content:center}
+.final-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.final-result-lead{
+  font-family:'EB Garamond',serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--ui-text-soft);
+  max-width:600px;
+  margin:12px auto 18px;
+  font-style:italic;
+}
+.final-score-big{
+  font-family:'Cinzel',serif;
+  font-size:56px;
+  font-weight:900;
+  text-align:center;
+  margin:14px 0 10px;
+  letter-spacing:2px;
+  line-height:1;
+}
+.final-score-big.passed{color:var(--green)}
+.final-score-big.failed{color:var(--coral)}
+.review-correct{
+  background:rgba(22,163,74,.12);
+  border:1px solid rgba(22,163,74,.4);
+  border-radius:10px;
+  padding:14px 18px;
+  color:#166534;
+  margin:14px 0 8px;
+  font-size:15.5px;
+}
+[data-theme="dark"] .review-correct{background:rgba(22,163,74,.18);color:#6EE7A7}
+.review-yours{
+  background:rgba(220,38,38,.1);
+  border:1px solid rgba(220,38,38,.35);
+  border-radius:10px;
+  padding:14px 18px;
+  color:#991B1B;
+  margin-bottom:10px;
+  font-size:15.5px;
+}
+[data-theme="dark"] .review-yours{background:rgba(220,38,38,.2);color:#FCA5A5}
+
+/* ------ Mobile (<640px) ------ */
+@media(max-width:640px){
+  body{font-size:15.5px;line-height:1.65}
+  .sec-h2{font-size:24px !important;line-height:1.25 !important}
+  .sec-desc{font-size:16px !important}
+  .hero-title{font-size:clamp(32px,8vw,42px) !important}
+  .hero-lead{font-size:16px !important;line-height:1.55 !important}
+  .quiz-q-text{font-size:17px !important}
+  .quiz-opt{font-size:15px !important;padding:13px 14px !important}
+  .barrio-table th{font-size:12.5px !important}
+  .barrio-table td{font-size:14px !important}
+  .checklist li{font-size:14.5px !important}
+  .hub-card-title{font-size:20px !important}
+  .hub-card-sub{font-size:15px !important}
+  .lockout-box{padding:28px 20px}
+  .lockout-title{font-size:19px}
+  .lockout-text{font-size:15.5px}
+  .lockout-timer{font-size:44px;letter-spacing:2px}
+  .btn-big{padding:15px 24px !important;font-size:15px !important;width:100% !important;max-width:360px}
+  .quiz-done.quiz-done-big{padding:28px 18px}
+  .quiz-done.quiz-done-big .quiz-done-title{font-size:22px}
+  .quiz-done.quiz-done-big .quiz-score-n{font-size:34px}
+  .quiz-done.quiz-done-big .quiz-done-text{font-size:15.5px}
+  .final-brief{font-size:14px;padding:14px 16px}
+  .final-score-big{font-size:42px}
+  .final-result-lead{font-size:15px}
+  .final-actions{flex-direction:column;width:100%;align-items:stretch}
+  .final-actions .btn,.final-actions .btn-big{width:100%}
+  .info-box .info-text{font-size:14.5px !important}
+  .mod-t-title{font-size:15.5px !important}
+  .quiz-feedback-title{font-size:15px !important}
+  .qfb-correct,.qfb-wrong-list{font-size:14px !important}
+  .qfb-wrong-item{font-size:13.5px !important}
+}
+
+/* ------ Tablet (641-900px) ------ */
+@media(max-width:900px) and (min-width:641px){
+  body{font-size:16px}
+  .sec-h2{font-size:26px !important}
+  .quiz-q-text{font-size:18px !important}
+  .lockout-timer{font-size:54px}
+  .btn-big{padding:16px 28px !important;font-size:16px !important}
+}

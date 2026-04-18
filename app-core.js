@@ -1,7 +1,10 @@
 /* ==========================================================
    TuMatch Inmobiliario — Academia Avanzada · Core compartido
-   Comprador Primera Vivienda · 6 talleres avanzados
-   Incluye bloqueo de 10 min tras 5 errores acumulados
+   Comprador Primera Vivienda · 7 talleres avanzados
+   - Alternativas con posición aleatoria por cada intento
+   - Bloqueo 10 min tras 5 errores acumulados en módulo (mensaje específico)
+   - Bloqueo 10 min tras 5 intentos fallidos de prueba final (mensaje específico)
+   - Botón claro "Siguiente módulo →" al aprobar cada módulo
    ========================================================== */
 
 (function(){
@@ -10,6 +13,10 @@
   /* ---------- util ---------- */
   function shuffle(a){ const x = a.slice(); for (let i=x.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [x[i],x[j]] = [x[j],x[i]]; } return x; }
   function pickQuestions(bank, n){ return shuffle(bank).slice(0, n); }
+  function makeShuffledOpts(q){
+    // Devuelve [{text, originalIdx}] en orden aleatorio, manteniendo trazabilidad al correcto
+    return shuffle(q.opts.map((_, i) => i)).map(i => ({text: q.opts[i], originalIdx: i}));
+  }
 
   function buildWhy(correctIdx, opts, whyCorrect, whyWrong){
     const correctLetter = String.fromCharCode(65 + correctIdx);
@@ -28,25 +35,35 @@
   /* ---------- init ---------- */
   function init(config){
     const TALLER_SLUG       = config.slug;
-    const MODULE_NAMES      = config.moduleNames;           // { 1:'...', 2:'...', ... 7:'...' }
+    const MODULE_NAMES      = config.moduleNames;
     const TOTAL_MODULES     = Object.keys(MODULE_NAMES).length;
     const FINAL_MODULE      = TOTAL_MODULES + 1;
     const CONCLUSION_MODULE = TOTAL_MODULES + 2;
-    const quizBank          = config.quizBank;              // { 1:[...], 2:[...], ... 7:[...] }
-    const finalQuestions    = config.finalQuestions;        // banco de 50 preguntas
+    const quizBank          = config.quizBank;
+    const finalQuestions    = config.finalQuestions;
     const goldRules         = config.goldRules || [];
-    const certTitle         = config.certTitle || 'Taller Avanzado';
-    const certSubtitle      = config.certSubtitle || 'Academia de Corredores TuMatch';
-    const certBody          = config.certBody || '';
     const STORAGE_PREFIX    = 'tumatch_' + TALLER_SLUG + '_v1';
     const CERT_STORAGE_KEY  = 'tumatch_cert_name_' + TALLER_SLUG;
     const LOCKOUT_KEY       = 'tumatch_' + TALLER_SLUG + '_lockout';
-    const WRONG_COUNT_KEY   = 'tumatch_' + TALLER_SLUG + '_wrong';
+    const LOCKOUT_REASON_KEY= 'tumatch_' + TALLER_SLUG + '_lockout_reason';
+    const WRONG_COUNT_KEY   = 'tumatch_' + TALLER_SLUG + '_wrong';       // errores módulo
+    const FINAL_FAIL_KEY    = 'tumatch_' + TALLER_SLUG + '_final_fail';  // intentos fallidos prueba final
     const MAX_WRONG         = 5;
-    const LOCKOUT_MS        = 10 * 60 * 1000; // 10 minutos
-
+    const MAX_FINAL_FAIL    = 5;
+    const LOCKOUT_MS        = 10 * 60 * 1000;
     const QUIZ_QUESTIONS_PER_ATTEMPT = 5;
     const FINAL_SHOWN = 10;
+
+    const LOCKOUT_MESSAGES = {
+      module: {
+        title: 'Paciencia · el taller se bloqueó por 10 minutos',
+        body:  'Es clave leer con tiempo y estudiar lo que aquí se entrega para que tengas buenos resultados. Usa estos 10 minutos para repasar el módulo. Vuelve a intentarlo cuando el contador llegue a 0:00.'
+      },
+      final: {
+        title: 'Prueba final bloqueada por 10 minutos',
+        body:  'Aprovecha de revisar los módulos para que puedas superar esta prueba y tener tu certificado de cumplimiento. Las preguntas rotan del banco de 50, así que el próximo intento mostrará una selección distinta. Vuelve a intentarlo cuando el contador llegue a 0:00.'
+      }
+    };
 
     function defaultState(){ return { current:0, unlocked:1, completedModules:[], finalPassed:false, lastFinalAttempt:null }; }
     let state = defaultState();
@@ -57,17 +74,39 @@
     function getWrongCount(){ try { return parseInt(localStorage.getItem(WRONG_COUNT_KEY)||'0',10) || 0; } catch(e){ return 0; } }
     function setWrongCount(n){ try { localStorage.setItem(WRONG_COUNT_KEY, String(n)); } catch(e){} }
     function clearWrongCount(){ try { localStorage.removeItem(WRONG_COUNT_KEY); } catch(e){} }
+
+    function getFinalFailCount(){ try { return parseInt(localStorage.getItem(FINAL_FAIL_KEY)||'0',10) || 0; } catch(e){ return 0; } }
+    function setFinalFailCount(n){ try { localStorage.setItem(FINAL_FAIL_KEY, String(n)); } catch(e){} }
+    function clearFinalFailCount(){ try { localStorage.removeItem(FINAL_FAIL_KEY); } catch(e){} }
+
     function getLockoutUntil(){ try { return parseInt(localStorage.getItem(LOCKOUT_KEY)||'0',10) || 0; } catch(e){ return 0; } }
-    function setLockout(ts){ try { localStorage.setItem(LOCKOUT_KEY, String(ts)); } catch(e){} }
-    function clearLockout(){ try { localStorage.removeItem(LOCKOUT_KEY); } catch(e){} }
+    function getLockoutReason(){ try { return localStorage.getItem(LOCKOUT_REASON_KEY) || 'module'; } catch(e){ return 'module'; } }
+    function setLockout(ts, reason){
+      try { localStorage.setItem(LOCKOUT_KEY, String(ts)); } catch(e){}
+      try { localStorage.setItem(LOCKOUT_REASON_KEY, reason || 'module'); } catch(e){}
+    }
+    function clearLockout(){
+      try { localStorage.removeItem(LOCKOUT_KEY); } catch(e){}
+      try { localStorage.removeItem(LOCKOUT_REASON_KEY); } catch(e){}
+    }
     function isLocked(){ return getLockoutUntil() > Date.now(); }
 
     function incWrong(){
       const n = getWrongCount() + 1;
       setWrongCount(n);
       if (n >= MAX_WRONG){
-        setLockout(Date.now() + LOCKOUT_MS);
+        setLockout(Date.now() + LOCKOUT_MS, 'module');
         clearWrongCount();
+      }
+      return n;
+    }
+
+    function incFinalFail(){
+      const n = getFinalFailCount() + 1;
+      setFinalFailCount(n);
+      if (n >= MAX_FINAL_FAIL){
+        setLockout(Date.now() + LOCKOUT_MS, 'final');
+        clearFinalFailCount();
       }
       return n;
     }
@@ -81,12 +120,14 @@
     function renderLockoutBox(){
       const until = getLockoutUntil();
       const left = until - Date.now();
+      const reason = getLockoutReason();
+      const msg = LOCKOUT_MESSAGES[reason] || LOCKOUT_MESSAGES.module;
       return `<div class="lockout-box">
         <div class="lockout-icon">⏱️</div>
-        <div class="lockout-title">Taller bloqueado por 10 minutos</div>
-        <div class="lockout-text">Acumulaste ${MAX_WRONG} errores en los quiz. Usa este tiempo para repasar el contenido.</div>
+        <div class="lockout-title">${msg.title}</div>
+        <div class="lockout-text">${msg.body}</div>
         <div class="lockout-timer" id="lockoutTimer">${formatCountdown(left)}</div>
-        <div class="lockout-hint">Podrás reintentar cuando el contador llegue a 0:00. Puedes navegar por los módulos mientras tanto.</div>
+        <div class="lockout-hint">Puedes navegar los módulos y repasar contenido mientras esperas.</div>
       </div>`;
     }
 
@@ -94,21 +135,18 @@
       if (!isLocked()) return;
       const el = document.getElementById('lockoutTimer');
       if (el) el.textContent = formatCountdown(getLockoutUntil() - Date.now());
-      const bar = document.getElementById('globalLockoutBar');
-      const barTimer = document.getElementById('globalLockoutTimer');
-      if (bar && barTimer){ bar.style.display = 'flex'; barTimer.textContent = formatCountdown(getLockoutUntil() - Date.now()); }
     }
 
     setInterval(() => {
       if (isLocked()){ updateLockoutTimers(); }
       else {
-        const bar = document.getElementById('globalLockoutBar');
-        if (bar) bar.style.display = 'none';
-        // Re-renderizar quiz actual si está mostrando lockout
         const modN = state.current;
         if (modN >= 1 && modN <= TOTAL_MODULES){
           const gate = document.getElementById(`quiz-${modN}`);
           if (gate && gate.querySelector('.lockout-box')){ mountQuizGate(modN); }
+        } else if (modN === FINAL_MODULE){
+          const c = document.getElementById('final-quiz');
+          if (c && c.querySelector('.lockout-box')) { mountFinalTest(false); }
         }
       }
     }, 1000);
@@ -160,13 +198,15 @@
       if (num) num.textContent = `${done} / ${TOTAL_MODULES}`;
     }
 
-    /* ---------- quiz module ---------- */
+    /* ---------- quiz módulo (opciones aleatorizadas) ---------- */
     function mountQuizGate(modN){
       const gate = document.getElementById(`quiz-${modN}`); if (!gate) return;
       if (isLocked()){ gate.innerHTML = renderLockoutBox(); return; }
       if (state.completedModules.includes(modN)) { gate.innerHTML = renderQuizDone(modN); return; }
       if (!quizState[modN]) {
-        const picked = pickQuestions(quizBank[modN], QUIZ_QUESTIONS_PER_ATTEMPT);
+        const picked = pickQuestions(quizBank[modN], QUIZ_QUESTIONS_PER_ATTEMPT).map(q => ({
+          ...q, shuffledOpts: makeShuffledOpts(q)
+        }));
         quizState[modN] = { questions: picked, idx: 0, correctCount: 0, answered: false };
       }
       renderQuizGate(modN);
@@ -188,7 +228,7 @@
           <div class="quiz-icon">📝</div>
           <div><div class="quiz-title">Quiz · Módulo ${modN} · ${MODULE_NAMES[modN]}</div></div>
         </div>
-        <div class="quiz-sub">Responde 5 correctas (rotan de un banco de 20). Si fallas, la pregunta se reemplaza automáticamente.</div>
+        <div class="quiz-sub">Responde 5 correctas (rotan de un banco de 20). Si fallas, la pregunta se reemplaza automáticamente y las alternativas se reordenan.</div>
         ${wrongBadge}
         <div class="quiz-progress-wrap">
           <span class="quiz-progress-label">Pregunta ${qs.idx + 1} de ${total}</span>
@@ -198,7 +238,7 @@
           <div class="quiz-q-label">Pregunta ${qs.idx + 1}</div>
           <div class="quiz-q-text">${q.q}</div>
           <div class="quiz-opts" id="quiz-opts-${modN}">
-            ${q.opts.map((opt, i) => `<button class="quiz-opt" onclick="TMApp.answerQuestion(${modN}, ${i})"><span class="opt-letter">${String.fromCharCode(65+i)}</span><span>${opt}</span></button>`).join('')}
+            ${q.shuffledOpts.map((opt, i) => `<button class="quiz-opt" onclick="TMApp.answerQuestion(${modN}, ${i})"><span class="opt-letter">${String.fromCharCode(65+i)}</span><span>${opt.text}</span></button>`).join('')}
           </div>
           <div class="quiz-feedback" id="quiz-fb-${modN}"></div>
           <div class="quiz-next" id="quiz-next-${modN}"></div>
@@ -206,16 +246,18 @@
       `;
     }
 
-    function answerQuestion(modN, optIdx){
+    function answerQuestion(modN, shuffledIdx){
       const qs = quizState[modN]; if (!qs || qs.answered) return;
       const q = qs.questions[qs.idx];
-      const correct = optIdx === q.correct;
+      const originalIdx = q.shuffledOpts[shuffledIdx].originalIdx;
+      const correct = originalIdx === q.correct;
       qs.answered = true;
       const opts = document.querySelectorAll(`#quiz-opts-${modN} .quiz-opt`);
+      const correctShuffledIdx = q.shuffledOpts.findIndex(o => o.originalIdx === q.correct);
       opts.forEach((btn, i) => {
         btn.classList.add('disabled');
-        if (i === q.correct) btn.classList.add('correct');
-        if (i === optIdx && !correct) btn.classList.add('wrong');
+        if (i === correctShuffledIdx) btn.classList.add('correct');
+        if (i === shuffledIdx && !correct) btn.classList.add('wrong');
       });
       const fb = document.getElementById(`quiz-fb-${modN}`);
       fb.classList.add('show', correct ? 'correct' : 'wrong');
@@ -224,58 +266,67 @@
       const nextBox = document.getElementById(`quiz-next-${modN}`);
       if (correct){
         qs.correctCount += 1;
-        if (qs.idx === qs.questions.length - 1) nextBox.innerHTML = `<button class="btn btn-success" onclick="TMApp.finishQuiz(${modN})">Completar módulo ${modN} (+20 pts) →</button>`;
+        if (qs.idx === qs.questions.length - 1) nextBox.innerHTML = `<button class="btn btn-success" onclick="TMApp.finishQuiz(${modN})">✓ Completar módulo ${modN} (+20 pts) →</button>`;
         else nextBox.innerHTML = `<button class="btn btn-primary" onclick="TMApp.nextQuestion(${modN})">Siguiente pregunta →</button>`;
       } else {
         const total = incWrong();
-        if (total >= MAX_WRONG){ nextBox.innerHTML = `<button class="btn btn-ghost" onclick="TMApp.showLockout(${modN})">Ver estado del bloqueo →</button>`; }
-        else { nextBox.innerHTML = `<div class="quiz-wrong-tally">Errores acumulados: <strong>${total} / ${MAX_WRONG}</strong></div><button class="btn btn-ghost" onclick="TMApp.retryQuestion(${modN})">↻ Intentar otra pregunta del banco</button>`; }
+        if (total >= MAX_WRONG){
+          nextBox.innerHTML = '';
+          const gate = document.getElementById(`quiz-${modN}`);
+          if (gate) gate.innerHTML = renderLockoutBox();
+          return;
+        }
+        nextBox.innerHTML = `<div class="quiz-wrong-tally">Errores acumulados: <strong>${total} / ${MAX_WRONG}</strong> · a los ${MAX_WRONG} se bloquea 10 min</div><button class="btn btn-ghost" onclick="TMApp.retryQuestion(${modN})">↻ Intentar otra pregunta del banco</button>`;
       }
     }
-
-    function showLockout(modN){ mountQuizGate(modN); }
 
     function nextQuestion(modN){ const qs = quizState[modN]; qs.idx += 1; qs.answered = false; renderQuizGate(modN); }
     function retryQuestion(modN){
       const qs = quizState[modN];
       const used = qs.questions.map(x => x.q);
       const rest = quizBank[modN].filter(x => !used.includes(x.q));
-      if (rest.length > 0) qs.questions[qs.idx] = rest[Math.floor(Math.random()*rest.length)];
+      if (rest.length > 0) {
+        const fresh = rest[Math.floor(Math.random()*rest.length)];
+        qs.questions[qs.idx] = { ...fresh, shuffledOpts: makeShuffledOpts(fresh) };
+      } else {
+        // Si agotamos el banco, rehacemos la pregunta actual con nuevo shuffle
+        qs.questions[qs.idx].shuffledOpts = makeShuffledOpts(qs.questions[qs.idx]);
+      }
       qs.answered = false; renderQuizGate(modN);
     }
 
     function finishQuiz(modN){
       if (!state.completedModules.includes(modN)) state.completedModules.push(modN);
       if (modN >= state.unlocked) state.unlocked = Math.min(modN + 1, FINAL_MODULE);
-      // reset contador de errores al completar con éxito un módulo
       clearWrongCount();
       save(); renderNav(); updateProgress();
       const nextN = modN + 1;
-      const label = nextN > TOTAL_MODULES ? 'Ir a la Prueba Final →' : `Ir al Módulo ${nextN} →`;
-      const target = nextN > TOTAL_MODULES ? FINAL_MODULE : nextN;
+      const isLast = nextN > TOTAL_MODULES;
+      const label = isLast ? 'Ir a la Prueba Final →' : `Ir al Módulo ${nextN} · ${MODULE_NAMES[nextN]} →`;
+      const target = isLast ? FINAL_MODULE : nextN;
       document.getElementById(`quiz-${modN}`).innerHTML = `
-        <div class="quiz-done">
+        <div class="quiz-done quiz-done-big">
           <span class="quiz-done-icon">🎉</span>
-          <div class="quiz-done-title">Módulo ${modN} aprobado (+20 puntos)</div>
-          <div class="quiz-score"><span class="quiz-score-n">5/5</span><span class="quiz-score-lbl">Dominio del módulo</span></div>
-          <div class="quiz-done-text">Desbloqueaste el siguiente contenido.</div>
-          <button class="btn btn-primary" onclick="TMApp.goToModule(${target})">${label}</button>
+          <div class="quiz-done-title">¡Módulo ${modN} aprobado!</div>
+          <div class="quiz-score"><span class="quiz-score-n">5/5</span><span class="quiz-score-lbl">+20 puntos · Dominio del módulo</span></div>
+          <div class="quiz-done-text">Desbloqueaste el siguiente contenido. Continúa con el aprendizaje.</div>
+          <button class="btn btn-primary btn-big" onclick="TMApp.goToModule(${target})">${label}</button>
+          <div class="quiz-done-sub"><button class="btn btn-ghost btn-small" onclick="TMApp.retakeQuiz(${modN})">↻ Repetir quiz de este módulo</button></div>
         </div>`;
     }
 
     function renderQuizDone(modN){
       const nextN = modN + 1;
-      const label = nextN > TOTAL_MODULES ? 'Ir a la Prueba Final →' : `Ir al Módulo ${nextN} →`;
-      const target = nextN > TOTAL_MODULES ? FINAL_MODULE : nextN;
+      const isLast = nextN > TOTAL_MODULES;
+      const label = isLast ? 'Ir a la Prueba Final →' : `Ir al Módulo ${nextN} · ${MODULE_NAMES[nextN]} →`;
+      const target = isLast ? FINAL_MODULE : nextN;
       return `
-        <div class="quiz-done">
+        <div class="quiz-done quiz-done-big">
           <span class="quiz-done-icon">✅</span>
           <div class="quiz-done-title">Módulo ${modN} ya aprobado</div>
-          <div class="quiz-done-text">Ya completaste este módulo. Puedes continuar o repetir el quiz.</div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
-            <button class="btn btn-primary" onclick="TMApp.goToModule(${target})">${label}</button>
-            <button class="btn btn-ghost" onclick="TMApp.retakeQuiz(${modN})">↻ Repetir quiz</button>
-          </div>
+          <div class="quiz-done-text">Ya completaste este módulo. Puedes continuar con el siguiente o repetir el quiz para afianzar.</div>
+          <button class="btn btn-primary btn-big" onclick="TMApp.goToModule(${target})">${label}</button>
+          <div class="quiz-done-sub"><button class="btn btn-ghost btn-small" onclick="TMApp.retakeQuiz(${modN})">↻ Repetir quiz</button></div>
         </div>`;
     }
 
@@ -286,7 +337,7 @@
       renderNav(); updateProgress(); mountQuizGate(modN);
     }
 
-    /* ---------- final ---------- */
+    /* ---------- prueba final (opciones aleatorizadas + lockout intentos) ---------- */
     const finalState = { questions:null, answers:{}, submitted:false };
 
     function mountFinalTest(forceRetake){
@@ -295,7 +346,7 @@
       if (state.finalPassed && !forceRetake){ renderFinalApproved(); return; }
       if (!finalState.questions || finalState.submitted || forceRetake){
         const picked = pickQuestions(finalQuestions, FINAL_SHOWN);
-        finalState.questions = picked.map(q => ({ ...q, shuffledOpts: shuffle(q.opts.map((_, i) => i)).map(i => ({text: q.opts[i], originalIdx: i})) }));
+        finalState.questions = picked.map(q => ({ ...q, shuffledOpts: makeShuffledOpts(q) }));
         finalState.answers = {}; finalState.submitted = false;
       }
       renderFinalTest();
@@ -307,10 +358,10 @@
         <div class="final-result">
           <span class="final-result-icon">🏆</span>
           <h3>Prueba final aprobada</h3>
-          <p style="color:var(--slate);font-size:15px;line-height:1.7;max-width:560px;margin:12px auto 6px">Aprobaste con 10/10. Accede a las reglas de oro y al certificado.</p>
+          <p class="final-result-lead">Aprobaste con 10/10. Accede a las reglas de oro y al certificado oficial.</p>
           <div class="final-score-big">10/10</div>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <button class="btn btn-primary" onclick="TMApp.unlockConclusion()">Ver reglas de oro y certificado →</button>
+          <div class="final-actions">
+            <button class="btn btn-primary btn-big" onclick="TMApp.unlockConclusion()">Ver reglas de oro y certificado →</button>
             <button class="btn btn-ghost" onclick="TMApp.retryFinal()">↻ Repetir prueba con preguntas nuevas</button>
           </div>
         </div>`;
@@ -318,27 +369,42 @@
 
     function renderFinalTest(){
       const c = document.getElementById('final-quiz');
-      const wrong = getWrongCount();
-      const wrongBadge = wrong > 0 ? `<div class="wrong-tracker">Errores acumulados: <strong>${wrong} / ${MAX_WRONG}</strong></div>` : '';
-      c.innerHTML = wrongBadge + finalState.questions.map((q, qi) => `
-        <div class="quiz-gate" style="margin-top:22px;padding:28px">
-          <div class="quiz-q-label" style="color:var(--coral);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">Pregunta ${qi+1} de ${FINAL_SHOWN}</div>
-          <div class="quiz-q-text" style="color:var(--white);font-size:16.5px;font-weight:600;line-height:1.55;margin-bottom:20px">${q.q}</div>
+      const fails = getFinalFailCount();
+      const failBadge = fails > 0 ? `<div class="wrong-tracker">Intentos fallidos de la prueba final: <strong>${fails} / ${MAX_FINAL_FAIL}</strong> · a los ${MAX_FINAL_FAIL} se bloquea 10 min</div>` : '';
+      c.innerHTML = `
+        <div class="final-brief">
+          <strong>Requisito de aprobación:</strong> 10/10 preguntas correctas. Las preguntas rotan del banco de 50 y las alternativas se reordenan en cada intento. Si fallas la prueba 5 veces (sin sacar 10/10), el acceso se bloquea por 10 minutos.
+        </div>
+        ${failBadge}
+      ` + finalState.questions.map((q, qi) => `
+        <div class="quiz-gate quiz-gate-final">
+          <div class="quiz-q-label quiz-q-label-final">Pregunta ${qi+1} de ${FINAL_SHOWN}</div>
+          <div class="quiz-q-text quiz-q-text-final">${q.q}</div>
           <div class="quiz-opts">
             ${q.shuffledOpts.map((opt, i) => `
-              <button class="quiz-opt ${finalState.answers[qi] === i ? 'active-opt' : ''}" style="${finalState.answers[qi] === i ? 'background:rgba(232,93,74,.18);border-color:var(--coral);color:#FFF3F0' : ''}" onclick="TMApp.finalAnswer(${qi}, ${i})">
+              <button class="quiz-opt ${finalState.answers[qi] === i ? 'active-opt' : ''}" onclick="TMApp.finalAnswer(${qi}, ${i})">
                 <span class="opt-letter">${String.fromCharCode(65+i)}</span>
                 <span>${opt.text}</span>
               </button>
             `).join('')}
           </div>
         </div>`).join('') + `
-        <div style="margin-top:28px;display:flex;justify-content:center">
-          <button class="btn btn-primary" style="padding:16px 34px;font-size:15px" onclick="TMApp.submitFinal()">📊 Entregar prueba final</button>
+        <div class="final-submit-wrap">
+          <button class="btn btn-primary btn-big" onclick="TMApp.submitFinal()">📊 Entregar prueba final</button>
         </div>`;
     }
 
-    function finalAnswer(qi, i){ if (finalState.submitted) return; finalState.answers[qi] = i; renderFinalTest(); }
+    function finalAnswer(qi, i){
+      if (finalState.submitted) return;
+      finalState.answers[qi] = i;
+      // Sólo repinta botones (no el resto) para preservar scroll
+      const group = document.querySelectorAll(`.quiz-gate-final`)[qi];
+      if (group){
+        group.querySelectorAll('.quiz-opt').forEach((btn, idx) => {
+          btn.classList.toggle('active-opt', idx === i);
+        });
+      }
+    }
 
     function submitFinal(){
       const missing = finalState.questions.length - Object.keys(finalState.answers).length;
@@ -351,36 +417,34 @@
       });
       const passed = correct === FINAL_SHOWN;
       finalState.submitted = true;
-      // Si falla: suma errores (hasta MAX_WRONG = bloqueo)
       if (!passed){
-        // por cada respuesta incorrecta sumamos 1 error hasta el máximo
-        const errores = FINAL_SHOWN - correct;
-        const actual = getWrongCount();
-        let acumulado = actual;
-        for (let i=0;i<errores;i++){
-          acumulado = acumulado + 1;
-          if (acumulado >= MAX_WRONG){ setLockout(Date.now() + LOCKOUT_MS); acumulado = 0; break; }
-        }
-        setWrongCount(acumulado);
-      } else { clearWrongCount(); }
-
+        incFinalFail();
+      } else {
+        clearFinalFailCount();
+      }
+      if (isLocked()){
+        document.getElementById('final-quiz').innerHTML = renderLockoutBox();
+        return;
+      }
+      const fails = getFinalFailCount();
       document.getElementById('final-quiz').innerHTML = `
         <div class="final-result">
-          <span class="final-result-icon">${passed ? '🏆' : (isLocked()?'⏱️':'📚')}</span>
-          <h3>${passed ? '¡Prueba final aprobada!' : (isLocked()?'Taller bloqueado por 10 minutos':'Sigue estudiando')}</h3>
-          <div class="final-score-big">${correct}/${FINAL_SHOWN}</div>
-          <p style="color:var(--slate);font-size:15px;line-height:1.7;max-width:560px;margin:0 auto 20px">${passed ? 'Dominas el taller avanzado. Accede a las reglas de oro y al certificado.' : (isLocked()?'Acumulaste 5 errores. Repasa el contenido mientras esperas 10 minutos.':'Necesitas 10/10 para aprobar. Las preguntas rotan del banco de 50.')}</p>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            ${passed ? `<button class="btn btn-primary" onclick="TMApp.unlockConclusion()">Ver reglas de oro →</button>` : (isLocked() ? '' : `<button class="btn btn-primary" onclick="TMApp.retryFinal()">↻ Repetir prueba</button>`)}
+          <span class="final-result-icon">${passed ? '🏆' : '📚'}</span>
+          <h3>${passed ? '¡Prueba final aprobada!' : 'Aún no alcanzas el 10/10'}</h3>
+          <div class="final-score-big ${passed?'passed':'failed'}">${correct}/${FINAL_SHOWN}</div>
+          <p class="final-result-lead">${passed ? 'Excelente. Puedes ver las reglas de oro y descargar tu certificado oficial.' : `Requieres 10 respuestas correctas. Intentos fallidos acumulados: ${fails} / ${MAX_FINAL_FAIL}. Repasa los módulos del taller y vuelve a intentar — las preguntas y alternativas rotan.`}</p>
+          <div class="final-actions">
+            ${passed
+              ? `<button class="btn btn-primary btn-big" onclick="TMApp.unlockConclusion()">Ver reglas de oro y certificado →</button>`
+              : `<button class="btn btn-primary btn-big" onclick="TMApp.retryFinal()">↻ Repetir prueba (preguntas nuevas)</button>`}
             <button class="btn btn-light" onclick="TMApp.reviewFinal()">🔍 Revisar respuestas</button>
           </div>
         </div>`;
       if (passed){
         state.finalPassed = true;
-        state.lastFinalAttempt = { questions: finalState.questions, answers: {...finalState.answers}, correct, date: new Date().toISOString() };
+        state.lastFinalAttempt = { correct, date: new Date().toISOString() };
         save(); renderNav(); updateProgress();
       }
-      updateLockoutTimers();
     }
 
     function retryFinal(){
@@ -396,16 +460,16 @@
         const ok = orig === q.correct;
         const richWhy = buildWhy(q.correct, q.opts, q.whyCorrect, q.whyWrong);
         return `
-          <div class="quiz-gate" style="margin-top:22px;padding:28px">
-            <div class="quiz-q-label" style="color:${ok ? 'var(--green)' : 'var(--red)'}">${ok ? '✓ Correcta' : '✗ Incorrecta'} · Pregunta ${qi+1}</div>
-            <div class="quiz-q-text" style="color:var(--white)">${q.q}</div>
-            <div style="background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.4);border-radius:10px;padding:14px 16px;color:#BBF7D0;margin-bottom:10px;margin-top:16px"><strong style="color:#5DE0A8">Correcta:</strong> ${q.opts[q.correct]}</div>
-            ${!ok && orig !== -1 ? `<div style="background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.35);border-radius:10px;padding:14px 16px;color:#FECACA;margin-bottom:10px"><strong style="color:#F87171">Tu respuesta:</strong> ${q.opts[orig]}</div>` : ''}
-            <div class="quiz-feedback show ${ok?'correct':'wrong'}" style="margin-top:10px"><div class="quiz-feedback-body">${richWhy}</div></div>
+          <div class="quiz-gate quiz-gate-final">
+            <div class="quiz-q-label ${ok?'ok':'ko'}">${ok ? '✓ Correcta' : '✗ Incorrecta'} · Pregunta ${qi+1}</div>
+            <div class="quiz-q-text quiz-q-text-final">${q.q}</div>
+            <div class="review-correct"><strong>Correcta:</strong> ${q.opts[q.correct]}</div>
+            ${!ok && orig !== -1 ? `<div class="review-yours"><strong>Tu respuesta:</strong> ${q.opts[orig]}</div>` : ''}
+            <div class="quiz-feedback show ${ok?'correct':'wrong'}"><div class="quiz-feedback-body">${richWhy}</div></div>
           </div>`;
       }).join('') + `
-        <div style="margin-top:28px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
-          ${state.finalPassed ? `<button class="btn btn-primary" onclick="TMApp.unlockConclusion()">Ver reglas de oro →</button>` : `<button class="btn btn-primary" onclick="TMApp.retryFinal()">↻ Repetir</button>`}
+        <div class="final-submit-wrap">
+          ${state.finalPassed ? `<button class="btn btn-primary btn-big" onclick="TMApp.unlockConclusion()">Ver reglas de oro y certificado →</button>` : `<button class="btn btn-primary btn-big" onclick="TMApp.retryFinal()">↻ Repetir prueba</button>`}
         </div>`;
     }
 
@@ -475,7 +539,7 @@
     function restart(){
       if (!confirm('¿Reiniciar el taller y perder todo el avance?')) return;
       state = defaultState(); save();
-      clearWrongCount(); clearLockout();
+      clearWrongCount(); clearFinalFailCount(); clearLockout();
       window.location.reload();
     }
 
@@ -517,13 +581,11 @@
 
     function init(){
       load(); initTheme(); renderNav(); updateProgress(); renderResumeBanner();
-      // Intro global lockout bar
-      if (isLocked()){ updateLockoutTimers(); }
       if (state.current === 0) show('mod-0');
       else goToModule(state.current);
     }
 
-    window.TMApp = { init, goToModule, startModule, restart, answerQuestion, nextQuestion, retryQuestion, finishQuiz, retakeQuiz, finalAnswer, submitFinal, retryFinal, reviewFinal, unlockConclusion, updateCertName, printCertificate, downloadCertificate, showLockout };
+    window.TMApp = { init, goToModule, startModule, restart, answerQuestion, nextQuestion, retryQuestion, finishQuiz, retakeQuiz, finalAnswer, submitFinal, retryFinal, reviewFinal, unlockConclusion, updateCertName, printCertificate, downloadCertificate };
 
     document.addEventListener('DOMContentLoaded', () => window.TMApp.init());
   }
