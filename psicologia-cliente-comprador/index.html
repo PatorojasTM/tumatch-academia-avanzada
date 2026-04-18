@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch Inmobiliario · En la Mente del Cliente Comprador · Taller Avanzado sobre Comprador Primera Vivienda</title>
+<meta name="description" content="Taller Avanzado sobre Comprador Primera Vivienda: psicología profunda, perfilamiento SPIN, escucha activa, redes calientes/tibias, CRM TuMatch y manejo LAARC de objeciones para entender en profundidad al cliente comprador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>
+  (function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();
+</script>
+</head>
+<body>
+
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+
+<header class="hdr">
+  <div class="grad-stripe"></div>
+  <div class="hdr-row">
+    <a class="brand-logo" href="#" onclick="App.goToModule(0);return false;" aria-label="Inicio">
+      <img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="brand-tagline">
+        <div class="brand-tagline-l1">Academia de Corredores</div>
+        <div class="brand-tagline-l2">En la Mente del Cliente Comprador · Taller Avanzado · 2026</div>
+      </div>
+    </a>
+    <div class="hdr-actions">
+      <span class="taller-badge">Taller Avanzado 2026</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro">
+        <svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="4.9" y1="4.9" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.1" y2="4.9"/></g></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progreso del taller</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-num" id="progressNum">0 / 7</span>
+  </div>
+</div>
+
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<!-- ===== MÓDULO 0: INTRO ===== -->
+<section class="module active" id="mod-0">
+  <div class="hero-new">
+    <div class="hero-new-inner">
+      <div class="hero-academy-mark">Academia de Corredores · Taller Avanzado</div>
+      <img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="hero-eyebrow-line">Taller Avanzado sobre Comprador Primera Vivienda · 2026</div>
+      <h1 class="hero-title">En la Mente del<br><em>Cliente Comprador</em></h1>
+      <p class="hero-lead">Taller avanzado del Curso del Comprador de Primera Vivienda. Quién es, de dónde viene, cómo piensa, qué siente, cómo atraerlo desde tu red caliente y cómo trabajarlo con CRM, SPIN, escucha activa y LAARC.</p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">~1,2<span class="u">h</span></div><div class="hero-meta-lbl">Duración</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">75<span class="u">+</span></div><div class="hero-meta-lbl">Preguntas rotativas</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado oficial</div></div>
+      </div>
+
+      <div id="resumeBanner" class="resume-banner" style="display:none">
+        <div class="resume-banner-icon">📖</div>
+        <div class="resume-banner-body">
+          <div class="resume-banner-title">Tienes avance guardado</div>
+          <div class="resume-banner-text" id="resumeBannerText">Puedes continuar donde quedaste.</div>
+        </div>
+        <button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button>
+      </div>
+
+      <div class="hero-cta-row"><button class="hero-cta-new" onclick="App.startModule(1)" id="heroStartBtn">Comenzar taller avanzado →</button></div>
+      <div class="hero-save-hint"><span class="save-dot"></span><span>Tu avance se guarda automáticamente en este navegador.</span></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · entrar en la mente del cliente comprador</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Cada módulo combina teoría aplicada, frameworks (SPIN, LAARC, Carl Rogers, Kahneman), datos 2025 (Ipsos, Zillow) y un quiz de 5 preguntas. Las preguntas rotan del banco si fallas.</p>
+    </div>
+
+    <div class="mod-timeline">
+      <div class="mod-t-item" onclick="App.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Quién es y de dónde viene</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>5 arquetipos</span><span>Ipsos 2025</span><span>Canales de origen</span><span>RSH</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Redes calientes y tibias</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>Pirámide 100</span><span>Nutrición 21d</span><span>Reactivar dormidos</span><span>Referidos</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">CRM TuMatch como herramienta de cliente</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Pipeline</span><span>Perfil-comprador</span><span>Calculadora</span><span>Reportes</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Preguntas clave · Método SPIN</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Situación</span><span>Problema</span><span>Implicación</span><span>Necesidad-Beneficio</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Psicología profunda y urgencia</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Sesgos Kahneman</span><span>Curva emocional</span><span>Maslow</span><span>Termómetro urgencia</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Empatía clínica y escucha activa</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Carl Rogers</span><span>5 niveles Covey</span><span>Parafraseo</span><span>Mehrabian</span></div></div></div>
+      <div class="mod-t-item" onclick="App.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Objeciones LAARC + biblioteca</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>L-A-A-R-C</span><span>6 objeciones</span><span>Lecturas</span><span>Videos</span></div></div></div>
+      <div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 6 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>10/10 aprobar</span><span>Certificado</span></div></div></div>
+    </div>
+
+    <div class="how-works">
+      <div class="how-item"><div class="how-n">01</div><div class="how-title">Aprende con método</div><div class="how-text">Cada módulo termina con 5 preguntas. Las respondes todas correctas para desbloquear el siguiente.</div></div>
+      <div class="how-item"><div class="how-n">02</div><div class="how-title">Preguntas rotativas</div><div class="how-text">Si fallas una, la pregunta cambia. Estudias hasta dominar el concepto.</div></div>
+      <div class="how-item"><div class="how-n">03</div><div class="how-title">Certificado oficial</div><div class="how-text">Al aprobar 10/10, recibes reglas de oro y certificado descargable.</div></div>
+    </div>
+
+    <div class="info-box info" style="margin-top:32px">
+      <span class="info-icon">🎓</span>
+      <div class="info-text"><strong>Pre-requisito sugerido:</strong> haber completado el <em>Taller del Comprador de Primera Vivienda</em> (10 módulos base). Este taller avanzado profundiza en la mente del cliente sin repetir lo ya cubierto sobre venta emocional, financiamiento, subsidios, barrio, aspectos físicos y cierre.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 1: QUIÉN ES Y DE DÓNDE VIENE ===== -->
+<section class="module" id="mod-1">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 1 · Quién es y de dónde viene</div>
+      <h2 class="sec-h2">Mapear al cliente antes de mostrar la primera propiedad</h2>
+      <p class="sec-desc">El comprador primera vivienda en Chile no es uno solo: es 5 arquetipos con motivaciones, capacidades y canales de origen distintos. Saber cuál tienes al frente cambia el guion completo, desde la primera llamada hasta la entrega de llaves.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="card" style="border-left:4px solid var(--coral)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--coralDk);margin-bottom:16px">Datos clave 2025</div>
+        <ul class="checklist">
+          <li><strong>56%</strong> del mercado comprador es primera vivienda (Ipsos Monitor de Vivienda 2025)</li>
+          <li><strong>46%</strong> prioriza sectores con baja delincuencia (sobre el promedio mundial)</li>
+          <li>Edad concentrada: <strong>28-38 años</strong> con desviación a 24-45</li>
+          <li>Capacidad típica RM: <strong>UF 1.500 – UF 3.500</strong> (combinada con subsidio)</li>
+          <li>Migrantes con residencia definitiva representan segmento creciente</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--orange)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:16px">Por qué el perfilamiento importa</div>
+        <ul class="checklist warn">
+          <li>Cada arquetipo tiene un <strong>guion conversacional</strong> distinto</li>
+          <li>El subsidio aplicable cambia (DS49 / DS1 T1 / T2 / T3 / DS19)</li>
+          <li>La <strong>fuente del lead</strong> predice probabilidad de cierre</li>
+          <li>El ciclo de venta varía: red caliente cierra en <strong>30-60 días</strong>, frío en 4-9 meses</li>
+          <li>Las <strong>palancas emocionales</strong> son específicas por arquetipo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>5 arquetipos del primera vivienda</div>
+      <h2 class="sec-h2" style="font-size:26px">Cómo reconocerlos en la primera conversación</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Arquetipo</th><th>Edad / situación</th><th>Capacidad típica</th><th>Palanca emocional clave</th><th>Subsidio aplicable</th></tr></thead>
+        <tbody>
+          <tr><td><strong>👨‍💻 Joven profesional</strong></td><td>28-32, soltero o pareja sin hijos. Lleva 4-7 años arrendando.</td><td>UF 2.000-3.500 + ahorro 15-20% pie</td><td>Dejar de "perder" arriendo + estatus de adultez</td><td>DS1 T2 / T3</td></tr>
+          <tr><td><strong>👨‍👩‍👧 Pareja consolidando</strong></td><td>30-38, recién casados o conviviendo. Embarazo o hijo pequeño.</td><td>Doble ingreso UF 3.000-5.000</td><td>Estabilidad para los hijos + barrio con colegios</td><td>DS1 T2 / T3</td></tr>
+          <tr><td><strong>📐 Trabajador independiente</strong></td><td>32-45, boletas o pyme. F22 con utilidades demostrables hace 2+ años.</td><td>Variable; ahorro fuerte (20-30% pie)</td><td>Convertir ingreso volátil en patrimonio estable</td><td>DS1 T1 / T2</td></tr>
+          <tr><td><strong>🏠 Familia DS49</strong></td><td>30-50, RSH 40% más vulnerable. Arrienda o vive con familiares.</td><td>Subsidio total + ahorro 30 UF</td><td>Salir del hacinamiento + dejar herencia a hijos</td><td>DS49 (sin crédito)</td></tr>
+          <tr><td><strong>✈️ Migrante con sueño cumplido</strong></td><td>30-45, residencia definitiva 4+ años. Familia en Chile.</td><td>UF 1.500-3.000 con doble esfuerzo de ahorro</td><td>Echar raíces + orgullo familiar + carta a la familia en origen</td><td>DS1 según RSH</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>De dónde viene</div>
+      <h2 class="sec-h2" style="font-size:26px">Canales de origen del lead y su peso real</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Canal</th><th>Tipo</th><th>Conversión esperada</th><th>Ciclo de venta</th><th>Costo de adquisición</th></tr></thead>
+        <tbody>
+          <tr><td><strong>👨‍👩‍👧 Familia / amigos</strong></td><td>🔥 Red caliente</td><td>30-50%</td><td>30-60 días</td><td>$0 — relación previa</td></tr>
+          <tr><td><strong>🤝 Ex-clientes (referido)</strong></td><td>🔥 Red caliente</td><td>25-40%</td><td>45-90 días</td><td>$0 + agradecimiento</td></tr>
+          <tr><td><strong>💼 LinkedIn / red profesional</strong></td><td>🌡️ Tibio</td><td>10-20%</td><td>90-180 días</td><td>Ciclo de cultivo relacional</td></tr>
+          <tr><td><strong>📱 Instagram / contenido propio</strong></td><td>🌡️ Tibio</td><td>5-15%</td><td>120-240 días</td><td>Producción contenido</td></tr>
+          <tr><td><strong>🌐 Inbound TuMatch</strong></td><td>🌡️ Tibio calificado</td><td>15-25%</td><td>60-120 días</td><td>Plataforma TuMatch</td></tr>
+          <tr><td><strong>🌍 Portales (Portal Inmobiliario, Yapo)</strong></td><td>❄️ Frío</td><td>2-5%</td><td>4-9 meses</td><td>Suscripción mensual</td></tr>
+          <tr><td><strong>📞 Llamada en frío</strong></td><td>❄️ Frío</td><td>1-3%</td><td>6-12 meses</td><td>Tiempo + desgaste</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">💡</span>
+      <div class="info-text"><strong>Lectura estratégica de la tabla:</strong> 80% de tu rentabilidad viene de los 3 primeros canales. Ese es el principio de Pareto aplicado a captación. Antes de pagar publicidad, audita tu propia red caliente — casi siempre está sub-explotada.</div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:12px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Error frecuente:</strong> asignar la misma intensidad al lead frío que al caliente. Un caliente requiere agenda inmediata y reunión en 48 horas; un frío requiere un flujo sistematizado de Marketing Relacional de largo plazo. Confundir ambos desgasta al corredor y compromete la conversión de los dos perfiles.</div>
+    </div>
+
+    <div id="quiz-1" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 2: REDES CALIENTES Y TIBIAS ===== -->
+<section class="module" id="mod-2">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 2 · Marketing Relacional y Sistema de Referidos</div>
+      <h2 class="sec-h2">El Círculo de Influencia como motor del corredor profesional</h2>
+      <p class="sec-desc">En la industria inmobiliaria, el <strong>Círculo de Influencia</strong> (sphere of influence) del corredor genera, en promedio, entre el 60% y el 80% de sus operaciones de carrera. Este módulo entrega un sistema replicable de Marketing Relacional y un protocolo de referidos que convierten tu red personal y profesional en una fuente sostenida de clientes cualificados.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Pirámide de los 100 · Segmentación del Círculo de Influencia</div>
+      <h2 class="sec-h2" style="font-size:26px">La base del corredor segmentada en tres capas operativas</h2>
+    </div>
+
+    <div class="grid-3" style="gap:18px;margin-bottom:24px">
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🔥</div>
+        <div class="tip-title">Capa A · Top 20 · Red primaria</div>
+        <div class="tip-text">Familia directa, clientes recientes y aliados estratégicos. <strong>Ciclo de contacto trimestral obligatorio.</strong> Cada integrante ya ha generado o está en condiciones de generar derivaciones activas hacia el corredor.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🌡️</div>
+        <div class="tip-title">Capa B · 50 Medios · Cultivo relacional</div>
+        <div class="tip-text">Conocidos profesionales, ex-compañeros de trabajo, conexiones de LinkedIn, vecinos y proveedores del ecosistema inmobiliario. <strong>Reciben contenido de valor cada 21 días</strong> para consolidar la autoridad profesional del corredor.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">💤</div>
+        <div class="tip-title">Capa C · 30 Dormidos · Reactivación</div>
+        <div class="tip-text">Contactos sin interacción por más de 12 meses. Se abordan con mensaje personal, contextual y con propuesta de valor concreta. Un contacto personalizado supera ampliamente a cualquier campaña masiva automatizada.</div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:32px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Sistema de Referidos TuMatch</div>
+      <h2 class="sec-h2" style="font-size:26px">Los cuatro pilares para generar clientes por derivación</h2>
+      <p class="sec-desc">El referido no es un evento fortuito: es el resultado de un sistema deliberado que opera antes, durante y después de cada transacción. El corredor profesional aplica los cuatro pilares siguientes de forma permanente.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)"><span>①</span> Referibilidad del servicio</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Condición previa al sistema</div>
+          <div class="prop-item"><strong>Servicio referible</strong><span>Solo se refiere aquello que supera la expectativa. Mide la referibilidad con la pregunta: "del 0 al 10, ¿cuán probable es que me recomiende a un conocido?" (Net Promoter Score adaptado).</span></div>
+          <div class="prop-item"><strong>Momento de la verdad</strong><span>Identifica tres hitos donde se construye referibilidad: primera reunión, firma de promesa y entrega de llaves. En cada uno, el corredor debe entregar un "sobre-servicio" memorable.</span></div>
+          <div class="prop-item"><strong>Score mínimo</strong><span>NPS ≥ 9 es el umbral para activar el pedido formal de referidos. Bajo 9, el corredor debe primero resolver la fricción detectada.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D7C78,#10B981)"><span>②</span> Solicitud estratégica</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">El referido solicitado supera ampliamente al espontáneo</div>
+          <div class="prop-item"><strong>Timing óptimo</strong><span>Inmediatamente tras un hito de valor entregado (asesoría crediticia concreta, firma de promesa, entrega de llaves). Fuera de estos momentos, la solicitud pierde fuerza.</span></div>
+          <div class="prop-item"><strong>Acotación cognitiva</strong><span>Pedir "1 o 2 personas" en lugar de "alguien": el cerebro procesa rangos específicos, no abstracciones.</span></div>
+          <div class="prop-item"><strong>Segmentación del pedido</strong><span>Ejemplo: "¿Alguna pareja joven en tu trabajo que esté pensando en dejar el arriendo?". Delimitar el perfil facilita el recuerdo.</span></div>
+          <div class="prop-item prop-item-star"><strong>★ Protocolo verbal</strong><span><em>"Ahora que conoces cómo trabajo: ¿se te ocurren una o dos personas de tu círculo que estén en una situación similar a la tuya y podrían beneficiarse de una asesoría como ésta?"</em></span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#9D174D,#E8307A)"><span>③</span> Calendario de Cultivo Relacional</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Cada 21 días · 80% contenido formativo · 20% oferta profesional</div>
+          <div class="prop-item"><strong>Ciclo 1</strong><span>Simulación hipotecaria con la Calculadora TuMatch aplicada a un caso tipo de la zona del contacto.</span></div>
+          <div class="prop-item"><strong>Ciclo 2</strong><span>Actualización normativa de subsidios habitacionales vigentes (DS1, DS49, DS19).</span></div>
+          <div class="prop-item"><strong>Ciclo 3</strong><span>Caso de estudio real (con autorización expresa), extraído de la cartera del corredor.</span></div>
+          <div class="prop-item"><strong>Ciclo 4</strong><span>Guía técnica breve: "Cinco errores frecuentes en la adquisición de primera vivienda".</span></div>
+          <div class="prop-item"><strong>Ciclo 5</strong><span>Valor UF actualizado, proyección de tasas hipotecarias e impacto en el dividendo.</span></div>
+          <div class="prop-item"><strong>Ciclo 6</strong><span>Oportunidades segmentadas por comuna o sector donde reside el contacto.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#92400E,#D97706)"><span>④</span> Reciprocidad estructurada</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Cerrar el ciclo genera referidos recurrentes</div>
+          <div class="prop-item"><strong>Agradecimiento formal</strong><span>Nota manuscrita o llamada en menos de 48 horas tras recibir el referido. El gesto es más valioso que el obsequio.</span></div>
+          <div class="prop-item"><strong>Reporte de estado</strong><span>Informar al referidor sobre el avance de su recomendado (con autorización): refuerza la sensación de corresponsabilidad profesional.</span></div>
+          <div class="prop-item"><strong>Reciprocidad en servicios</strong><span>Ofrecer al referidor acceso prioritario a nuevas oportunidades, tasaciones gratuitas o actualizaciones de mercado de su zona.</span></div>
+          <div class="prop-item"><strong>Reconocimiento sostenido</strong><span>Mencionar al referidor en contenidos de caso (con permiso) consolida su rol de "embajador" y lo motiva a derivar nuevamente.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Protocolo de reactivación · Capa C</div>
+      <h2 class="sec-h2" style="font-size:26px">Cómo recuperar contactos dormidos sin quemar la relación</h2>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">💬</span>
+      <div class="info-text"><strong>Estructura de mensaje de reactivación validada:</strong> <em>"Hola [nombre]. Hace tiempo que no conversamos. Te contacté porque [motivo concreto y verificable: pasé por tu antigua comuna, leí una noticia que te interesaría, recordé tu consulta sobre X]. Si en este periodo has considerado adquirir tu primera propiedad, o conoces a alguien en esa etapa, quedo a tu disposición para una asesoría sin compromiso."</em> — El elemento crítico es el <strong>motivo concreto</strong>: las reactivaciones genéricas tienen una tasa de respuesta inferior al 3%; las personalizadas superan el 25%.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:32px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Indicadores de desempeño del sistema</div>
+      <h2 class="sec-h2" style="font-size:26px">KPI mensuales del corredor TuMatch</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Indicador</th><th>Meta mensual</th><th>Fundamento operativo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Top 20 contactados</strong></td><td>≥ 8 contactos (40%)</td><td>Sostiene la presencia profesional sin generar saturación.</td></tr>
+          <tr><td><strong>Tibios en cultivo relacional</strong></td><td>50 (100% del segmento)</td><td>Cada contacto recibe contenido de valor en el ciclo de 21 días.</td></tr>
+          <tr><td><strong>Dormidos reactivados</strong></td><td>5 contactos</td><td>Permite recorrer la totalidad de la Capa C en el ejercicio anual.</td></tr>
+          <tr><td><strong>Solicitudes de referido</strong></td><td>≥ 4 solicitudes</td><td>La derivación se construye por sistema, no por azar.</td></tr>
+          <tr><td><strong>Referidos recibidos</strong></td><td>≥ 2 nominaciones/mes</td><td>Tasa de éxito esperada: 50% de las solicitudes bien ejecutadas.</td></tr>
+          <tr><td><strong>Tasa de conversión de red caliente</strong></td><td>≥ 30%</td><td>Bajo esa cifra, revisar calidad de servicio entregado previamente.</td></tr>
+          <tr><td><strong>NPS cartera activa</strong></td><td>≥ 9</td><td>Umbral crítico para solicitar referidos con legitimidad profesional.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Principio rector:</strong> no debe confundirse "ausencia de contacto" con "ausencia de necesidad". Dentro del Top 20 del corredor existen, en promedio, entre dos y cuatro personas evaluando activamente la compra de su primera vivienda que no tomarán la iniciativa de contactar. <em>La responsabilidad profesional del corredor es iniciar la conversación antes de que el cliente acuda a la competencia.</em></div>
+    </div>
+
+    <div id="quiz-2" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 3: CRM TUMATCH ===== -->
+<section class="module" id="mod-3">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 3 · CRM TuMatch como herramienta de cliente</div>
+      <h2 class="sec-h2">Tu memoria operativa, tu pipeline y tu reporte de carrera</h2>
+      <p class="sec-desc">El CRM disponible en <code>tumatch-leads.vercel.app</code> no es un cuaderno digital: es la diferencia entre un corredor que cierra 5 operaciones al año y uno que cierra 25. Esta sección te muestra cómo aprovecharlo específicamente para entender al comprador primera vivienda.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Funciones clave para perfilar al comprador</div>
+      <h2 class="sec-h2" style="font-size:26px">Lo que cada sección hace por ti</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Sección CRM</th><th>Para qué sirve</th><th>Aplicación a primera vivienda</th></tr></thead>
+        <tbody>
+          <tr><td><strong>📊 Pipeline visual</strong></td><td>Ver todos tus leads agrupados por etapa.</td><td>Identificas dónde se atascan los compradores (¿en pre-aprobación? ¿en visitas?).</td></tr>
+          <tr><td><strong>👤 Perfil-comprador-section</strong></td><td>Ficha estructurada del cliente con campos editables.</td><td>Arquetipo, RSH, subsidio aplicable, urgencia, motivación, miedos, red de origen.</td></tr>
+          <tr><td><strong>🤝 Cierre-negocio</strong></td><td>Workflow de la operación tras oferta aceptada.</td><td>Checklist de las 9 etapas (oferta → promesa → escritura → entrega).</td></tr>
+          <tr><td><strong>🧮 Calculadora hipotecaria</strong></td><td>Simular dividendo según pie, plazo y tasa.</td><td>Ancla con el comprador en primera reunión. Quita ansiedad de incertidumbre.</td></tr>
+          <tr><td><strong>📞 Histórico de interacciones</strong></td><td>Cada llamada, mail, reunión y resultado registrados.</td><td>Antes de retomar, lees el contexto en 60 segundos.</td></tr>
+          <tr><td><strong>📈 Reportes por canal</strong></td><td>Conversión y ciclo por origen del lead.</td><td>Decides dónde duplicar tiempo el próximo trimestre.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Registro mínimo</div>
+      <h2 class="sec-h2" style="font-size:26px">7 campos en 5 minutos por lead</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="card" style="border-left:4px solid var(--coral)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--coralDk);margin-bottom:16px">Campos críticos al ingresar lead</div>
+        <ul class="checklist">
+          <li><strong>Nombre completo + canal</strong> de origen del lead</li>
+          <li><strong>Arquetipo</strong> (1 de los 5 del módulo 1)</li>
+          <li><strong>Capacidad estimada</strong> (UF) + RSH si aplica</li>
+          <li><strong>Urgencia</strong> (necesidad real / deseo / impulso)</li>
+          <li><strong>Motivación principal</strong> (1 frase del cliente)</li>
+          <li><strong>Próxima acción</strong> + fecha de seguimiento</li>
+          <li><strong>Etiqueta de calor</strong>: 🔥 / 🌡️ / ❄️</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--teal)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:16px">Beneficio acumulado del registro</div>
+        <ul class="checklist">
+          <li>A los <strong>30 leads</strong>: ya no recuerdas todo. CRM te salva.</li>
+          <li>A los <strong>100 leads</strong>: empiezas a hacer match cliente↔propiedad en segundos.</li>
+          <li>A los <strong>300 leads</strong>: tienes data propia de tu zona y arquetipos.</li>
+          <li>El CRM se vuelve tu <strong>activo de carrera</strong> — te acompaña aunque cambies de oficina.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Workflow por etapa</div>
+      <h2 class="sec-h2" style="font-size:26px">Qué hace el CRM por ti en cada momento</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Etapa del lead</th><th>Acción del corredor</th><th>Lo que aporta el CRM</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Captación</strong></td><td>Registrar en 5 min con los 7 campos.</td><td>Etiqueta automática + recordatorio próxima acción.</td></tr>
+          <tr><td><strong>2. Discovery (SPIN)</strong></td><td>Reunión de perfilamiento. Anotar respuestas en perfil-comprador-section.</td><td>Plantilla con 25 preguntas pre-cargadas (módulo 4).</td></tr>
+          <tr><td><strong>3. Pre-aprobación</strong></td><td>Aplicar calculadora hipotecaria + simular 2-3 bancos.</td><td>Genera PDF con escenarios para entregar al cliente.</td></tr>
+          <tr><td><strong>4. Visitas</strong></td><td>3-5 propiedades curadas según perfil.</td><td>Match automático según arquetipo + capacidad.</td></tr>
+          <tr><td><strong>5. Oferta</strong></td><td>Acompañar negociación.</td><td>Histórico de comparables cerrados de la zona.</td></tr>
+          <tr><td><strong>6. Cierre</strong></td><td>Promesa → escritura → entrega.</td><td>Workflow cierre-negocio con checklist de 9 hitos.</td></tr>
+          <tr><td><strong>7. Post-firma</strong></td><td>Solicitar referidos e incorporar al cliente al Sistema de Cultivo Relacional.</td><td>Recordatorio automático a los 30, 90 y 180 días.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🛠️</span>
+      <div class="info-text"><strong>Tip de productividad TuMatch:</strong> reserva 20 minutos al final de cada día para actualizar el CRM. Es la práctica que distingue al corredor profesional del intermediario. Sin ese ritual, el CRM se desactualiza en 2 semanas y deja de servir.</div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:12px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Error mortal:</strong> tener el lead solo en WhatsApp y la cabeza. A los 25 leads colapsa la memoria, se cae el seguimiento, llamas tarde y pierdes la operación. El CRM no es opcional cuando aspiras a crecer.</div>
+    </div>
+
+    <div id="quiz-3" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 4: SPIN ===== -->
+<section class="module" id="mod-4">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 4 · Preguntas clave · Método SPIN</div>
+      <h2 class="sec-h2">El cliente se vende a sí mismo si haces las preguntas correctas</h2>
+      <p class="sec-desc">SPIN, desarrollado por Neil Rackham (1988) tras analizar 35.000 ventas, ordena las preguntas en 4 momentos: <strong>S</strong>ituación, <strong>P</strong>roblema, <strong>I</strong>mplicación, <strong>N</strong>ecesidad-Beneficio. Aplicado al primera vivienda, transforma la entrevista en un viaje donde el cliente conecta su realidad con la solución sin presión.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)"><span>S</span> Preguntas de Situación</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Mapean el contexto sin invadir.</div>
+          <div class="prop-item"><strong>1.</strong><span>"¿Hace cuánto que están arrendando?"</span></div>
+          <div class="prop-item"><strong>2.</strong><span>"¿Cuánto pagan hoy de arriendo?"</span></div>
+          <div class="prop-item"><strong>3.</strong><span>"¿Cómo está la capacidad de ahorro mensual?"</span></div>
+          <div class="prop-item"><strong>4.</strong><span>"¿Han postulado antes a algún subsidio?"</span></div>
+          <div class="prop-item"><strong>5.</strong><span>"¿En qué barrios han pensado?"</span></div>
+          <div class="prop-item"><strong>6.</strong><span>"¿Quiénes participan en la decisión?"</span></div>
+          <div class="prop-item"><strong>7.</strong><span>"¿Tienen bancarización / Dicom?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#92400E,#D97706)"><span>P</span> Preguntas de Problema</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Sacan a la luz el dolor.</div>
+          <div class="prop-item"><strong>1.</strong><span>"¿Qué los ha frenado hasta ahora?"</span></div>
+          <div class="prop-item"><strong>2.</strong><span>"¿Qué les frustra del mercado actual?"</span></div>
+          <div class="prop-item"><strong>3.</strong><span>"¿Qué les preocupa del proceso bancario?"</span></div>
+          <div class="prop-item"><strong>4.</strong><span>"¿Han tenido alguna mala experiencia con un corredor?"</span></div>
+          <div class="prop-item"><strong>5.</strong><span>"¿Qué los hace dudar de comprometerse hoy?"</span></div>
+          <div class="prop-item"><strong>6.</strong><span>"¿Qué les molesta de seguir arrendando?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#9D174D,#E8307A)"><span>I</span> Preguntas de Implicación</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Conectan el dolor con consecuencias.</div>
+          <div class="prop-item"><strong>1.</strong><span>"¿Qué pasa si en 2 años todavía están arrendando?"</span></div>
+          <div class="prop-item"><strong>2.</strong><span>"¿Cuánto habrán pagado en arriendo perdido?"</span></div>
+          <div class="prop-item"><strong>3.</strong><span>"¿Cómo afecta la incertidumbre a la pareja / familia?"</span></div>
+          <div class="prop-item"><strong>4.</strong><span>"¿Qué oportunidades dejan pasar mientras esperan?"</span></div>
+          <div class="prop-item"><strong>5.</strong><span>"Si el subsidio actual cambia el próximo año, ¿qué harían?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D7C78,#10B981)"><span>N</span> Preguntas de Necesidad-Beneficio</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">El cliente proyecta vida futura con la solución.</div>
+          <div class="prop-item"><strong>1.</strong><span>"¿Cómo cambiaría su día a día si en 6 meses estuvieran pagando dividendo en su propia propiedad?"</span></div>
+          <div class="prop-item"><strong>2.</strong><span>"¿Qué significaría para su familia tener un techo propio?"</span></div>
+          <div class="prop-item"><strong>3.</strong><span>"¿Qué les daría tranquilidad: que el banco les diga sí o tener un plan B claro?"</span></div>
+          <div class="prop-item"><strong>4.</strong><span>"Si pudieran resolver lo del subsidio en 60 días, ¿iniciamos el proceso ahora?"</span></div>
+          <div class="prop-item"><strong>5.</strong><span>"¿Prefieren visitar 3 propiedades curadas o 10 a ciegas?"</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Tipos de preguntas</div>
+      <h2 class="sec-h2" style="font-size:26px">Cuándo usar cada una</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Tipo</th><th>Para qué</th><th>Ejemplo en primera vivienda</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cerrada (sí/no)</strong></td><td>Confirmar dato puntual.</td><td>"¿Tienen RSH activo?"</td></tr>
+          <tr><td><strong>Abierta</strong></td><td>Que el cliente hable y descubra.</td><td>"¿Qué los hizo pensar en comprar este año?"</td></tr>
+          <tr><td><strong>Proyectiva</strong></td><td>Activar imaginación de futuro.</td><td>"Si en 6 meses estuvieran viviendo en su casa, ¿qué sería lo primero que harían un domingo?"</td></tr>
+          <tr><td><strong>Comparativa</strong></td><td>Hacer pensar en alternativas.</td><td>"Entre departamento en La Florida o casa en Buin, ¿qué pesa más para ustedes?"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">⚖️</span>
+      <div class="info-text"><strong>Regla de oro 20/80:</strong> en una reunión de 60 minutos, el corredor habla 12 minutos máximo. Los otros 48 los habla el cliente. Si saliste hablando más de la mitad, perdiste la oportunidad de perfilarlo bien.</div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:12px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>3 errores comunes:</strong> 1) Hacer las preguntas como interrogatorio policial sin transición. 2) Saltar de Situación a Necesidad-Beneficio sin explorar Problema e Implicación. 3) Dar respuesta tú a la pregunta de Implicación en lugar de dejar que el cliente la responda.</div>
+    </div>
+
+    <div id="quiz-4" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 5: PSICOLOGÍA Y URGENCIA ===== -->
+<section class="module" id="mod-5">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 5 · Psicología profunda y mapa de urgencia</div>
+      <h2 class="sec-h2">Lo que el cliente siente y por qué decide cuando decide</h2>
+      <p class="sec-desc">Comprar vivienda es la transacción más cara y emocional de la mayoría de las personas. <strong>50% de los compradores reconoce haber llorado</strong> durante el proceso (Zillow, 2024). Conocer los sesgos cognitivos, la curva emocional típica y el termómetro de urgencia te permite acompañar — no presionar — y cerrar con dignidad.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Sesgos cognitivos clave (Kahneman, Cialdini)</div>
+      <h2 class="sec-h2" style="font-size:26px">Las trampas mentales del primera vivienda</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Sesgo</th><th>Cómo se manifiesta</th><th>Cómo lo trabajas</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🎯 Anclaje</strong></td><td>El primer precio que ve marca su referencia.</td><td>Anclas con calculadora hipotecaria + comparables reales.</td></tr>
+          <tr><td><strong>📉 Aversión a la pérdida</strong></td><td>Perder duele ~2x más que ganar (Kahneman).</td><td>Bajas la sensación de riesgo: data, plan B, garantías, dos bancos en paralelo.</td></tr>
+          <tr><td><strong>⏳ FOMO</strong></td><td>Miedo a perderse la oportunidad.</td><td>Solo se usa si la urgencia es genuina (demanda real, subsidio expira). Nunca construida.</td></tr>
+          <tr><td><strong>👥 Prueba social</strong></td><td>"Otros como yo ya lo hicieron."</td><td>Casos reales con permiso, testimonios concretos de tu cartera.</td></tr>
+          <tr><td><strong>🏠 Efecto dotación</strong></td><td>Una vez se imagina viviendo allí, sobrevalora la propiedad.</td><td>Activa visualización en visitas: "imaginen el desayuno de domingo aquí".</td></tr>
+          <tr><td><strong>🔄 Reciprocidad</strong></td><td>Si recibe algo de valor, siente impulso de devolver.</td><td>Entregas calculadora, mini-guías, comparables — sin esperar pago inmediato.</td></tr>
+          <tr><td><strong>📌 Sesgo de confirmación</strong></td><td>Solo escucha lo que confirma su idea previa.</td><td>Validas primero, después contrastas con dato.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Curva emocional típica</div>
+      <h2 class="sec-h2" style="font-size:26px">6 fases del comprador primerizo</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Fase</th><th>Estado emocional</th><th>Acción del corredor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Idealización</strong></td><td>"¡Vamos a comprar!" Optimismo. Ilusión.</td><td>Acompañar entusiasmo + introducir el método.</td></tr>
+          <tr><td><strong>2. Confusión</strong></td><td>Demasiada información. Bancos, subsidios, barrios.</td><td>Simplificar con calculadora + 1 sola decisión a la vez.</td></tr>
+          <tr><td><strong>3. Miedo</strong></td><td>"¿Y si me equivoco?" Paralización.</td><td>Validar emoción + bajar riesgo con data y plan B.</td></tr>
+          <tr><td><strong>4. Decisión</strong></td><td>Punto de quiebre. Confianza o huida.</td><td>Estar presente. La presencia gana operaciones.</td></tr>
+          <tr><td><strong>5. Alivio</strong></td><td>Firma. Llave en mano. Catarsis.</td><td>Celebrar + agradecer + pedir referidos en este pico.</td></tr>
+          <tr><td><strong>6. Duda post-cierre</strong></td><td>"¿Tomé la decisión correcta?" — 48-72h después.</td><td>Mensaje proactivo: "lo hiciste bien, los datos así lo confirman".</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📊</span>
+      <div class="info-text"><strong>Dato Zillow 2024:</strong> 50% de los compradores reconoce haber llorado durante el proceso (65% Gen Z, 61% Millennials). No es debilidad: es la magnitud emocional real. El corredor que minimiza esto pierde la confianza del cliente.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:32px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Maslow aplicado a vivienda</div>
+      <h2 class="sec-h2" style="font-size:26px">Las dos capas que importan</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="card" style="border-left:4px solid var(--coral)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--coralDk);margin-bottom:16px">🛡️ Seguridad</div>
+        <ul class="checklist">
+          <li>Estabilidad económica (no más subir de arriendo cada año)</li>
+          <li>Protección física (barrio sin delincuencia — 46% prioritario en Chile)</li>
+          <li>Patrimonio para los hijos</li>
+          <li>"Algo propio que nadie me puede quitar"</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--purple)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple);margin-bottom:16px">🤝 Pertenencia</div>
+        <ul class="checklist">
+          <li>Barrio donde criar a los hijos</li>
+          <li>Vecinos, comunidad, raíces</li>
+          <li>Sentir "ya llegué" socialmente</li>
+          <li>Identidad de adulto / familia consolidada</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Termómetro de urgencia TuMatch</div>
+      <h2 class="sec-h2" style="font-size:26px">3 niveles que definen tu agenda</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Nivel</th><th>Señales</th><th>Acción del corredor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🔥 Necesidad real</strong></td><td>Arriendo termina &lt; 90 días, embarazo, separación, traslado laboral.</td><td>Reunión esta semana. Pre-aprobación en 14 días. Visitas curadas.</td></tr>
+          <tr><td><strong>🌡️ Deseo activo</strong></td><td>"Llevamos 2 años pensándolo, este año queremos avanzar."</td><td>Reunión en 2-3 semanas. Calculadora + perfilamiento + plan a 90 días.</td></tr>
+          <tr><td><strong>❄️ Impulso</strong></td><td>"Vi un anuncio, me dieron ganas." Sin deadline.</td><td>Nutrición cada 21 días. Calificar en 30 días: si no escala, baja prioridad.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Ética de la urgencia:</strong> nunca inventes urgencia. Si dices "esta es la última propiedad disponible" y no es cierto, mueres profesionalmente al primer descubrimiento. Usa solo urgencia real (subsidio que expira, propiedad con varias ofertas, tasa que va a subir según Banco Central).</div>
+    </div>
+
+    <div id="quiz-5" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 6: EMPATÍA Y ESCUCHA ACTIVA ===== -->
+<section class="module" id="mod-6">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 6 · Empatía clínica y escucha activa</div>
+      <h2 class="sec-h2">Carl Rogers en la mesa de tu cliente</h2>
+      <p class="sec-desc">Carl Rogers (1957) demostró en psicología clínica que tres condiciones generan cambio profundo: <strong>aceptación incondicional + congruencia + empatía</strong>. Llevadas al corretaje del primera vivienda, estas tres condiciones son lo que distingue al corredor que el cliente recomienda del que olvida.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>5 niveles de escucha (Stephen Covey)</div>
+      <h2 class="sec-h2" style="font-size:26px">¿Dónde estás hoy y dónde necesitas llegar?</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Nivel</th><th>Cómo se ve</th><th>Resultado en el cliente</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Ignorar</strong></td><td>Mirar el celular mientras habla.</td><td>Pierdes al cliente en 5 minutos.</td></tr>
+          <tr><td><strong>2. Fingir</strong></td><td>"Ajá, claro" sin procesar.</td><td>Cliente nota la falsedad. Baja confianza.</td></tr>
+          <tr><td><strong>3. Selectiva</strong></td><td>Escuchas solo lo que te interesa para vender.</td><td>Cliente percibe agenda comercial.</td></tr>
+          <tr><td><strong>4. Atenta</strong></td><td>Escuchas las palabras con foco.</td><td>Captas datos pero no emoción.</td></tr>
+          <tr><td><strong>5. Empática</strong></td><td>Escuchas palabras + emoción + subtexto.</td><td>El cliente se siente comprendido. Confianza profunda.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:24px">
+      <span class="info-icon">🎯</span>
+      <div class="info-text"><strong>El salto profesional:</strong> los corredores promedio se quedan en nivel 4 (atenta). Los de élite operan en nivel 5 (empática). Esa es la diferencia entre 5 operaciones al año y 25.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>4 técnicas concretas</div>
+      <h2 class="sec-h2" style="font-size:26px">Lo que haces con tu cuerpo y voz</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D7C78,#10B981)"><span>🪞</span> Parafraseo</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Resumir con tus palabras lo que el cliente dijo.</div>
+          <div class="prop-item prop-item-star"><strong>★ Plantilla</strong><span><em>"Si te entendí bien, lo que más te preocupa es..."</em></span></div>
+          <div class="prop-item"><strong>Por qué funciona</strong><span>El cliente al escucharse sintetizado siente que SÍ lo entendiste. Baja defensas.</span></div>
+          <div class="prop-item"><strong>Cuándo</strong><span>Después de cualquier respuesta emocional o larga del cliente.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)"><span>🤫</span> Silencio de 3 segundos</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Después de una pregunta, no llenes el espacio.</div>
+          <div class="prop-item prop-item-star"><strong>★ La regla</strong><span>Cuenta mentalmente: 1... 2... 3... y solo después interviene si el cliente no continúa.</span></div>
+          <div class="prop-item"><strong>Por qué funciona</strong><span>La respuesta más valiosa suele aparecer después del primer silencio. La mayoría rellena y pierde el oro.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#9D174D,#E8307A)"><span>💗</span> Validación emocional</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Reconocer la emoción antes de procesar lo racional.</div>
+          <div class="prop-item prop-item-star"><strong>★ Frases plantilla</strong><span><em>"Entiendo que esto te angustia — es la decisión más grande de tu vida."</em><br><em>"Es normal sentirse abrumado con tanta información."</em></span></div>
+          <div class="prop-item"><strong>Por qué funciona</strong><span>Cliente con miedo activo no procesa números. Validar abre la conversación racional posterior.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#92400E,#D97706)"><span>👁️</span> Mirar sin invadir</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Contacto visual cálido, no penetrante.</div>
+          <div class="prop-item prop-item-star"><strong>★ Regla</strong><span>70% del tiempo contacto visual + 30% mirar referencias (planos, calculadora, tablet).</span></div>
+          <div class="prop-item"><strong>Por qué funciona</strong><span>Demuestra atención sin generar incomodidad. Mirada penetrante = cliente se cierra.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Comunicación no verbal (Mehrabian)</div>
+      <h2 class="sec-h2" style="font-size:26px">Lo que tu cuerpo dice antes de tu argumento</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Componente</th><th>Peso en percepción de confianza</th><th>Cómo cuidarlo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Lenguaje corporal</strong></td><td>~55%</td><td>Postura abierta, hombros relajados, cuerpo orientado al cliente. Nunca cruzado de brazos.</td></tr>
+          <tr><td><strong>Tono y voz</strong></td><td>~38%</td><td>Tono cálido, ritmo pausado, volumen medio. Bajar la voz en momentos emocionales.</td></tr>
+          <tr><td><strong>Palabras</strong></td><td>~7%</td><td>Frases simples, evitar tecnicismos sin explicación, repetir conceptos clave.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Empatía en escenarios difíciles</div>
+      <h2 class="sec-h2" style="font-size:26px">Casos que requieren extra cuidado</h2>
+    </div>
+
+    <div class="grid-3" style="gap:18px;margin-bottom:24px">
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">✈️</div>
+        <div class="tip-title">Comprador migrante</div>
+        <div class="tip-text">Reconoce barrera de información sobre el sistema chileno (RSH, banca, notaría). Educa sin paternalismo. Es uno de los segmentos más fieles y referidores cuando se siente respetado.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">💑</div>
+        <div class="tip-title">Pareja con desacuerdo</div>
+        <div class="tip-text">No tomes partido. Pregunta a cada uno por separado: "¿qué es lo más importante para ti?" Resume las dos respuestas y muestra terreno común antes de proponer.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">😰</div>
+        <div class="tip-title">Cliente con miedo paralizante</div>
+        <div class="tip-text">No empujes con beneficios. Baja la sensación de riesgo: comparables, plan B, segunda opinión, contraste con datos. La calma se contagia.</div>
+      </div>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📚</span>
+      <div class="info-text"><strong>Frase de Carl Rogers (1957):</strong> <em>"Escuchar, de esa forma tan especial, es una de las fuerzas más poderosas para el cambio que conozco."</em> No es metáfora ni motivacional: es ciencia validada en miles de horas clínicas. Funciona igual en consulta que en mesa de cierre inmobiliario.</div>
+    </div>
+
+    <div id="quiz-6" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 7: LAARC + BIBLIOTECA ===== -->
+<section class="module" id="mod-7">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 7 · Manejo profundo de objeciones (LAARC) + biblioteca</div>
+      <h2 class="sec-h2">El cierre real está en cómo respondes lo que duele</h2>
+      <p class="sec-desc">Toda objeción es una pregunta disfrazada. El método <strong>LAARC</strong> — Listen, Acknowledge, Assess, Respond, Confirm — es la versión avanzada de LAER, con un quinto paso (Confirm) que distingue al profesional. En este módulo aprendes el método y cierras con biblioteca de recursos para seguir creciendo.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Método LAARC paso a paso</div>
+      <h2 class="sec-h2" style="font-size:26px">5 movimientos en orden estricto</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Paso</th><th>Qué haces</th><th>Frase modelo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>L · Listen</strong></td><td>Escucha hasta el final. No interrumpas. Cara abierta.</td><td>(silencio + asentir)</td></tr>
+          <tr><td><strong>A · Acknowledge</strong></td><td>Reconoce sin defenderte ni discutir.</td><td><em>"Entiendo perfectamente esa preocupación, es muy razonable."</em></td></tr>
+          <tr><td><strong>A · Assess</strong></td><td>Evalúa si es real o si esconde otra cosa.</td><td><em>"¿Lo que más te preocupa es X o también hay algo más detrás?"</em></td></tr>
+          <tr><td><strong>R · Respond</strong></td><td>Responde con dato, comparable o plan concreto.</td><td><em>"Mira los números: en este escenario X, sucede Y. Y si pasara Z, tenemos plan B."</em></td></tr>
+          <tr><td><strong>C · Confirm</strong></td><td>Confirma que la respuesta resolvió la inquietud.</td><td><em>"¿Esa respuesta resolvió tu inquietud o quedó algo dándote vueltas?"</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>6 objeciones del primera vivienda</div>
+      <h2 class="sec-h2" style="font-size:26px">Script LAARC verbatim</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)"><span>1</span> "Necesito pensarlo / consultarlo con la familia"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Escuchar completo, sin contraargumentar.</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Por supuesto, es una decisión familiar — me parece responsable."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"¿Qué información específica necesitarían para conversarlo bien en familia?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Te mando esta noche un PDF con los 3 escenarios + comparables. Y si quieren, los acompaño 30 min mañana en la conversación familiar — sin compromiso."</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Te hace sentido ese plan?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#92400E,#D97706)"><span>2</span> "Es mucho dinero, prefiero seguir arrendando"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Validar la sensación de riesgo financiero.</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Entiendo, es una decisión muy grande y vale la pena pensarla."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"¿Lo que pesa más es el monto del pie o el dividendo mensual?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Mira: pagas $480.000 de arriendo. En 5 años son $28,8M perdidos sin patrimonio. Con calculadora hipotecaria tu dividendo serían $510.000 — $30.000 más pero CONSTRUYES patrimonio. ¿Lo proyectamos a 10 años juntos?"</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Cambia algo cómo lo ves al verlo así?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#9D174D,#E8307A)"><span>3</span> "El banco me va a rechazar"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Escuchar el miedo concreto: ¿Dicom, ingreso, antigüedad, RSH?</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Es una preocupación válida — el rechazo bancario es un susto real."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"¿Hay algo específico que crees que el banco vería mal?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Hagamos pre-evaluación con calculadora hoy + presento a 3 bancos en paralelo (Santander, Estado, Falabella). Multiplicamos tu probabilidad de aprobación. Y si uno dice no, los otros dos siguen evaluando."</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Te tranquiliza ese plan?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D7C78,#10B981)"><span>4</span> "Quiero ver más propiedades antes de decidir"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Escuchar si es FOMO o si el match no fue claro.</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Tiene todo el sentido querer comparar — es un proceso importante."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"De las 5 que vimos, ¿cuál te tocó más y por qué? ¿Y qué crees que te falta ver?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Te propongo: 3 propiedades adicionales muy curadas según lo que aprendí de ti. Si ninguna supera a la primera que más te gustó, eso te da certeza para volver. Si aparece una mejor, también ganaste."</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Te hace sentido?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D1B2A,#1C2F44)"><span>5</span> "El subsidio no me alcanza"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Escuchar el cálculo que hizo el cliente.</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Entiendo el cálculo, te entiendo perfectamente."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"¿Cuál subsidio estabas considerando? ¿Has revisado RSH y combinación con Subsidio al Crédito Hipotecario?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Voy a revisar contigo: 1) tramo correcto según RSH, 2) combinación con Subsidio al Crédito (0,61–1,16% de descuento en tasa), 3) propiedades en zonas con DS19 que dan acceso a más oferta. Te entrego 3 alternativas concretas en 48h."</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Te sirve ese plan de revisión?"</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#7C2D12,#B91C1C)"><span>6</span> "No me gusta el barrio que me propones"</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>L</strong><span>Escuchar qué específicamente no le gusta.</span></div>
+          <div class="prop-item"><strong>A</strong><span>"Tiene total sentido, el barrio define la vida diaria."</span></div>
+          <div class="prop-item"><strong>A</strong><span>"¿Qué es lo que no te calza: seguridad, conectividad, colegios, lejanía de tu trabajo, otra cosa?"</span></div>
+          <div class="prop-item"><strong>R</strong><span>"Replanteamos: con tu capacidad de UF X y subsidio Y, los barrios alternativos viables son A, B, C. Te llevo a recorrerlos un sábado para que los vivas, no solo los veas en mapa."</span></div>
+          <div class="prop-item"><strong>C</strong><span>"¿Te hace sentido ese paseo de evaluación?"</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>El paso "Confirm" es no-negociable:</strong> una objeción sin confirmación queda viva en la mente del cliente y reaparece al firmar (peor: en el último minuto). Confirmar te da lectura honesta del avance — y a veces saca una segunda objeción más profunda que la primera.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:36px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Biblioteca complementaria</div>
+      <h2 class="sec-h2" style="font-size:26px">30 minutos a la semana cambian tu carrera</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#1E40AF,#3B82F6)"><span>📚</span> 5 lecturas estructurales</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>SPIN Selling</strong><span>Neil Rackham (1988). El método de preguntas validado en 35.000 ventas.</span></div>
+          <div class="prop-item"><strong>Influencia</strong><span>Robert Cialdini. Los 6 principios de persuasión ética (reciprocidad, autoridad, escasez, etc.).</span></div>
+          <div class="prop-item"><strong>Pre-Suasión</strong><span>Cialdini. Cómo preparar el momento antes del momento de decisión.</span></div>
+          <div class="prop-item"><strong>Pensar rápido, pensar despacio</strong><span>Daniel Kahneman. Sistema 1 vs Sistema 2 — decisiones racionales vs emocionales.</span></div>
+          <div class="prop-item"><strong>La era de la empatía</strong><span>Frans de Waal. Bases biológicas de la empatía aplicables a vínculo cliente-corredor.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#9D174D,#E8307A)"><span>🎬</span> Videos y podcasts</div>
+        <div class="prop-body">
+          <div class="prop-item"><strong>Carl Rogers · Entrevistas YouTube</strong><span>Ver al maestro de la escucha activa explicarla en sus palabras.</span></div>
+          <div class="prop-item"><strong>Brené Brown · TED "El poder de la vulnerabilidad"</strong><span>Por qué la empatía requiere arriesgarse a estar vulnerable.</span></div>
+          <div class="prop-item"><strong>Daniel Kahneman · Charlas sobre sesgos</strong><span>Aplicaciones prácticas a decisiones de compra.</span></div>
+          <div class="prop-item"><strong>Podcast "Pivote Inmobiliario"</strong><span>Casos reales del mercado chileno y entrevistas a corredores top.</span></div>
+          <div class="prop-item"><strong>Estudio Ipsos Monitor de Vivienda</strong><span>Anual. La radiografía actualizada del comprador chileno.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:24px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Estudios y datos para citar</div>
+      <h2 class="sec-h2" style="font-size:26px">Tus referencias profesionales</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Fuente</th><th>Dato útil</th><th>Cómo usarlo con cliente</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ipsos Monitor de Vivienda 2025</strong></td><td>56% mercado primera vivienda · 46% prioriza baja delincuencia</td><td>"Según Ipsos, la mayoría de los chilenos como tú prioriza seguridad — vamos a verla con data."</td></tr>
+          <tr><td><strong>Zillow 2024</strong></td><td>50% de los compradores reconoce haber llorado durante el proceso</td><td>"Es normal que esto sea emocional. La mitad de los compradores lo reconoce. Estoy aquí para acompañarte."</td></tr>
+          <tr><td><strong>Banco Central de Chile</strong></td><td>Tasa hipotecaria promedio + tendencia UF</td><td>Anclar conversación con dato oficial. Eleva tu autoridad técnica.</td></tr>
+          <tr><td><strong>MINVU Calendario Habitacional</strong></td><td>Fechas de postulación a DS49, DS1, DS19</td><td>Crear urgencia genuina cuando una ventana se cierra.</td></tr>
+          <tr><td><strong>Gob.cl / ChileAtiende</strong></td><td>Requisitos actualizados de cada subsidio</td><td>Validar al cliente con fuente oficial, no opinión.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🎯</span>
+      <div class="info-text"><strong>Cómo aplicar la biblioteca:</strong> elige 1 libro al trimestre + 1 charla al mes + el Ipsos anual. Anota 3 ideas que vas a aplicar la próxima semana. La formación sin aplicación es entretenimiento; la aplicación sin formación es estancamiento.</div>
+    </div>
+
+    <div id="quiz-7" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== PRUEBA FINAL ===== -->
+<section class="module" id="mod-final">
+  <div class="page">
+    <div class="final-test-intro">
+      <h2>Prueba final · 10 preguntas</h2>
+      <p>Esta prueba mide tu dominio del método para entrar en la mente del cliente comprador primera vivienda. Necesitas 10/10 para aprobar. Si fallas, las preguntas se reemplazan por otras del banco.</p>
+      <div class="test-stats">
+        <div class="test-stat"><div class="num">10</div><div class="lbl">Preguntas</div></div>
+        <div class="test-stat"><div class="num">10/10</div><div class="lbl">Para aprobar</div></div>
+        <div class="test-stat"><div class="num">↻</div><div class="lbl">Rotativas</div></div>
+      </div>
+    </div>
+    <div id="final-quiz"></div>
+  </div>
+</section>
+
+<!-- ===== CONCLUSIÓN Y CERTIFICADO ===== -->
+<section class="module" id="mod-done">
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Ya estás en la mente de tu cliente</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Ya tienes los frameworks. Aplícalos en cada conversación con primer comprador y notarás el cambio en 30 días: cierras más, te recomiendan más, recibes mejores referidos.</p>
+    </div>
+
+    <div class="cert-section" style="margin-top:50px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Certificado de Reconocimiento</div>
+        <h2 class="sec-h2">Descarga tu certificado oficial TuMatch</h2>
+        <p class="sec-desc">Escribe tu nombre completo tal como quieres que aparezca. Luego imprímelo o descárgalo como PNG.</p>
+      </div>
+
+      <div class="cert-name-form">
+        <label for="tmCertNameInput">Nombre completo del corredor:</label>
+        <input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="App.updateCertName(this.value)" autocomplete="name">
+      </div>
+
+      <div class="tm-cert" id="tmCert">
+        <div class="tm-cert-border">
+          <div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+
+          <div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario"></div>
+
+          <div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+          <h1 class="tm-cert-title">En la Mente del Cliente Comprador<br><em>Taller Avanzado sobre Comprador Primera Vivienda</em></h1>
+          <div class="tm-cert-divider"></div>
+          <div class="tm-cert-subtitle">Taller Avanzado Oficial 2026 · Academia de Corredores TuMatch</div>
+
+          <p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+          <div class="tm-cert-name" id="tmCertName">_______________________________</div>
+
+          <p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado y aprobado la prueba final, demostrando dominio para entrar en la mente del comprador primera vivienda en Chile: perfilamiento por arquetipos, gestión de redes calientes y tibias, uso del CRM TuMatch, método SPIN de preguntas, psicología y mapa de urgencia, escucha activa según Carl Rogers y manejo profundo de objeciones con metodología LAARC.</p>
+
+          <div class="tm-cert-modules-block">
+            <div class="tm-cert-modules-title">Módulos aprobados</div>
+            <ol class="tm-cert-modules" id="tmCertModules"></ol>
+            <div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Prueba final aprobada</span></div>
+          </div>
+
+          <div class="tm-cert-footer">
+            <div class="tm-cert-date" id="tmCertDate">Santiago, —</div>
+            <div class="tm-cert-seal">
+              <div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div>
+              <div class="tm-cert-seal-label">Sello de<br>reconocimiento</div>
+            </div>
+            <div class="tm-cert-sign">
+              <div class="tm-cert-stamp">
+                <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="tm-cert-stamp-svg">
+                  <defs><path id="tmStampArcTop3" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmStampArcBottom3" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs>
+                  <circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/>
+                  <circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/>
+                  <circle cx="120" cy="120" r="100" fill="none" stroke="#E85D4A" stroke-width="2.2"/>
+                  <circle cx="120" cy="120" r="76" fill="none" stroke="#0D1B2A" stroke-width="1" stroke-dasharray="1 3"/>
+                  <text font-family="Cinzel, serif" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmStampArcTop3" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text>
+                  <text font-family="Cinzel, serif" font-size="9" font-weight="700" letter-spacing="5" fill="#C94432"><textPath href="#tmStampArcBottom3" startOffset="50%" text-anchor="middle">TALLER AVANZADO · 2026</textPath></text>
+                  <text x="120" y="108" font-family="Cinzel, serif" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text>
+                  <text x="120" y="140" font-family="Cinzel, serif" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#C94432">10/10</text>
+                  <text x="120" y="168" font-family="EB Garamond, serif" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text>
+                </svg>
+              </div>
+              <div class="tm-cert-sign-line"></div>
+              <div class="tm-cert-sign-name">Dirección de Taller</div>
+              <div class="tm-cert-sign-role">TuMatch Inmobiliario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-cert-actions">
+        <button class="btn btn-primary" onclick="App.printCertificate()">🖨️ Imprimir certificado</button>
+        <button class="btn btn-success" onclick="App.downloadCertificate(this)">⬇️ Descargar como PNG</button>
+      </div>
+    </div>
+
+    <div style="margin-top:60px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Reglas de oro</div>
+        <h2 class="sec-h2">10 reglas de oro para entender al cliente comprador</h2>
+        <p class="sec-desc">Imprímelas. Pégalas al lado del computador. Léelas antes de cada reunión con primer comprador.</p>
+      </div>
+      <div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div>
+    </div>
+
+    <div class="crm-msg">
+      <span style="font-size:56px;display:block;margin-bottom:12px">💬</span>
+      <h3>Aplica esto en TuMatch CRM</h3>
+      <p>Abre <strong>tumatch-leads.vercel.app</strong> y registra hoy mismo a tus próximos 5 leads con los 7 campos críticos del módulo 3. Etiqueta su calor (🔥/🌡️/❄️) y agenda la primera acción. La diferencia se ve en 30 días.</p>
+      <div class="crm-highlight">📅 Reuniones semanales del equipo TuMatch para casos reales · 🎯 Cada caso compartido eleva el estándar colectivo</div>
+      <div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <button class="btn btn-light" onclick="App.restart()">↻ Reiniciar taller</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
