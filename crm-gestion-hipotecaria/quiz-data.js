@@ -19,10 +19,20 @@ window.TALLER_CONFIG = {
     "1": [
       {
         q: "Según Cláusula Cuarta del Contrato Freelance TuMatch, la comisión por referido/lead de comprador es:",
-        opts: ["25% de la comisión bruta generada por la operación de compraventa", "10%", "0%", "50%"],
+        opts: [
+          "25% de la comisión bruta generada por la operación de compraventa",
+          "25% del precio de venta del inmueble captado en la operación",
+          "30% de la comisión bruta cuando el lead proviene de red caliente del corredor",
+          "15% de la comisión bruta más bono de cierre si la operación cierra en menos de 90 días"
+        ],
         correct: 0,
-        whyCorrect: "Lo establece textualmente la letra a) de la Cláusula Cuarta. Se paga solo con referir un lead que termine en compraventa cerrada.",
-        whyWrong: ["", "No corresponde al contrato.", "El referido sí genera comisión.", "No corresponde; ese porcentaje está fuera del tramo referido."]
+        whyCorrect: "Lo establece textualmente la letra a) de la Cláusula Cuarta: 25% sobre la comisión bruta, solo cuando el lead referido termina en compraventa cerrada.",
+        whyWrong: [
+          "",
+          "La base de cálculo contractual es la comisión bruta, no el precio de venta; confundir ambas multiplica varias veces el monto real.",
+          "El contrato no distingue por canal de origen del lead; el tramo referido es plano.",
+          "El contrato no contempla bonos por velocidad de cierre en el tramo referido."
+        ]
       },
       {
         q: "La comisión por referido/lead de arrendatario según contrato es:",
@@ -33,10 +43,20 @@ window.TALLER_CONFIG = {
       },
       {
         q: "La comisión por gestión comercial integral CON Team Leader es típicamente:",
-        opts: ["50%", "25%", "30% base, pudiendo alcanzar hasta 40% (o 60% si incluye lado arrendador)", "10%"],
+        opts: [
+          "25% base sobre comisión bruta, con tope de 35% si la operación incluye el lado arrendador",
+          "30% base fijo, sin incremento adicional cuando se gestionan lados arrendador o arrendatario",
+          "30% base sobre comisión bruta, pudiendo alcanzar hasta 40% (o 60% si incluye lado arrendador)",
+          "35% base sobre comisión bruta, con tope de 45% cuando el corredor participa en todos los lados"
+        ],
         correct: 2,
         whyCorrect: "La Cláusula Cuarta letra c) establece que el remanente se distribuye según participación efectiva, con tope de 40% estándar o 60% cuando se incluya la parte arrendadora.",
-        whyWrong: ["No corresponde al tramo con TL.", "Corresponde a referido, no gestión integral.", "", "Demasiado bajo."]
+        whyWrong: [
+          "El 25%/35% describe un esquema de referido ampliado, no el tramo de gestión integral con TL.",
+          "La modalidad con TL sí reconoce incremento por participar en lados adicionales; negarlo elimina el 60% techo.",
+          "",
+          "Los 35%/45% corresponden a modalidad Autónoma (Anexo N°1), no al esquema con Team Leader."
+        ]
       },
       {
         q: "En modalidad Autónoma (Anexo N°1 · sin TL), la comisión por gestión comercial integral es:",
@@ -47,10 +67,20 @@ window.TALLER_CONFIG = {
       },
       {
         q: "El tope máximo de la comisión del corredor autónomo cuando la operación cubre vendedor + arrendatario + comprador + contribución arrendador es:",
-        opts: ["80%", "40%", "65%", "100%"],
+        opts: [
+          "45% del remanente bruto (tope estándar autónomo sin contribución arrendador)",
+          "60% del remanente bruto (equivalente al tope con TL cuando incluye arrendador)",
+          "65% del remanente bruto (tope autónomo con contribución arrendador incluida)",
+          "70% del remanente bruto (tope autónomo expandido por multilado)"
+        ],
         correct: 2,
         whyCorrect: "El Anexo N°1 fija tope máximo de 65% cuando el corredor autónomo interviene en todos los lados incluida la contribución al lado arrendador.",
-        whyWrong: ["Fuera del rango contractual.", "Corresponde a tope con TL sin arrendador.", "", "No se alcanza el 100%."]
+        whyWrong: [
+          "El 45% es el tope estándar autónomo sin contribución arrendador; con arrendador sube +20 pp.",
+          "El 60% es el techo con Team Leader; en modalidad autónoma el techo es +5 pp mayor.",
+          "",
+          "El Anexo N°1 no contempla topes por sobre 65%; el 70% está fuera del rango contractual."
+        ]
       },
       {
         q: "Para que la comisión sea exigible, deben cumplirse copulativamente:",
@@ -66,22 +96,37 @@ window.TALLER_CONFIG = {
       },
       {
         q: "La multa por desviar operaciones por fuera del sistema TuMatch es:",
-        opts: ["No hay multa", "100 UF", "10 UF", "1.000 UF, sin perjuicio de otras acciones legales"],
+        opts: [
+          "500 UF más la restitución del doble de la comisión desviada, cobrables vía arbitraje",
+          "200 UF por operación desviada, con tope agregado de 800 UF por año contractual",
+          "El triple de la comisión eludida, con piso mínimo de 300 UF por evento de desvío",
+          "1.000 UF por evento, sin perjuicio de otras acciones legales y cobro de comisiones adeudadas"
+        ],
         correct: 3,
-        whyCorrect: "Establecida en la Cláusula Séptima como consecuencia de conductas que evaden el pago de comisión.",
-        whyWrong: ["Sí existe multa.", "Muy por debajo.", "Muy por debajo.", ""]
+        whyCorrect: "La Cláusula Séptima fija 1.000 UF como multa por desvío de operaciones, sin perjuicio del cobro de la comisión adeudada y acciones legales adicionales.",
+        whyWrong: [
+          "Las 500 UF con restitución duplicada no corresponden al texto contractual vigente.",
+          "El contrato no establece multas escalonadas por operación con tope anual.",
+          "El múltiplo triple de la comisión no es la fórmula contractual; la multa es un valor fijo.",
+          ""
+        ]
       },
       {
         q: "Para acceder a modalidad Autónoma (Anexo N°1) el corredor debe:",
         opts: [
           "Acreditar al menos 1 negocio cerrado en TuMatch en el año en curso o año anterior",
-          "Ser mayor de 50",
-          "Tener 5 años",
-          "No requiere nada"
+          "Haber cerrado al menos 3 negocios en los 12 meses previos a la solicitud del Anexo",
+          "Contar con 6 meses de antigüedad en TuMatch y una cartera activa de al menos 5 leads",
+          "Haber cerrado operaciones por un volumen acumulado mínimo de UF 5.000 en el último ejercicio"
         ],
         correct: 0,
-        whyCorrect: "Es el requisito de elegibilidad establecido en el Segundo del Anexo N°1.",
-        whyWrong: ["", "No es requisito etario.", "No es requisito etario.", "Requiere acreditación."]
+        whyCorrect: "El Segundo del Anexo N°1 fija como requisito acreditar al menos 1 negocio cerrado en TuMatch durante el año en curso o el año anterior.",
+        whyWrong: [
+          "",
+          "El Anexo N°1 no exige 3 operaciones; basta con 1 negocio cerrado en la ventana vigente.",
+          "El requisito no mide antigüedad ni tamaño de cartera de leads, sino cierre efectivo.",
+          "El contrato no impone umbrales de volumen en UF para acceder a la modalidad autónoma."
+        ]
       },
       {
         q: "La duración inicial del contrato freelance TuMatch es:",
@@ -105,28 +150,53 @@ window.TALLER_CONFIG = {
       {
         q: "El contrato freelance TuMatch es jurídicamente:",
         opts: [
-          "Mandato gratuito",
-          "Contrato de trabajo",
-          "Arrendamiento",
+          "Mandato mercantil remunerado, regido por el Art. 233 y sgtes. del Código de Comercio",
+          "Contrato de trabajo a honorarios, con aplicación supletoria del Código del Trabajo Art. 8°",
+          "Contrato innominado atípico, con aplicación supletoria de la Ley 18.046 sobre sociedades",
           "Prestación de servicios profesionales intangibles (Art. 2.006 y sgtes. del Código Civil)"
         ],
         correct: 3,
-        whyCorrect: "La Cláusula Tercera lo califica expresamente como prestación de servicios intangibles, sin vínculo laboral.",
-        whyWrong: ["Es remunerado.", "Se excluye expresamente.", "Naturaleza jurídica distinta.", ""]
+        whyCorrect: "La Cláusula Tercera califica expresamente el contrato como prestación de servicios profesionales intangibles regida por el Art. 2.006 y sgtes. del Código Civil, sin vínculo laboral.",
+        whyWrong: [
+          "Aunque el corretaje comercial existe como figura, el contrato TuMatch se remite al Código Civil y excluye la regulación mercantil del mandato.",
+          "El contrato descarta expresamente la relación laboral; calificarlo como contrato de trabajo activa el Art. 8° solo vía reclasificación, no por su naturaleza.",
+          "No es innominado: el propio contrato se tipifica y se remite al Código Civil; la Ley 18.046 regula sociedades anónimas, no servicios.",
+          ""
+        ]
       },
       {
         q: "Un corredor con TL que cubre captación + gestión + cierre de una operación compraventa UF 3.500 gana aproximadamente:",
-        opts: ["~UF 28 (40% de UF 70 comisión bruta lado cliente) ≈ $1.092.000", "Nada", "UF 100", "$100.000"],
+        opts: [
+          "~UF 28 (40% de UF 70 comisión bruta lado cliente) ≈ $1.092.000 con UF a $39.000",
+          "~UF 21 (30% de UF 70 comisión bruta lado cliente) ≈ $819.000, aplicando solo el porcentaje base",
+          "~UF 14 (20% de UF 70 comisión bruta lado cliente) ≈ $546.000, usando reparto de captador referido",
+          "~UF 35 (50% de UF 70 comisión bruta lado cliente) ≈ $1.365.000, asumiendo operación sin Team Leader"
+        ],
         correct: 0,
-        whyCorrect: "Ejemplo: 2% de UF 3.500 = UF 70 comisión bruta. 40% del techo con TL = UF 28. A UF $39.000 son $1.092.000.",
-        whyWrong: ["", "La operación genera comisión.", "Fuera de rango.", "Muy por debajo."]
+        whyCorrect: "Cálculo: 2% de UF 3.500 = UF 70 comisión bruta lado cliente. El 40% es el techo con TL cuando el corredor cubre captación + gestión + cierre: 40% × UF 70 = UF 28 ≈ $1.092.000.",
+        whyWrong: [
+          "",
+          "El 30% es el porcentaje base, pero el contrato permite llegar a 40% al cubrir captación + gestión + cierre; usar solo la base subestima el ingreso real.",
+          "El 20% corresponde al tramo referido/captador, no al corredor que ejecuta todo el ciclo con TL.",
+          "El 50% no existe en el esquema con TL; ese cálculo asume modalidad autónoma, que además llega a 45%."
+        ]
       },
       {
         q: "Si un corredor autónomo cubre una operación integral (hasta 65%) sobre compraventa UF 3.500 con ambos lados, su techo es aproximadamente:",
-        opts: ["UF 10", "UF 5", "UF 200", "UF 91 (65% de UF 140) ≈ $3.549.000"],
+        opts: [
+          "UF 63 (45% de UF 140 comisión bruta de ambos lados) ≈ $2.457.000, tope autónomo sin arrendador",
+          "UF 56 (40% de UF 140 comisión bruta de ambos lados) ≈ $2.184.000, aplicando tope con Team Leader",
+          "UF 84 (60% de UF 140 comisión bruta de ambos lados) ≈ $3.276.000, omitiendo contribución arrendador",
+          "UF 91 (65% de UF 140 comisión bruta de ambos lados) ≈ $3.549.000, tope autónomo con arrendador"
+        ],
         correct: 3,
-        whyCorrect: "Comisión bruta total = 2%+2% = 4% = UF 140. 65% del techo autónomo = UF 91 ≈ $3.549.000.",
-        whyWrong: ["Subestima radicalmente.", "Irreal.", "Excede el tope.", ""]
+        whyCorrect: "Comisión bruta total = 2%+2% = 4% sobre UF 3.500 = UF 140. El 65% es el techo autónomo cuando la operación incluye contribución arrendador: 65% × UF 140 = UF 91 ≈ $3.549.000.",
+        whyWrong: [
+          "El 45% es el tope estándar autónomo sin contribución arrendador; al incluirla sube +20 pp.",
+          "El 40% corresponde al tope con Team Leader, no a la modalidad autónoma; en autónoma el techo es +5 pp mayor.",
+          "El 60% equivale al tope con TL incluyendo arrendador, no al techo autónomo.",
+          ""
+        ]
       },
       {
         q: "La relación contractual entre TuMatch SpA y el Corredor es:",
