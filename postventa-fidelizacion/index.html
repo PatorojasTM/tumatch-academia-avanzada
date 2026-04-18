@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Postventa, Fidelización y Referidos</title>
+<meta name="description" content="Taller avanzado TuMatch sobre postventa, fidelización y sistema de referidos del comprador primera vivienda: entrega, garantías Ley 19.472, primer año, NPS, reactivación.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script>(function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();</script>
+<style>
+:root{--coral:#0EA5A0;--coralDk:#0D7C78;--pink:#14B8A6;--mag:#2DD4BF;--gold:#D4A017;--purple:#0F766E;--teal:#0EA5A0}
+.grad-stripe{background:linear-gradient(90deg,#0D7C78,#0EA5A0,#2DD4BF,#D4A017)!important}
+.progress-fill{background:linear-gradient(90deg,#0D7C78,#0EA5A0,#2DD4BF)!important}
+.taller-badge{color:#0D7C78!important;background:rgba(14,165,160,.08)!important;border-color:rgba(14,165,160,.35)!important}
+.brand-tagline-l1{color:#D4A017!important}.hero-eyebrow-line{color:#0EA5A0!important}.hero-title em{color:#0EA5A0!important}.sec-tag .dot{background:#0EA5A0!important}
+</style>
+</head>
+<body>
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+<header class="hdr"><div class="grad-stripe"></div><div class="hdr-row">
+<a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;"><img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"><div class="brand-tagline"><div class="brand-tagline-l1">Academia de Corredores</div><div class="brand-tagline-l2">Postventa y Fidelización · 2026</div></div></a>
+<div class="hdr-actions"><a href="../" style="font-size:12px;text-decoration:none;color:#0D7C78;font-weight:700">← Hub</a><span class="taller-badge">Taller 07</span><button class="theme-toggle" id="themeToggle"><svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/></g></svg><svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg></button></div>
+</div></header>
+<div class="progress-wrap"><div class="progress-inner"><span class="progress-label">Progreso</span><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><span class="progress-num" id="progressNum">0 / 7</span></div></div>
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<section class="module active" id="mod-0"><div class="hero-new"><div class="hero-new-inner">
+<div class="hero-academy-mark">Academia · Taller Avanzado</div>
+<img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch">
+<div class="hero-eyebrow-line">Comprador Primera Vivienda · 2026</div>
+<h1 class="hero-title">Postventa,<br><em>Fidelización y Referidos</em></h1>
+<p class="hero-lead">El 60-80% de las operaciones de carrera del corredor vienen de su red caliente. Este taller cubre postventa inmediata, garantías legales (Ley 19.472), acompañamiento primer año, medición NPS, reactivación y Sistema de Referidos estructurado sobre el Círculo de Influencia.</p>
+<div class="hero-meta"><div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado</div></div></div>
+<div id="resumeBanner" class="resume-banner" style="display:none"><div class="resume-banner-icon">📖</div><div class="resume-banner-body"><div class="resume-banner-title">Avance guardado</div><div class="resume-banner-text" id="resumeBannerText">Continúa donde quedaste.</div></div><button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button></div>
+<div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar →</button></div>
+<div class="hero-save-hint"><span class="save-dot"></span><span>5 errores = 10 min bloqueo.</span></div>
+</div></div>
+<div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · postventa profesional que multiplica tu negocio</h2></div>
+<div class="mod-timeline">
+<div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Postventa inmediata (primeros 30 días)</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>Check-in</span><span>Duda post-cierre</span><span>Detalle memorable</span><span>Dedicatoria</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Garantías legales (Ley 19.472)</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>3-5-10 años</span><span>Vicios</span><span>Reclamos</span><span>Inmobiliaria</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Acompañamiento primer año</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>30-90-180-365</span><span>Tips mantención</span><span>Contribuciones</span><span>Seguros</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">NPS · medir satisfacción profesionalmente</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>0-10</span><span>Promotores</span><span>Detractores</span><span>Umbrales</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Sistema de Referidos estructurado</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Pirámide 100</span><span>Solicitud acotada</span><span>Reciprocidad</span><span>KPI referidos</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Reactivación · Capa C dormida</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Mensaje concreto</span><span>Eventos vitales</span><span>Tasa de reactivación</span><span>Ciclo</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Marca personal y contenido del corredor</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>LinkedIn</span><span>Instagram</span><span>Casos</span><span>Valor</span></div></div></div>
+<div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+</div>
+<div class="info-box info" style="margin-top:24px"><span class="info-icon">🤝</span><div class="info-text"><strong>Regla TuMatch:</strong> el 60-80% de las operaciones de carrera del corredor top vienen de su red caliente (referidos + ex-clientes). Sin postventa profesional, ese porcentaje cae al 10-20%. La diferencia entre 8 operaciones/año y 25.</div></div>
+</div></section>
+
+<section class="module" id="mod-1"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 1 · Postventa Inmediata</div><h2 class="sec-h2">Los primeros 30 días definen el recuerdo</h2><p class="sec-desc">Hay una 'duda post-cierre' 48-72 horas después de firmar: '¿tomé la decisión correcta?'. El corredor profesional la anticipa con mensaje de refuerzo. Los primeros 30 días construyen el NPS y la disposición a referir.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #0EA5A0"><div style="font-size:12px;font-weight:800;color:#0D7C78;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Cronograma primeros 30 días</div><ul class="checklist">
+<li><strong>Día 1-2:</strong> mensaje de refuerzo ('tomaste una buena decisión, los números lo confirman')</li>
+<li><strong>Día 5-7:</strong> check-in por WhatsApp — ¿cómo va la mudanza? ¿algo que necesites?</li>
+<li><strong>Día 10-14:</strong> llamada breve — verificar instalación servicios (luz, agua, gas, internet)</li>
+<li><strong>Día 20-25:</strong> mail con tips de primer mes (contribuciones, seguro hogar, comunidad)</li>
+<li><strong>Día 30:</strong> encuesta NPS breve (3 preguntas) + solicitud de testimonio si NPS ≥ 9</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Detalle memorable</div><ul class="checklist">
+<li>Canasta de bienvenida al día de entrega o semana siguiente</li>
+<li>Nota manuscrita con agradecimiento y contacto</li>
+<li>Invitación a café al cumplir 30 días</li>
+<li>Guía 'vivir en tu nueva casa' con proveedores locales recomendados</li>
+<li>Recordatorio de fechas clave (contribuciones, gastos comunes)</li>
+</ul></div></div>
+<div class="info-box info"><span class="info-icon">💡</span><div class="info-text"><strong>La duda post-cierre es real:</strong> 48-72 horas tras firmar, el cerebro re-evalúa la decisión (sesgo Kahneman). Un mensaje de refuerzo con data (comparables, fundamentos, tasación positiva) calma la ansiedad y solidifica el vínculo.</div></div>
+<div id="quiz-1" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-2"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 2 · Garantías Legales · Ley 19.472</div><h2 class="sec-h2">Protección del comprador durante 10 años</h2><p class="sec-desc">La Ley 19.472 (1997, modificada) es la protección legal del comprador de vivienda nueva frente a vicios de construcción. Plazos: 3 años terminaciones, 5 años instalaciones, 10 años estructural, desde la recepción municipal. Es obligación del corredor informar estos plazos al momento de la entrega.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Vicio</th><th>Artículo</th><th>Plazo</th></tr></thead><tbody>
+<tr><td><strong>Terminaciones (puertas, pisos, pintura, griferías, carpintería)</strong></td><td>Art. 18 c) Ley 19.472</td><td>3 años</td></tr>
+<tr><td><strong>Instalaciones (elec., agua, gas, calefón, climatización)</strong></td><td>Art. 18 b)</td><td>5 años</td></tr>
+<tr><td><strong>Estructurales (cimientos, muros resistentes, vigas, columnas, cubierta)</strong></td><td>Art. 18 a)</td><td>10 años</td></tr>
+<tr><td><strong>Vicios redhibitorios (vivienda usada, Art. 1.858 CC)</strong></td><td>Código Civil</td><td>6 meses rebaja / 1 año rescisión</td></tr>
+</tbody></table></div>
+<div class="info-box info"><span class="info-icon">📋</span><div class="info-text"><strong>Procedimiento de reclamo Ley 19.472:</strong> 1) Denuncia por escrito a la inmobiliaria constructora (correo certificado o mail con recibo). 2) Registro de la reclamación en documento con fecha. 3) Inspección técnica si se requiere. 4) Plazo de reparación razonable. 5) Si no cumplen: mediación CChC, SERNAC Construcción o demanda judicial.</div></div>
+<div id="quiz-2" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-3"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 3 · Acompañamiento Primer Año</div><h2 class="sec-h2">Plan sistemático de contacto</h2><p class="sec-desc">El corredor profesional mantiene presencia durante los 12 primeros meses. No es seguimiento comercial (el cliente ya compró) sino servicio de acompañamiento que consolida NPS y habilita referidos. Sistema 30-90-180-365.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Hito</th><th>Acción del corredor</th><th>Objetivo</th></tr></thead><tbody>
+<tr><td><strong>Día 30</strong></td><td>Encuesta NPS + mensaje proactivo + tips primer mes</td><td>Validar experiencia y detectar fricción temprana</td></tr>
+<tr><td><strong>Día 90 (3 meses)</strong></td><td>Llamada o visita corta · solicitar testimonio escrito si NPS alto · primera petición de referidos</td><td>Cliente instalado, relación sólida</td></tr>
+<tr><td><strong>Día 180 (6 meses)</strong></td><td>Mail con actualización de mercado + valor estimado actual de su propiedad</td><td>Mantener autoridad profesional</td></tr>
+<tr><td><strong>Día 365 (1 año)</strong></td><td>Mensaje aniversario + invitación a café + segunda petición de referidos formalizada</td><td>Ritual de fidelización · máximo momento referencial</td></tr>
+<tr><td><strong>Aniversario 2+</strong></td><td>Entrar al flujo de cultivo relacional 21 días (Capa A del Círculo)</td><td>Sostener la relación a largo plazo</td></tr>
+</tbody></table></div>
+<div id="quiz-3" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-4"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 4 · NPS · Medir Satisfacción</h2><h2 class="sec-h2">Métrica estándar de excelencia</h2><p class="sec-desc">El Net Promoter Score (Reichheld, 2003) es la pregunta: '0 al 10, ¿cuán probable es que me recomiende a un conocido?'. Escala: 9-10 Promotores, 7-8 Pasivos, 0-6 Detractores. NPS = %Promotores - %Detractores. Umbral para pedir referidos: ≥ 8.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #0EA5A0"><div style="font-size:12px;font-weight:800;color:#0D7C78;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Interpretación del NPS</div><ul class="checklist">
+<li><strong>9-10 (Promotor):</strong> cliente entusiasta · referirá activamente</li>
+<li><strong>7-8 (Pasivo):</strong> satisfecho pero no referirá espontáneamente</li>
+<li><strong>0-6 (Detractor):</strong> insatisfecho · potencial daño reputacional</li>
+<li><strong>Umbral corredor TuMatch:</strong> NPS ≥ 8 de cartera activa</li>
+<li>Bajo ese umbral: revisar calidad del servicio antes de pedir referidos</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Encuesta corta post-firma</div><ul class="checklist">
+<li>1) Del 0 al 10, ¿cuán probable es que me recomiendes? (NPS)</li>
+<li>2) ¿Qué fue lo que más valoraste de nuestra gestión?</li>
+<li>3) ¿Qué podríamos mejorar para próximos clientes?</li>
+<li>Enviar a los 30 días post-entrega vía Google Form o directo WhatsApp</li>
+<li>Responder en menos de 24 horas cada feedback · especialmente detractores</li>
+</ul></div></div>
+<div id="quiz-4" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-5"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 5 · Sistema de Referidos</div><h2 class="sec-h2">El 60-80% de tus operaciones de carrera</h2><p class="sec-desc">El Sistema de Referidos no es azar: es método replicable basado en la Pirámide de los 100 del Círculo de Influencia (Capa A 20 primarios · Capa B 50 medios · Capa C 30 dormidos). Solicitud estratégica tras hito de valor, con acotación numérica y segmentación, produce 2-4 referidos/mes.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #0EA5A0"><div style="font-size:12px;font-weight:800;color:#0D7C78;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Protocolo de solicitud</div><ul class="checklist">
+<li><strong>Timing:</strong> tras hito de valor entregado (firma promesa, entrega, 1 año)</li>
+<li><strong>Acotación:</strong> pedir '1 o 2 personas' (no 'alguien')</li>
+<li><strong>Segmentación:</strong> '¿pareja joven en tu trabajo que piense dejar el arriendo?'</li>
+<li><strong>Script:</strong> 'ahora que conoces cómo trabajo, ¿se te ocurren una o dos personas en tu círculo en una situación similar a la tuya?'</li>
+<li><strong>Reciprocidad:</strong> agradecimiento en 48h, reporte del avance del recomendado (con autorización)</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">KPIs mensuales TuMatch</div><ul class="checklist">
+<li>≥ 8 contactos a Capa A mensuales (40% de los 20)</li>
+<li>50 Capa B con ciclo cultivo 21 días (100%)</li>
+<li>≥ 5 reactivaciones Capa C mensuales</li>
+<li>≥ 4 solicitudes formales de referido / mes</li>
+<li>≥ 2 referidos nominados recibidos / mes</li>
+<li>Conversión red caliente ≥ 30%</li>
+<li>NPS cartera activa ≥ 8</li>
+</ul></div></div>
+<div id="quiz-5" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-6"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 6 · Reactivación Capa C</div><h2 class="sec-h2">Recuperar contactos dormidos sin quemar la relación</h2><p class="sec-desc">La Capa C son contactos sin interacción por más de 12 meses. Reactivación profesional: mensaje personal con motivo concreto + propuesta de valor sin exigencia inmediata. Tasa de respuesta reactivación personalizada: 25% · versus masiva: 3%. Eventos vitales (matrimonio, hijo, cambio laboral) son detonantes naturales.</p></div>
+<div class="info-box info" style="margin-bottom:12px"><span class="info-icon">💬</span><div class="info-text"><strong>Plantilla mensaje reactivación:</strong> <em>"Hola [nombre]. Hace tiempo que no conversamos. Te escribo porque [motivo concreto: recordé tu consulta sobre X, vi que cumpliste X, noticia relevante para ti]. Si estás pensando en comprar tu primera propiedad, o conoces a alguien en esa etapa, quedo a tu disposición para asesoría sin compromiso."</em></div></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Gatillo</th><th>Oportunidad</th><th>Enfoque</th></tr></thead><tbody>
+<tr><td><strong>Matrimonio / conviviente civil</strong></td><td>Primera vivienda conjunta</td><td>Tasa subsidio DS1 combinada de 2 rentas</td></tr>
+<tr><td><strong>Nacimiento / embarazo</strong></td><td>Búsqueda barrio con colegios</td><td>Arquetipo 'pareja consolidando'</td></tr>
+<tr><td><strong>Cambio laboral o promoción</strong></td><td>Mayor capacidad crediticia</td><td>Actualizar pre-aprobación</td></tr>
+<tr><td><strong>Mudanza de ciudad</strong></td><td>Venta y recompra</td><td>Coordinación completa</td></tr>
+<tr><td><strong>Nuevos subsidios o cambios de tasa</strong></td><td>Ventana de oportunidad</td><td>'Con estas nuevas condiciones, vale la pena re-evaluar'</td></tr>
+</tbody></table></div>
+<div id="quiz-6" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-7"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 7 · Marca Personal del Corredor</div><h2 class="sec-h2">Posicionamiento digital profesional</h2><p class="sec-desc">En 2026, el corredor profesional construye marca personal digital con contenido útil: LinkedIn (B2B, hipotecaria, subsidios), Instagram (propiedades, testimonios), WhatsApp Business (difusión segmentada). Contenido 80% formativo / 20% comercial. Ritmo mínimo: 1 post semanal LinkedIn + 3 Instagram + 1 newsletter mensual.</p></div>
+<div class="grid-3" style="gap:18px;margin-bottom:24px"><div class="tip-card" style="flex-direction:column"><div style="font-size:34px;margin-bottom:12px">💼</div><div class="tip-title">LinkedIn</div><div class="tip-text">Contenido técnico: hipotecario, subsidios, due diligence, mercado. 1 post semanal mínimo. Comentar publicaciones de otros profesionales del ecosistema. Construye autoridad B2B.</div></div><div class="tip-card" style="flex-direction:column"><div style="font-size:34px;margin-bottom:12px">📸</div><div class="tip-title">Instagram</div><div class="tip-text">Propiedades (curadas, no masivas), reels de barrio, testimonios cortos, tips. 3 posts semanales + stories diarios. Mezclar curación técnica con momentos humanos.</div></div><div class="tip-card" style="flex-direction:column"><div style="font-size:34px;margin-bottom:12px">📨</div><div class="tip-title">Newsletter / WhatsApp</div><div class="tip-text">Segmentado por Capa (A/B/C). Ciclo 21 días. 80% formativo. Casos de estudio autorizados. Actualización UF/tasas. Alertas de subsidios. Herramientas TuMatch.</div></div></div>
+<div class="info-box info"><span class="info-icon">🎯</span><div class="info-text"><strong>Regla 80/20:</strong> 80% del contenido es formativo sin call-to-action directo. 20% es comercial. La autoridad profesional se construye antes que la transacción. Un corredor que solo publica anuncios de propiedades se convierte en volantero digital.</div></div>
+<div id="quiz-7" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-final"><div class="page"><div class="final-test-intro"><h2>Prueba final · 10 preguntas</h2><p>Dominio completo de postventa y referidos. 10/10 aprueba. Banco rotativo 50.</p><div class="test-stats"><div class="test-stat"><div class="num">10</div><div class="lbl">Mostradas</div></div><div class="test-stat"><div class="num">50</div><div class="lbl">Banco</div></div><div class="test-stat"><div class="num">10/10</div><div class="lbl">Aprobar</div></div></div></div><div id="final-quiz"></div></div></section>
+
+<section class="module" id="mod-done"><div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas la postventa profesional</h2></div>
+<div class="cert-section" style="margin-top:50px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Certificado</div><h2 class="sec-h2">Descarga tu certificado</h2></div>
+<div class="cert-name-form"><label for="tmCertNameInput">Nombre completo:</label><input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name"></div>
+<div class="tm-cert" id="tmCert"><div class="tm-cert-border"><div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+<div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"></div>
+<div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+<h1 class="tm-cert-title">Postventa, Fidelización y Referidos<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+<div class="tm-cert-divider"></div><div class="tm-cert-subtitle">Taller Avanzado 07 · Academia TuMatch · 2026</div>
+<p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+<div class="tm-cert-name" id="tmCertName">_______________________________</div>
+<p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre postventa, fidelización y sistema de referidos aplicados al comprador primera vivienda, demostrando dominio en acompañamiento inmediato, garantías legales bajo Ley 19.472, plan 30-90-180-365, NPS (Reichheld 2003), Sistema de Referidos sobre Pirámide de los 100, reactivación de Capa C y marca personal digital del corredor profesional.</p>
+<div class="tm-cert-modules-block"><div class="tm-cert-modules-title">Módulos aprobados</div><ol class="tm-cert-modules" id="tmCertModules"></ol><div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Aprobada</span></div></div>
+<div class="tm-cert-footer"><div class="tm-cert-date" id="tmCertDate">Santiago, —</div><div class="tm-cert-seal"><div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div><div class="tm-cert-seal-label">Sello de<br>reconocimiento</div></div><div class="tm-cert-sign"><div class="tm-cert-stamp"><svg viewBox="0 0 240 240" class="tm-cert-stamp-svg"><defs><path id="tmAT7" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmAB7" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs><circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/><circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/><circle cx="120" cy="120" r="100" fill="none" stroke="#0EA5A0" stroke-width="2.2"/><text font-family="Cinzel" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmAT7" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text><text font-family="Cinzel" font-size="9" font-weight="700" letter-spacing="5" fill="#0D7C78"><textPath href="#tmAB7" startOffset="50%" text-anchor="middle">POSTVENTA · 2026</textPath></text><text x="120" y="108" font-family="Cinzel" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text><text x="120" y="140" font-family="Cinzel" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#0EA5A0">10/10</text><text x="120" y="168" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text></svg></div><div class="tm-cert-sign-line"></div><div class="tm-cert-sign-name">Dirección de Taller</div><div class="tm-cert-sign-role">TuMatch Inmobiliario</div></div></div>
+</div></div>
+<div class="tm-cert-actions"><button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir</button><button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar PNG</button></div>
+</div>
+<div style="margin-top:60px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Reglas de oro</div><h2 class="sec-h2">10 reglas de postventa y referidos</h2></div><div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div></div>
+<div class="crm-msg"><span style="font-size:56px;display:block;margin-bottom:12px">🤝</span><h3>Aplica hoy</h3><p>Configura alarmas para tus últimos 5 clientes firmados: 30-90-180-365 días. Envía NPS día 30. Pide referido día 90 si NPS ≥ 8.</p><div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a href="../" class="btn btn-light">🎓 Otros talleres</a><button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar</button></div></div>
+</div></section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="../app-core.js"></script><script src="quiz-data.js"></script><script src="app.js"></script>
+</body></html>

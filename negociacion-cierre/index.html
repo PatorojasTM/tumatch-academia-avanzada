@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Negociación y Cierre</title>
+<meta name="description" content="Taller avanzado TuMatch sobre negociación y cierre del primera vivienda: promesa, condiciones suspensivas, multas, contraoferta, negociación principled Fisher-Ury, arras y escritura.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script>(function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();</script>
+<style>
+:root{--coral:#991B1B;--coralDk:#7F1D1D;--pink:#B91C1C;--mag:#DC2626;--gold:#D4A017;--purple:#7F1D1D;--teal:#0EA5A0}
+.grad-stripe{background:linear-gradient(90deg,#7F1D1D,#991B1B,#DC2626,#D4A017)!important}
+.progress-fill{background:linear-gradient(90deg,#7F1D1D,#991B1B,#DC2626)!important}
+.taller-badge{color:#7F1D1D!important;background:rgba(153,27,27,.08)!important;border-color:rgba(153,27,27,.35)!important}
+.brand-tagline-l1{color:#D4A017!important}.hero-eyebrow-line{color:#991B1B!important}.hero-title em{color:#991B1B!important}.sec-tag .dot{background:#991B1B!important}
+</style>
+</head>
+<body>
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+<header class="hdr"><div class="grad-stripe"></div><div class="hdr-row">
+<a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;"><img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"><div class="brand-tagline"><div class="brand-tagline-l1">Academia de Corredores</div><div class="brand-tagline-l2">Negociación y Cierre · 2026</div></div></a>
+<div class="hdr-actions"><a href="../" style="font-size:12px;text-decoration:none;color:#7F1D1D;font-weight:700">← Hub</a><span class="taller-badge">Taller 06</span><button class="theme-toggle" id="themeToggle"><svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/></g></svg><svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg></button></div>
+</div></header>
+<div class="progress-wrap"><div class="progress-inner"><span class="progress-label">Progreso</span><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><span class="progress-num" id="progressNum">0 / 7</span></div></div>
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<section class="module active" id="mod-0"><div class="hero-new"><div class="hero-new-inner">
+<div class="hero-academy-mark">Academia · Taller Avanzado</div>
+<img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch">
+<div class="hero-eyebrow-line">Comprador Primera Vivienda · 2026</div>
+<h1 class="hero-title">Negociación<br><em>y Cierre de Operación</em></h1>
+<p class="hero-lead">El cierre separa al corredor de resultados del operador de actividad. Este taller cubre negociación principled (Fisher-Ury), contraoferta, promesa de compraventa con condiciones suspensivas, arras, multas, escritura pública y entrega. La tensión final, bien manejada, es donde se construye tu reputación.</p>
+<div class="hero-meta"><div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado</div></div></div>
+<div id="resumeBanner" class="resume-banner" style="display:none"><div class="resume-banner-icon">📖</div><div class="resume-banner-body"><div class="resume-banner-title">Avance guardado</div><div class="resume-banner-text" id="resumeBannerText">Continúa donde quedaste.</div></div><button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button></div>
+<div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar →</button></div>
+<div class="hero-save-hint"><span class="save-dot"></span><span>5 errores = bloqueo 10 min.</span></div>
+</div></div>
+<div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · negociación y cierre profesional</h2></div>
+<div class="mod-timeline">
+<div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Fundamentos de negociación (Fisher-Ury)</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Principled</span><span>BATNA</span><span>ZOPA</span><span>Intereses vs posiciones</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Oferta, contraoferta y tempo</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Oferta escrita</span><span>Contraoferta</span><span>Tempo</span><span>Anclaje</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Promesa de compraventa</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>1.554 CC</span><span>Condiciones suspensivas</span><span>Plazos</span><span>Solemnidad</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Arras, multas y cláusulas penales</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Arras confirmatorias</span><span>Penitenciales</span><span>Multa</span><span>Seña</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Escritura pública y mutuo hipotecario</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Minuta</span><span>Notario</span><span>Desembolso banco</span><span>Entrega</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Manejo de caídas y contingencias</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Banco rechaza</span><span>Alzamiento</span><span>Subsidio cae</span><span>Planes B</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Entrega material y acta de entrega</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>Acta</span><span>Inventario</span><span>Llaves</span><span>Cuentas al día</span></div></div></div>
+<div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+</div></div></section>
+
+<section class="module" id="mod-1"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 1 · Fundamentos de negociación · Fisher-Ury</div><h2 class="sec-h2">Separar persona de problema, centrar en intereses</h2><p class="sec-desc">El método Principled Negotiation de Fisher y Ury (Harvard Project 1981) es el estándar mundial en negociación compleja. Principios: 1) Separa personas del problema. 2) Céntrate en intereses, no posiciones. 3) Genera opciones de mutuo beneficio. 4) Usa criterios objetivos. Aplicado al corretaje, transforma tensiones en acuerdos sostenibles.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #991B1B"><div style="font-size:12px;font-weight:800;color:#7F1D1D;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Conceptos clave</div><ul class="checklist">
+<li><strong>BATNA:</strong> Best Alternative To Negotiated Agreement (qué pasa si no hay acuerdo). El corredor debe conocer el BATNA del cliente para no aceptar acuerdos malos.</li>
+<li><strong>ZOPA:</strong> Zone Of Possible Agreement. Intersección entre precio máximo comprador y precio mínimo vendedor.</li>
+<li><strong>Intereses vs posiciones:</strong> Posición es "quiero $X"; interés es el por qué detrás (seguridad, tiempo, retirarse).</li>
+<li><strong>Opciones creativas:</strong> Plazo extendido, muebles incluidos, cierre diferido, etc. A veces sacan el acuerdo sin tocar precio.</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Aplicación a primera vivienda</div><ul class="checklist">
+<li>Escucha intereses del vendedor (¿apura venta? ¿piso para retirarse? ¿mudanza al extranjero?)</li>
+<li>Presenta oferta con fundamento técnico (tasación, comparables)</li>
+<li>Separa personas: no lleves ego tuyo ni del cliente a la mesa</li>
+<li>Opciones creativas: incluir muebles, adelantar entrega, diferir pie, etc.</li>
+<li>Criterios objetivos: avalúo, tasación, precios comparables validados</li>
+</ul></div></div>
+<div id="quiz-1" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-2"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 2 · Oferta, Contraoferta y Tempo</div><h2 class="sec-h2">La coreografía del pre-cierre</h2><p class="sec-desc">La oferta escrita es el primer movimiento formal. La contraoferta, el segundo. El tempo (timing) entre movimientos comunica seriedad o desespero. Una oferta bien estructurada incluye precio, plazo de respuesta, condiciones suspensivas y validez temporal.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Elemento</th><th>Descripción</th><th>Buena práctica</th></tr></thead><tbody>
+<tr><td><strong>Precio</strong></td><td>Monto ofrecido en UF o $</td><td>Ancla basada en tasación + comparables, no capricho</td></tr>
+<tr><td><strong>Plazo respuesta</strong></td><td>Tiempo para que el vendedor acepte/rechace/contraoferte</td><td>48-72 horas habitual; evita urgencias fabricadas</td></tr>
+<tr><td><strong>Condiciones suspensivas</strong></td><td>Eventos que deben cumplirse (pre-aprobación, tasación ok, etc.)</td><td>Específicas y verificables; no ambiguas</td></tr>
+<tr><td><strong>Validez</strong></td><td>Hasta cuándo es vinculante la oferta</td><td>Coherente con el plazo de respuesta</td></tr>
+<tr><td><strong>Condición plazo entrega</strong></td><td>Cuándo se entrega el inmueble</td><td>Alinear con mudanza del vendedor y necesidad del comprador</td></tr>
+<tr><td><strong>Seña / reserva</strong></td><td>Monto pagado para reserva (3-5% típico)</td><td>Siempre con recibo y cláusula de devolución si cae condición</td></tr>
+</tbody></table></div>
+<div id="quiz-2" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-3"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 3 · Promesa de Compraventa</div><h2 class="sec-h2">El contrato que te obliga antes de la escritura</h2><p class="sec-desc">La promesa de compraventa es contrato regulado por el Art. 1.554 CC: debe ser escrita, contener plazo o condición que fije época de la celebración, especificar de tal modo el contrato que solo falten declaraciones o tradición, y referirse a una cosa lícita. Sin estos requisitos la promesa es nula.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #991B1B"><div style="font-size:12px;font-weight:800;color:#7F1D1D;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Elementos obligatorios Art. 1.554 CC</div><ul class="checklist">
+<li>Por escrito (puede ser privada con firmas autorizadas ante notario o escritura pública)</li>
+<li>Plazo o condición que fije la época del contrato definitivo</li>
+<li>Identificación específica del contrato futuro (precio, inmueble, partes)</li>
+<li>Cosa lícita (inmueble no prohibido o afecto)</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Condiciones suspensivas típicas</div><ul class="checklist">
+<li><strong>Pre-aprobación bancaria</strong> del comprador (banco a elegir)</li>
+<li><strong>Tasación bancaria conforme</strong> (valor ≥ X)</li>
+<li><strong>Estudio de títulos aprobado</strong> sin observaciones</li>
+<li><strong>Alzamiento de hipoteca</strong> del vendedor</li>
+<li><strong>Subsidio DS1 aprobado</strong> (si aplica)</li>
+<li><strong>Entrega libre de deudas municipales y de gastos comunes</strong></li>
+</ul></div></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Plazo típico entre promesa y escritura:</strong> 30 a 60 días. Incluye tasación bancaria, alzamiento de hipoteca si aplica, estudio de títulos, minuta notarial y coordinación de firma. Plazos más largos requieren justificación.</div></div>
+<div id="quiz-3" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-4"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 4 · Arras, Multas y Cláusulas Penales</div><h2 class="sec-h2">Lo que pasa si alguien se arrepiente</h2><p class="sec-desc">Las arras (Art. 1.803 y 1.805 CC) son una cantidad entregada al celebrar la promesa. Pueden ser 'confirmatorias' (parte del precio) o 'penitenciales' (autorizan arrepentimiento con pago). La cláusula penal (Art. 1.535 CC) fija multa por incumplimiento injustificado.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Figura</th><th>Función</th><th>Efecto</th></tr></thead><tbody>
+<tr><td><strong>Arras confirmatorias</strong></td><td>Parte anticipada del precio</td><td>No autorizan retracto; se imputan al precio final</td></tr>
+<tr><td><strong>Arras penitenciales</strong></td><td>Permiten retractarse del contrato</td><td>Comprador pierde arras / Vendedor restituye el doble · Art. 1.803 CC</td></tr>
+<tr><td><strong>Cláusula penal</strong></td><td>Multa estipulada por incumplimiento</td><td>Protege al cumplidor; típicamente doble o triple de la seña</td></tr>
+<tr><td><strong>Seña de reserva (pre-promesa)</strong></td><td>Pago simbólico para reservar</td><td>Se imputa a precio o se devuelve si la promesa no se concreta</td></tr>
+</tbody></table></div>
+<div class="info-box info"><span class="info-icon">💡</span><div class="info-text"><strong>Práctica:</strong> si no se especifica, las arras se presumen confirmatorias (no permiten retractarse). Para dar derecho a retractación, la cláusula debe pactarlo expresamente como 'arras penitenciales'. Lee siempre con atención.</div></div>
+<div id="quiz-4" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-5"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 5 · Escritura Pública y Mutuo Hipotecario</div><h2 class="sec-h2">El acto definitivo ante notario</h2><p class="sec-desc">La escritura pública de compraventa se otorga ante notario, con todas las partes presentes o representadas. Incluye el mutuo hipotecario del banco, el alzamiento de hipoteca previa si aplica y la entrega de fondos. Es el acto que transfiere el dominio — pendiente solo de inscripción CBR.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Hito</th><th>Responsable</th><th>Resultado</th></tr></thead><tbody>
+<tr><td><strong>Revisión de minuta</strong></td><td>Notario + partes + abogados</td><td>Observaciones resueltas antes de firma</td></tr>
+<tr><td><strong>Firma escritura compraventa</strong></td><td>Vendedor + comprador + notario</td><td>Documento público otorgado</td></tr>
+<tr><td><strong>Firma mutuo hipotecario</strong></td><td>Banco + comprador + notario</td><td>Crédito otorgado con garantía hipotecaria</td></tr>
+<tr><td><strong>Alzamiento hipoteca vendedor</strong></td><td>Banco del vendedor + notario</td><td>Inmueble libre de la hipoteca anterior</td></tr>
+<tr><td><strong>Pago a vendedor</strong></td><td>Notario retiene hasta inscripción CBR</td><td>Protege al banco comprador y al comprador</td></tr>
+<tr><td><strong>Inscripción CBR</strong></td><td>Conservador</td><td>Dominio y hipoteca oficialmente inscritos (10-45 días)</td></tr>
+<tr><td><strong>Entrega llaves</strong></td><td>Partes + corredor</td><td>Posesión material al comprador</td></tr>
+</tbody></table></div>
+<div id="quiz-5" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-6"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 6 · Caídas y Contingencias</div><h2 class="sec-h2">Qué hacer cuando algo se rompe</h2><p class="sec-desc">10-20% de las promesas de primera vivienda tienen algún contratiempo: banco que cambia términos, tasación baja, subsidio que no aparece, alzamiento que se atasca, Dicom que aparece tarde. El corredor profesional anticipa, comunica proactivamente y sostiene la operación con planes B pensados con antelación.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Contingencia</th><th>Acción del corredor</th><th>Plan B</th></tr></thead><tbody>
+<tr><td><strong>Banco cambia tasa post pre-aprobación</strong></td><td>Verificar condiciones oficiales; negociar con ejecutivo</td><td>Presentar alternativas de los otros 2 bancos pre-aprobados</td></tr>
+<tr><td><strong>Tasación bajo precio pactado</strong></td><td>Comunicar al vendedor; renegociar o aumentar pie</td><td>Pedir re-tasación con comparables adicionales / segundo banco</td></tr>
+<tr><td><strong>Subsidio MINVU rechazado o atrasado</strong></td><td>Apelar; postular siguiente llamado</td><td>Leasing habitacional con convenios DS1</td></tr>
+<tr><td><strong>Alzamiento hipoteca vendedor atasca</strong></td><td>Coordinar banco vendedor + vendedor; mediar</td><td>Extender plazo promesa o pago parcial como garantía</td></tr>
+<tr><td><strong>Dicom inesperado del comprador</strong></td><td>Documentar cierres y pagar pendientes</td><td>Re-presentar al banco tras actualización; leasing como plan B</td></tr>
+<tr><td><strong>Vendedor se arrepiente</strong></td><td>Activar cláusula penal o arras penitenciales</td><td>Compensación + reasignación del comprador a otra propiedad</td></tr>
+<tr><td><strong>Certificado CBR con observación</strong></td><td>Resolver con abogado antes de firma</td><td>Extender plazo promesa; si no se resuelve, activar condición suspensiva</td></tr>
+</tbody></table></div>
+<div class="info-box warn"><span class="info-icon">🛡️</span><div class="info-text"><strong>Regla:</strong> comunica las contingencias 48 horas antes de la fecha crítica, no el mismo día. El cliente se siente acompañado; no sorprendido.</div></div>
+<div id="quiz-6" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-7"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 7 · Entrega Material y Acta de Entrega</div><h2 class="sec-h2">El cierre operativo · donde se gana o pierde el referido</h2><p class="sec-desc">La entrega material es el último acto operativo. Un acta bien hecha protege al comprador y cierra limpiamente el ciclo. Los detalles de esta etapa construyen (o destruyen) la confianza final. Aquí se gana o pierde el NPS y, con él, los referidos.</p></div>
+<div class="grid-2" style="gap:22px"><div class="card" style="border-left:4px solid #991B1B"><div style="font-size:12px;font-weight:800;color:#7F1D1D;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Acta de entrega: qué incluir</div><ul class="checklist">
+<li>Fecha, hora, lugar de la entrega</li>
+<li>Partes presentes (vendedor + comprador + corredor)</li>
+<li><strong>Inventario:</strong> muebles, artefactos, llaves, controles, tarjetas</li>
+<li>Estado de conservación: observaciones + fotos adjuntas</li>
+<li>Lecturas de servicios: medidor eléctrico, agua, gas</li>
+<li>Certificados entregados: uso en copropiedad, manual, planos, libros</li>
+<li>Firmas de ambas partes + corredor testigo</li>
+</ul></div><div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px">Checklist pre-entrega (48 horas antes)</div><ul class="checklist">
+<li>Cuentas de servicios al día (luz, agua, gas, internet, TV cable)</li>
+<li>Gastos comunes al día + certificado del administrador</li>
+<li>Contribuciones al día según periodo del vendedor</li>
+<li>Llaves originales, copias y de cerraduras adicionales</li>
+<li>Controles de portón, alarma, TV digital</li>
+<li>Manual del hogar entregado (si es nuevo)</li>
+<li>Propiedad limpia y vacía (o con inventario pactado)</li>
+</ul></div></div>
+<div class="info-box info"><span class="info-icon">🏆</span><div class="info-text"><strong>Regla de oro TuMatch:</strong> el día de la entrega, agrega algo pequeño pero memorable (canasta de bienvenida, nota manuscrita, tarjeta con tus contactos). Ese detalle sobrevive en la memoria del cliente durante años — y se convierte en referidos.</div></div>
+<div id="quiz-7" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-final"><div class="page"><div class="final-test-intro"><h2>Prueba final · 10 preguntas</h2><p>Dominio completo de negociación y cierre. 10/10 aprueba. Banco rotativo de 50.</p><div class="test-stats"><div class="test-stat"><div class="num">10</div><div class="lbl">Mostradas</div></div><div class="test-stat"><div class="num">50</div><div class="lbl">Banco</div></div><div class="test-stat"><div class="num">10/10</div><div class="lbl">Aprobar</div></div></div></div><div id="final-quiz"></div></div></section>
+
+<section class="module" id="mod-done"><div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas el cierre profesional</h2></div>
+<div class="cert-section" style="margin-top:50px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Certificado</div><h2 class="sec-h2">Descarga tu certificado</h2></div>
+<div class="cert-name-form"><label for="tmCertNameInput">Nombre completo:</label><input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name"></div>
+<div class="tm-cert" id="tmCert"><div class="tm-cert-border"><div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+<div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"></div>
+<div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+<h1 class="tm-cert-title">Negociación y Cierre<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+<div class="tm-cert-divider"></div><div class="tm-cert-subtitle">Taller Avanzado 06 · Academia TuMatch · 2026</div>
+<p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+<div class="tm-cert-name" id="tmCertName">_______________________________</div>
+<p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre negociación y cierre del comprador primera vivienda, demostrando dominio en método Principled (Fisher-Ury), BATNA/ZOPA, oferta y contraoferta, promesa bajo Art. 1.554 CC, arras y cláusulas penales (Arts. 1.803 y 1.535 CC), escritura pública con mutuo hipotecario, manejo de contingencias y entrega material con acta profesional.</p>
+<div class="tm-cert-modules-block"><div class="tm-cert-modules-title">Módulos aprobados</div><ol class="tm-cert-modules" id="tmCertModules"></ol><div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Aprobada</span></div></div>
+<div class="tm-cert-footer"><div class="tm-cert-date" id="tmCertDate">Santiago, —</div><div class="tm-cert-seal"><div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div><div class="tm-cert-seal-label">Sello de<br>reconocimiento</div></div><div class="tm-cert-sign"><div class="tm-cert-stamp"><svg viewBox="0 0 240 240" class="tm-cert-stamp-svg"><defs><path id="tmAT6" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmAB6" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs><circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/><circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/><circle cx="120" cy="120" r="100" fill="none" stroke="#991B1B" stroke-width="2.2"/><text font-family="Cinzel" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmAT6" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text><text font-family="Cinzel" font-size="9" font-weight="700" letter-spacing="5" fill="#7F1D1D"><textPath href="#tmAB6" startOffset="50%" text-anchor="middle">CIERRE · 2026</textPath></text><text x="120" y="108" font-family="Cinzel" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text><text x="120" y="140" font-family="Cinzel" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#991B1B">10/10</text><text x="120" y="168" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text></svg></div><div class="tm-cert-sign-line"></div><div class="tm-cert-sign-name">Dirección de Taller</div><div class="tm-cert-sign-role">TuMatch Inmobiliario</div></div></div>
+</div></div>
+<div class="tm-cert-actions"><button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir</button><button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar PNG</button></div>
+</div>
+<div style="margin-top:60px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Reglas de oro</div><h2 class="sec-h2">10 reglas de negociación y cierre</h2></div><div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div></div>
+<div class="crm-msg"><span style="font-size:56px;display:block;margin-bottom:12px">🤝</span><h3>Aplica hoy</h3><p>En tu próxima oferta, define intereses del vendedor (no solo precio). Estructura la promesa con condiciones suspensivas específicas. Anticipa 2 contingencias posibles.</p><div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a href="../" class="btn btn-light">🎓 Otros talleres</a><button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar</button></div></div>
+</div></section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="../app-core.js"></script><script src="quiz-data.js"></script><script src="app.js"></script>
+</body></html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Comisiones, Contratos y Gestión Hipotecaria en CRM</title>
+<meta name="description" content="Taller avanzado TuMatch: comisiones del contrato freelance (25% referido, 30/35% gestión integral), comisión al cliente CChC, perfilado hipotecario en CRM TuMatch y documentación del pipeline de primera vivienda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>
+  (function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();
+</script>
+<style>
+  :root{--coral:#2563EB;--coralDk:#1E40AF;--pink:#3B82F6;--mag:#60A5FA;--gold:#D4A017;--purple:#1D4ED8;--teal:#0EA5A0;--orange:#2563EB}
+  .grad-stripe{background:linear-gradient(90deg,#1E40AF,#2563EB,#3B82F6,#D4A017)!important}
+  .progress-fill{background:linear-gradient(90deg,#1E40AF,#2563EB,#3B82F6)!important}
+  .taller-badge{color:#1E40AF!important;background:rgba(37,99,235,.08)!important;border-color:rgba(37,99,235,.35)!important}
+  .brand-tagline-l1{color:#D4A017!important}
+  .hero-eyebrow-line{color:#2563EB!important}
+  .hero-title em{color:#2563EB!important}
+  .sec-tag .dot{background:#2563EB!important}
+</style>
+</head>
+<body>
+
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+
+<header class="hdr">
+  <div class="grad-stripe"></div>
+  <div class="hdr-row">
+    <a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;" aria-label="Inicio">
+      <img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="brand-tagline">
+        <div class="brand-tagline-l1">Academia de Corredores</div>
+        <div class="brand-tagline-l2">Comisiones, Contratos y CRM Hipotecario · 2026</div>
+      </div>
+    </a>
+    <div class="hdr-actions">
+      <a href="../" style="font-size:12px;text-decoration:none;color:#1E40AF;font-weight:700;letter-spacing:.5px">← Hub Avanzado</a>
+      <span class="taller-badge">Taller 03 · Avanzado</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro">
+        <svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="4.9" y1="4.9" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.1" y2="4.9"/></g></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progreso del taller</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-num" id="progressNum">0 / 7</span>
+  </div>
+</div>
+
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<!-- ===== MÓDULO 0: INTRO ===== -->
+<section class="module active" id="mod-0">
+  <div class="hero-new">
+    <div class="hero-new-inner">
+      <div class="hero-academy-mark">Academia de Corredores · Taller Avanzado</div>
+      <img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="hero-eyebrow-line">Taller Avanzado · Comprador Primera Vivienda · 2026</div>
+      <h1 class="hero-title">Comisiones,<br><em>Contratos y CRM Hipotecario</em></h1>
+      <p class="hero-lead">El corredor que entiende su estructura de ingresos y maneja el CRM como herramienta de gestión hipotecaria profesional multiplica sus cierres. Cubre comisiones reales del contrato TuMatch (25% referido, 30/35% gestión integral), cobro al cliente, perfilado hipotecario en CRM y llenado documental paso a paso.</p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas rotativas</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos máx.</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado oficial</div></div>
+      </div>
+
+      <div id="resumeBanner" class="resume-banner" style="display:none">
+        <div class="resume-banner-icon">📖</div>
+        <div class="resume-banner-body">
+          <div class="resume-banner-title">Tienes avance guardado</div>
+          <div class="resume-banner-text" id="resumeBannerText">Puedes continuar donde quedaste.</div>
+        </div>
+        <button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button>
+      </div>
+
+      <div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar taller avanzado →</button></div>
+      <div class="hero-save-hint"><span class="save-dot"></span><span>Tu avance se guarda automáticamente. 5 errores acumulados bloquean el taller 10 minutos.</span></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · monetización y gestión profesional</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Cada módulo: 5 preguntas rotativas (banco de 20 · 20 pts). Prueba final 10 preguntas (banco 50). 10/10 aprueba.</p>
+    </div>
+
+    <div class="mod-timeline">
+      <div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Contrato Freelance TuMatch y estructura de comisiones</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>25% referido</span><span>30/35% gestión</span><span>40/45%/60/65%</span><span>1.000 UF multa</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Comisión al cliente · CChC y mercado chileno</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>2% + IVA</span><span>50% canon</span><span>SERNAC</span><span>Facturación</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">CRM TuMatch · Arquitectura para el corredor</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Pipeline</span><span>Perfil-comprador</span><span>Reportes</span><span>Leads tags</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Perfilamiento hipotecario en CRM · paso a paso</div><div class="mod-t-time">≈ 11 min</div></div><div class="mod-t-keys"><span>RSH</span><span>Capacidad UF</span><span>Subsidio</span><span>Scoring</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Solicitud de datos y documentos al cliente</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Checklist</span><span>Carpeta</span><span>Scripts</span><span>Plazos</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Pipeline y documentación del cierre-negocio</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>9 hitos</span><span>Promesa</span><span>Escritura</span><span>Entrega</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Reportes, KPIs e ingresos del corredor</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>Conversión</span><span>ARR</span><span>Facturación</span><span>SII</span></div></div></div>
+      <div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+    </div>
+
+    <div class="info-box info" style="margin-top:32px">
+      <span class="info-icon">💰</span>
+      <div class="info-text"><strong>Importante:</strong> los porcentajes de comisión citados son del Contrato Freelance de TuMatch Inmobiliario SpA vigente (2026). Incluyen modalidades con Team Leader (TL) y sin TL (autónomo). Las comisiones al cliente siguen la sugerencia CChC y la práctica de mercado chileno.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 1: CONTRATO FREELANCE + COMISIONES ===== -->
+<section class="module" id="mod-1">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 1 · Contrato Freelance TuMatch y Estructura de Comisiones</div>
+      <h2 class="sec-h2">Cuánto ganas exactamente por cada gestión: los números del contrato</h2>
+      <p class="sec-desc">El Contrato de Prestación de Servicios Profesionales vigente (2026) define con precisión los tramos de comisión del Corredor. Esta cláusula es la brújula económica de tu carrera TuMatch: define cuánto ganas por cada tipo de gestión y bajo qué condiciones la comisión es exigible. Conocerla de memoria es requisito profesional mínimo.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Cláusula Cuarta del Contrato Freelance</div>
+      <h2 class="sec-h2" style="font-size:26px">Tramos oficiales de comisión</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Concepto</th><th>% de la comisión bruta</th><th>Aplicación</th></tr></thead>
+        <tbody>
+          <tr><td><strong>a) Referido / lead de comprador</strong></td><td><strong>25%</strong></td><td>Se calcula sobre la comisión bruta generada por la operación de compraventa cerrada</td></tr>
+          <tr><td><strong>b) Referido / lead de arrendatario</strong></td><td><strong>25%</strong></td><td>Se calcula sobre la comisión bruta generada por la operación de arriendo cerrada</td></tr>
+          <tr><td><strong>c) Gestión comercial integral · con Team Leader</strong></td><td><strong>30% base</strong></td><td>Participación efectiva en captación, gestión y cierre</td></tr>
+          <tr><td><strong>Máx. obtenible con TL (vendedor + arrendatario + comprador)</strong></td><td><strong>hasta 40%</strong></td><td>Cuando el corredor cubre la operación integral sin lado arrendador</td></tr>
+          <tr><td><strong>Máx. obtenible con TL (incluye contribución arrendador)</strong></td><td><strong>hasta 60%</strong></td><td>Cuando el corredor también contribuye al lado arrendador</td></tr>
+          <tr><td colspan="3" style="background:rgba(37,99,235,.08);text-align:center;font-weight:800">Modalidad Autónoma (Anexo N°1 · sin Team Leader)</td></tr>
+          <tr><td><strong>Gestión comercial integral · sin TL (autónomo)</strong></td><td><strong>35% base</strong></td><td>+5 pp respecto a modalidad con TL</td></tr>
+          <tr><td><strong>Máx. obtenible sin TL (vendedor + arrendatario + comprador)</strong></td><td><strong>hasta 45%</strong></td><td>+5 pp respecto a modalidad con TL</td></tr>
+          <tr><td><strong>Máx. obtenible sin TL (incluye contribución arrendador)</strong></td><td><strong>hasta 65%</strong></td><td>+5 pp respecto a modalidad con TL</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📄</span>
+      <div class="info-text"><strong>Requisitos copulativos para que la comisión sea exigible (Cláusula Cuarta del Contrato):</strong>
+        <br>i) Contrato de arriendo, compraventa o promesa debidamente firmado.
+        <br>ii) La empresa ha recibido efectivamente el pago de la comisión.
+        <br>iii) Se ha formalizado la entrega del inmueble.
+        <br><em>No puedes cobrar una gestión cerrada pero no pagada por el cliente, ni una promesa sin entrega efectiva.</em></div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Ejemplo numérico aplicado</div>
+      <h2 class="sec-h2" style="font-size:26px">Cálculo real de tu pago por una operación</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="card" style="border-left:4px solid #2563EB">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#1E40AF;margin-bottom:16px">Compraventa UF 3.500 — Lead referido</div>
+        <ul class="checklist">
+          <li><strong>Precio venta:</strong> UF 3.500 ≈ $136.500.000</li>
+          <li><strong>Comisión bruta TuMatch (2% lado comprador):</strong> UF 70 ≈ $2.730.000</li>
+          <li><strong>Referido comprador (25%):</strong> UF 17,5 ≈ <strong>$682.500</strong></li>
+          <li><em>Solo por referir el lead, sin gestión activa</em></li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Compraventa UF 3.500 — Gestión integral con TL</div>
+        <ul class="checklist">
+          <li><strong>Comisión bruta TuMatch (lado comprador):</strong> UF 70</li>
+          <li><strong>Gestión integral con TL (30% base):</strong> UF 21 ≈ <strong>$819.000</strong></li>
+          <li><strong>Si cubre captación + gestión + cierre (hasta 40%):</strong> UF 28 ≈ <strong>$1.092.000</strong></li>
+          <li><em>Sin TL (autónomo) el base sube a 35% y el máximo a 45%</em></li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #0EA5A0">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0D7C78;margin-bottom:16px">Compraventa UF 3.500 — Operación integral (hasta 60%)</div>
+        <ul class="checklist">
+          <li><strong>Comisión bruta total (2% comprador + 2% vendedor):</strong> UF 140</li>
+          <li><strong>Si cubre vendedor + arrendatario + comprador hasta 40% con TL:</strong> UF 56</li>
+          <li><strong>Si además contribuye lado arrendador (hasta 60% con TL):</strong> UF 84 ≈ <strong>$3.276.000</strong></li>
+          <li><em>Sin TL (autónomo, hasta 65%): UF 91 ≈ $3.549.000</em></li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #DC2626">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#991B1B;margin-bottom:16px">⚠️ Multa por operación extra-sistema</div>
+        <ul class="checklist warn">
+          <li>Si se detecta que el Corredor desvía operaciones <strong>por fuera de TuMatch</strong> para evadir comisión</li>
+          <li><strong>Multa: 1.000 UF (≈ $39.000.000)</strong>, sin perjuicio de otras acciones legales</li>
+          <li>Aplica por operación desviada; acumulable</li>
+          <li>Cláusula Séptima del Contrato Freelance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Elegibilidad Modalidad Autónoma (Anexo N°1):</strong> para acceder al 35% (sin TL) el corredor debe acreditar haber completado exitosamente <strong>al menos un (1) negocio</strong> como corredor dentro de TuMatch Inmobiliario, en el año en curso o el inmediatamente anterior. No es automático.</div>
+    </div>
+
+    <div id="quiz-1" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 2: COMISIÓN AL CLIENTE ===== -->
+<section class="module" id="mod-2">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 2 · Comisión al Cliente en Chile</div>
+      <h2 class="sec-h2">Cuánto paga el cliente: norma CChC + práctica de mercado</h2>
+      <p class="sec-desc">En Chile no existe un precio fijo legal por corretaje: es un servicio a convenir. La Cámara Chilena de la Construcción (CChC) y las principales asociaciones inmobiliarias sugieren referencias estándar. El corredor profesional las conoce, las explica con claridad y emite factura o boleta correctamente para cumplir con SII y SERNAC.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Operación</th><th>Sugerencia CChC / mercado</th><th>Quién paga</th><th>Momento</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Compraventa estándar</strong></td><td><strong>2% + IVA del precio</strong> a cada parte (2% al comprador + 2% al vendedor = 4% total bruto)</td><td>Ambas partes</td><td>Al firmar escritura pública + entrega</td></tr>
+          <tr><td><strong>Compraventa con subsidio DS1</strong></td><td>Misma sugerencia, pero hay clientes que negocian 1,5-2% con base fundada</td><td>Ambas partes</td><td>Al firmar escritura + entrega</td></tr>
+          <tr><td><strong>Arriendo residencial estándar</strong></td><td><strong>50% del primer canon + IVA</strong> a cada parte (50% arrendatario + 50% arrendador = 100% total bruto)</td><td>Ambas partes</td><td>Al firmar contrato arriendo + entrega llaves</td></tr>
+          <tr><td><strong>Arriendo comercial o oficinas</strong></td><td>50% a 100% del primer canon + IVA (según plazo y valor)</td><td>Ambas partes habitualmente</td><td>Al firmar contrato</td></tr>
+          <tr><td><strong>Administración de arriendos</strong></td><td>6% a 10% del canon mensual + IVA</td><td>Arrendador</td><td>Mensual</td></tr>
+          <tr><td><strong>Tasación profesional</strong></td><td>UF 3 a 8 (casas/deptos) · contrato separado</td><td>Solicitante</td><td>A la entrega del informe</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📋</span>
+      <div class="info-text"><strong>Base legal y práctica:</strong> el corretaje no está regulado con tarifa única en Chile. La Cámara Chilena de la Construcción y el Colegio de Corredores sugieren las tarifas referenciales. El cliente <em>puede</em> negociar, pero el corredor tiene derecho a mantener su estándar. La comisión se pacta por escrito en la <strong>Orden de Compra/Encargo</strong> antes de iniciar gestión.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Facturación SII correcta</div>
+      <h2 class="sec-h2" style="font-size:26px">Cómo emitir el documento tributario</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="card" style="border-left:4px solid #2563EB">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#1E40AF;margin-bottom:16px">Si cliente es persona natural (sin RUT empresa)</div>
+        <ul class="checklist">
+          <li><strong>Boleta de honorarios</strong> electrónica desde sii.cl</li>
+          <li><strong>Retención 12,25%</strong> (2026) — el cliente no retiene, tú la pagas en F29</li>
+          <li>PPM (Pago Provisional Mensual) mensual o trimestral según régimen</li>
+          <li>El monto bruto debe coincidir con lo pactado en la Orden de Compra</li>
+          <li>Guarda respaldo: Orden de Compra + boleta emitida + comprobante pago</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Si cliente es empresa (RUT con giro)</div>
+        <ul class="checklist">
+          <li><strong>Factura electrónica</strong> con IVA 19% desde sii.cl</li>
+          <li>La empresa retiene IVA crédito fiscal si es contribuyente</li>
+          <li>El corredor como prestador puede ser persona natural con giro o sociedad</li>
+          <li>Código de giro: 683200 (agentes inmobiliarios) o 683100 (actividades inmobiliarias)</li>
+          <li>Plazo de emisión: al momento del servicio o al pago, según contrato</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Error común:</strong> cobrar sin emitir documento tributario. Es infracción SII + hace al corredor invisible profesionalmente. Cumple siempre: boleta de honorarios o factura electrónica. El cliente serio lo exige.</div>
+    </div>
+
+    <div id="quiz-2" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 3: CRM TUMATCH ARQUITECTURA ===== -->
+<section class="module" id="mod-3">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 3 · CRM TuMatch · Arquitectura y Módulos</div>
+      <h2 class="sec-h2">El CRM como herramienta profesional central</h2>
+      <p class="sec-desc">El CRM TuMatch (<code>tumatch-leads.vercel.app</code>) es la herramienta operativa integral del corredor. No es un simple contacto: integra pipeline visual, perfil-comprador, cierre-negocio, calculadora hipotecaria, histórico de interacciones, reportes por canal, matching cliente-propiedad y etiquetas de temperatura. Entender su arquitectura te permite usarlo como ventaja competitiva.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Sección CRM</th><th>Función</th><th>Output para el corredor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>📊 Pipeline visual</strong></td><td>Leads agrupados por etapa del embudo (captación → discovery → pre-aprobación → visitas → oferta → cierre)</td><td>Identifica cuellos de botella y prioriza acciones diarias</td></tr>
+          <tr><td><strong>👤 perfil-comprador-section</strong></td><td>Ficha estructurada del cliente con 30+ campos editables</td><td>Match cliente-propiedad en segundos; seguimiento profesional</td></tr>
+          <tr><td><strong>🤝 cierre-negocio</strong></td><td>Workflow de 9 hitos desde oferta aceptada hasta entrega</td><td>Cero promesas olvidadas con el cliente; trazabilidad legal</td></tr>
+          <tr><td><strong>🧮 Calculadora Hipotecaria</strong></td><td>Simulación dividendo según pie, plazo, tasa, subsidio</td><td>Ancla al cliente con cifras reales en primera reunión</td></tr>
+          <tr><td><strong>📞 Histórico de interacciones</strong></td><td>Llamadas, mails, reuniones, resultados timestamp</td><td>Retomar contacto con contexto en 60 segundos</td></tr>
+          <tr><td><strong>📈 Reportes por canal</strong></td><td>Conversión y ciclo por origen del lead</td><td>Decide dónde invertir tiempo el próximo trimestre</td></tr>
+          <tr><td><strong>🌡️ Tags de temperatura</strong></td><td>🔥 caliente · 🌡️ tibio · ❄️ frío</td><td>Priorización diaria automática</td></tr>
+          <tr><td><strong>📎 Documentos del lead</strong></td><td>Subida de CI, liquidaciones, F22, cartolas en el mismo lead</td><td>Carpeta centralizada lista para bancos</td></tr>
+          <tr><td><strong>🔔 Recordatorios automáticos</strong></td><td>Alertas a 30/90/180 días post-firma (pedir referido, seguimiento)</td><td>Sistema de postventa sin recordar manualmente</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🛠️</span>
+      <div class="info-text"><strong>Ritual diario TuMatch:</strong> reserva 20 minutos al final de cada día para actualizar el CRM. Sin ritual, el sistema se desactualiza en 2 semanas. Con ritual, el CRM se vuelve activo de carrera que vale más con cada lead registrado.</div>
+    </div>
+
+    <div id="quiz-3" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 4: PERFILAMIENTO HIPOTECARIO ===== -->
+<section class="module" id="mod-4">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 4 · Perfilamiento Hipotecario en CRM · Paso a Paso</div>
+      <h2 class="sec-h2">Los campos exactos a llenar para derivar al banco</h2>
+      <p class="sec-desc">Un lead de primera vivienda sin perfil hipotecario en CRM es un lead a medias. Esta es la lista exacta de campos del <strong>perfil-comprador-section</strong> que debes completar en CRM para cada lead de comprador primera vivienda, con ejemplos de llenado y por qué cada dato importa.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Campo CRM</th><th>Ejemplo de llenado correcto</th><th>¿Por qué lo pide el banco?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nombre completo + RUT</strong></td><td>María José Pérez González · 18.234.567-8</td><td>Identificación única del deudor</td></tr>
+          <tr><td><strong>Fecha nacimiento + edad</strong></td><td>15-mar-1990 · 36 años</td><td>Plazo máximo del crédito (+ edad de 75 años al vencimiento)</td></tr>
+          <tr><td><strong>Estado civil / pareja</strong></td><td>Casada c/separación bienes / Conviviente civil</td><td>Deudor solidario potencial para sumar rentas</td></tr>
+          <tr><td><strong>Ocupación + antigüedad</strong></td><td>Ingeniera Civil en empresa X · 4 años 6 meses · indefinido</td><td>Antigüedad laboral (≥6 meses indefinido típico)</td></tr>
+          <tr><td><strong>Renta líquida mensual</strong></td><td>$1.450.000 (con liquidación 3 últimos meses)</td><td>Base para carga financiera ≤25%</td></tr>
+          <tr><td><strong>Renta líquida pareja (si aplica)</strong></td><td>$920.000</td><td>Suma para rentas conjuntas</td></tr>
+          <tr><td><strong>Ahorro disponible (pie)</strong></td><td>UF 480 en BancoEstado + AFC</td><td>Capacidad de pie (20% LTV típico)</td></tr>
+          <tr><td><strong>Postulará a subsidio</strong></td><td>Sí · DS1 Tramo 3 (en tramitación RSH)</td><td>Complementa pie; cambia oferta bancaria</td></tr>
+          <tr><td><strong>Tramo RSH</strong></td><td>60% (confirmado registrosocial.gob.cl)</td><td>Tramo del subsidio aplicable</td></tr>
+          <tr><td><strong>Dicom / morosidades</strong></td><td>Limpio (adjunto equifax.cl pdf) / Cerradas 3 (certificados adjuntos)</td><td>Scoring crediticio previo</td></tr>
+          <tr><td><strong>Deudas vigentes otros bancos</strong></td><td>Tarjeta 200k · Consumo 1,2M (CMF adjunto)</td><td>Carga financiera actual</td></tr>
+          <tr><td><strong>Capacidad estimada crédito (UF)</strong></td><td>UF 2.500 (calculadora TuMatch)</td><td>Base para buscar propiedades</td></tr>
+          <tr><td><strong>Propiedad objetivo (UF)</strong></td><td>UF 3.000 (pie 480 + crédito 2.520)</td><td>Lo que puede aspirar</td></tr>
+          <tr><td><strong>Zona preferida</strong></td><td>La Florida norte / Ñuñoa poniente</td><td>Match con cartera de propiedades</td></tr>
+          <tr><td><strong>Bancos a presentar (3)</strong></td><td>BancoEstado · Santander · Tanner Mutuo</td><td>Estrategia de 3 en paralelo</td></tr>
+          <tr><td><strong>Tag temperatura</strong></td><td>🔥 Caliente (arriendo termina 90 días · embarazo)</td><td>Prioridad agenda corredor</td></tr>
+          <tr><td><strong>Canal origen</strong></td><td>Referido de Juan Pérez (ex-cliente)</td><td>Reportes por canal</td></tr>
+          <tr><td><strong>Próxima acción + fecha</strong></td><td>Entregar checklist carpeta · 22-abr-2026</td><td>Recordatorio automático</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🧮</span>
+      <div class="info-text"><strong>Integración con calculadora:</strong> una vez llenos renta + pie + dicom + subsidio, la <a href="https://tumatch-leads.vercel.app/herramientas/calculadora-hipotecaria" target="_blank" rel="noopener">Calculadora Hipotecaria TuMatch</a> devuelve dividendo máximo y capital máximo. Copia ese output a la sección "Capacidad estimada crédito" del perfil.</div>
+    </div>
+
+    <div id="quiz-4" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 5: SOLICITUD DE DATOS ===== -->
+<section class="module" id="mod-5">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 5 · Solicitud de Datos y Documentos al Cliente</div>
+      <h2 class="sec-h2">Scripts, plazos y checklists para no perder al cliente en el proceso</h2>
+      <p class="sec-desc">Solicitar documentación es el momento más frágil del ciclo: aquí muchos compradores se frustran y abandonan. Con un script claro, plazo acotado y checklist visual, transforma la solicitud en un servicio de acompañamiento que eleva la confianza del cliente.</p>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Script profesional de solicitud (primera reunión)</div>
+      <h2 class="sec-h2" style="font-size:26px">Cómo pedir la carpeta sin abrumar</h2>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">💬</span>
+      <div class="info-text"><em>"Para que los bancos te ofrezcan la mejor tasa en 2 semanas, necesitamos armar una carpeta. Te voy a pasar un checklist por WhatsApp con 10 documentos. La mayoría los tienes en tu correo o puedes pedir online en 15 minutos. Si te atoras con alguno, me escribes y lo resolvemos juntos. La meta es tenerlo en 3 a 5 días para ingresar a 3 bancos en paralelo y darte la mejor oferta."</em></div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Checklist estándar del primera vivienda dependiente</div>
+      <h2 class="sec-h2" style="font-size:26px">11 documentos para pre-aprobación</h2>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:22px">
+      <div class="card" style="border-left:4px solid #2563EB">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#1E40AF;margin-bottom:16px">Identidad y domicilio</div>
+        <ul class="checklist">
+          <li>Cédula de identidad (ambas caras, legible)</li>
+          <li>Comprobante domicilio: boleta servicio (luz/agua) últimos 3 meses</li>
+          <li>Si es propietario de arriendo: contrato de arriendo vigente</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #2563EB">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#1E40AF;margin-bottom:16px">Renta (dependientes)</div>
+        <ul class="checklist">
+          <li>3 últimas liquidaciones de sueldo (idealmente 6 últimas)</li>
+          <li>Contrato de trabajo vigente (condiciones y antigüedad)</li>
+          <li>Certificado cotizaciones AFP últimos 12 meses (desde <code>afp.cl</code>)</li>
+          <li>Certificado antigüedad RRHH de la empresa</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Renta (independientes)</div>
+        <ul class="checklist">
+          <li>F22 últimos 2 años (desde <code>sii.cl</code> con ClaveTributaria)</li>
+          <li>Carpeta Tributaria Electrónica completa SII</li>
+          <li>Boletas honorarios últimos 12 meses (sii.cl)</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #0EA5A0">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0D7C78;margin-bottom:16px">Financiero y crediticio</div>
+        <ul class="checklist">
+          <li>Cartolas bancarias 6 últimos meses (todas las cuentas)</li>
+          <li>Certificado Dicom (equifax.cl + plataforma.cl)</li>
+          <li>Certificado deudas CMF actualizado</li>
+          <li>Certificado RSH (si postulará a subsidio) desde registrosocial.gob.cl</li>
+          <li>Certificado Subsidio MINVU (si ya lo tiene)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Plazos razonables · SLA del corredor</div>
+      <h2 class="sec-h2" style="font-size:26px">Cuándo cada documento debe estar</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Momento</th><th>Documentos a recibir</th><th>Acción del corredor si no llega</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Día 1-2</strong> (inmediatos)</td><td>CI · comprobante domicilio · últimas liquidaciones</td><td>Recordatorio amable por WhatsApp; ofrecer ayuda</td></tr>
+          <tr><td><strong>Día 3-5</strong></td><td>Certificado AFP · F22 · carpeta tributaria</td><td>Agendar 15 min para hacerlo juntos por videollamada</td></tr>
+          <tr><td><strong>Día 6-8</strong></td><td>Cartolas banco · Dicom · deudas CMF · RSH</td><td>Pequeña reunión si se atasca</td></tr>
+          <tr><td><strong>Día 9+</strong></td><td>Carpeta completa ingresada a 3 bancos</td><td>Empieza plazo de pre-aprobación (5-15 días hábiles)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Red flag:</strong> si el cliente no entrega documentos en 14 días, el compromiso es bajo. Tengan una conversación honesta: ¿sigue vigente el proyecto? Mejor calificar temprano que invertir 6 meses en un cliente que no comprará.</div>
+    </div>
+
+    <div id="quiz-5" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 6: PIPELINE CIERRE ===== -->
+<section class="module" id="mod-6">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 6 · Pipeline y Documentación del Cierre-Negocio</div>
+      <h2 class="sec-h2">Los 9 hitos desde oferta aceptada hasta entrega material</h2>
+      <p class="sec-desc">La sección <strong>cierre-negocio</strong> del CRM TuMatch estructura la operación compraventa en 9 hitos auditables. Ninguno se omite; todos se documentan. Esto protege legalmente al cliente, al corredor y a TuMatch, y asegura la exigibilidad de tu comisión.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>#</th><th>Hito</th><th>Documento asociado</th><th>Responsable</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Oferta aceptada</strong></td><td>Oferta escrita firmada + respuesta del vendedor</td><td>Corredor (documenta en CRM)</td></tr>
+          <tr><td>2</td><td><strong>Pre-compromiso / reserva</strong></td><td>Documento de reserva + seña (3-5% precio habitual)</td><td>Corredor + partes</td></tr>
+          <tr><td>3</td><td><strong>Tasación bancaria</strong></td><td>Informe del tasador CMF</td><td>Banco (contrata tasador)</td></tr>
+          <tr><td>4</td><td><strong>Evaluación bancaria final</strong></td><td>Aprobación definitiva y condiciones finales</td><td>Banco</td></tr>
+          <tr><td>5</td><td><strong>Promesa de compraventa</strong></td><td>Escritura de promesa (notaría)</td><td>Notario + partes</td></tr>
+          <tr><td>6</td><td><strong>Alzamiento hipoteca previa</strong> (si aplica)</td><td>Certificado de alzamiento del banco vendedor</td><td>Banco del vendedor</td></tr>
+          <tr><td>7</td><td><strong>Escritura de compraventa definitiva</strong></td><td>Escritura pública de compraventa + mutuo hipotecario</td><td>Notario + partes + banco comprador</td></tr>
+          <tr><td>8</td><td><strong>Inscripción en CBR</strong></td><td>Certificado de dominio vigente + hipoteca inscrita</td><td>Conservador de Bienes Raíces</td></tr>
+          <tr><td>9</td><td><strong>Entrega material + acta</strong></td><td>Acta de entrega firmada por ambas partes</td><td>Corredor + partes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📌</span>
+      <div class="info-text"><strong>Exigibilidad de comisión (Cláusula Cuarta del Contrato TuMatch):</strong> tu comisión es exigible solo cuando se cumplen los <em>tres</em> requisitos: (i) contrato o promesa firmado, (ii) empresa recibió el pago de comisión, (iii) entrega formal del inmueble. Documentar los 9 hitos en CRM es la única manera de hacer valer la cláusula si hay disputa.</div>
+    </div>
+
+    <div id="quiz-6" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 7: REPORTES Y KPIS ===== -->
+<section class="module" id="mod-7">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 7 · Reportes, KPIs e Ingresos del Corredor</div>
+      <h2 class="sec-h2">Leer tu CRM como un estado financiero personal</h2>
+      <p class="sec-desc">El corredor profesional no solo cierra operaciones: las mide. Los reportes del CRM TuMatch te permiten calcular ingreso proyectado, conversión por canal, ciclo promedio y forecast del trimestre. Con esos números tomas decisiones de inversión de tiempo y puedes proyectar tu facturación SII con precisión.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>KPI</th><th>Fórmula</th><th>Meta referencial corredor TuMatch</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tasa conversión global</strong></td><td>Operaciones cerradas / Leads calificados</td><td>≥ 12% (25+ operaciones/año requiere ~200 leads activos)</td></tr>
+          <tr><td><strong>Tasa conversión red caliente</strong></td><td>Cerradas red caliente / Leads caliente</td><td>≥ 30% · bajo esto revisar servicio entregado</td></tr>
+          <tr><td><strong>Ciclo promedio</strong></td><td>Días desde lead a escritura</td><td>60-90 días (caliente) · 120-180 días (tibio/frío)</td></tr>
+          <tr><td><strong>Ticket promedio</strong></td><td>Precio promedio propiedades cerradas</td><td>Consistente con cartera objetivo (UF 2.500-4.000 primera vivienda)</td></tr>
+          <tr><td><strong>Comisión promedio por operación</strong></td><td>Comisión neta / Operaciones cerradas</td><td>UF 20 a 35 (según lado y % gestión)</td></tr>
+          <tr><td><strong>Ingreso mensual proyectado</strong></td><td>(Pipeline × prob. cierre) × ticket × comisión %</td><td>Consistente con meta anual (ej. $60M/año → ~$5M/mes)</td></tr>
+          <tr><td><strong>% referidos en pipeline activo</strong></td><td>Leads por referido / Total leads activos</td><td>≥ 40% · indicador de Sistema de Referidos funcionando</td></tr>
+          <tr><td><strong>NPS de cartera</strong></td><td>%promotores - %detractores (encuesta post-firma)</td><td>≥ 8 (umbral para pedir referidos)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Forecast anual del corredor profesional</div>
+      <h2 class="sec-h2" style="font-size:26px">Proyección de ingreso 2026</h2>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">📊</span>
+      <div class="info-text"><strong>Cálculo de referencia — corredor autónomo (sin TL, 35%):</strong>
+      <br>• 20 operaciones/año × UF 3.000 promedio = UF 60.000 transado
+      <br>• Comisión bruta TuMatch 2% lado cliente = UF 1.200
+      <br>• Gestión integral sin TL (35%) = UF 420 al corredor ≈ <strong>$16.380.000</strong>
+      <br>• Si incluye contribución arrendador (65%): UF 780 ≈ <strong>$30.420.000</strong>
+      <br>• Menos: retención honorarios 12,25% + PPM + gastos propios</div>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Obligación tributaria del corredor:</strong> Declaración anual F22 del SII con todos los honorarios. Retención ya se hace al emitir boleta. Planifica flujo: la retención acumulada en el año suele cubrir impuesto, pero no siempre. Si proyectas ingreso superior a 13,5 UTA (~ UF 400 al año) considera giro empresa individual o SpA para optimización tributaria.</div>
+    </div>
+
+    <div id="quiz-7" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== PRUEBA FINAL ===== -->
+<section class="module" id="mod-final">
+  <div class="page">
+    <div class="final-test-intro">
+      <h2>Prueba final · 10 preguntas</h2>
+      <p>Evalúa dominio de comisiones, contratos y CRM hipotecario. Necesitas 10/10 para aprobar y certificar. Preguntas rotan del banco de 50.</p>
+      <div class="test-stats">
+        <div class="test-stat"><div class="num">10</div><div class="lbl">Preguntas mostradas</div></div>
+        <div class="test-stat"><div class="num">50</div><div class="lbl">Banco de preguntas</div></div>
+        <div class="test-stat"><div class="num">10/10</div><div class="lbl">Para aprobar</div></div>
+      </div>
+    </div>
+    <div id="final-quiz"></div>
+  </div>
+</section>
+
+<!-- ===== CONCLUSIÓN Y CERTIFICADO ===== -->
+<section class="module" id="mod-done">
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas la estructura económica y operativa de tu negocio</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Ya entiendes exactamente cuánto ganas, bajo qué condiciones es exigible, cómo llenar el CRM para gestión hipotecaria, y cómo medir tu pipeline como un negocio real.</p>
+    </div>
+
+    <div class="cert-section" style="margin-top:50px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Certificado de Reconocimiento</div>
+        <h2 class="sec-h2">Descarga tu certificado oficial TuMatch</h2>
+        <p class="sec-desc">Escribe tu nombre completo tal como quieres que aparezca.</p>
+      </div>
+
+      <div class="cert-name-form">
+        <label for="tmCertNameInput">Nombre completo del corredor:</label>
+        <input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name">
+      </div>
+
+      <div class="tm-cert" id="tmCert">
+        <div class="tm-cert-border">
+          <div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+          <div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario"></div>
+          <div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+          <h1 class="tm-cert-title">Comisiones, Contratos y CRM Hipotecario<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+          <div class="tm-cert-divider"></div>
+          <div class="tm-cert-subtitle">Taller Avanzado 03 · Academia de Corredores TuMatch · 2026</div>
+          <p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+          <div class="tm-cert-name" id="tmCertName">_______________________________</div>
+          <p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre comisiones y gestión hipotecaria en CRM para comprador primera vivienda, demostrando dominio del Contrato Freelance TuMatch (tramos 25%, 30%, 35%, 40%, 45%, 60%, 65%), comisiones al cliente según sugerencia CChC, arquitectura del CRM TuMatch, perfilamiento hipotecario paso a paso, solicitud profesional de documentos, documentación del cierre-negocio en sus 9 hitos y lectura de reportes e indicadores KPI del corredor profesional.</p>
+          <div class="tm-cert-modules-block">
+            <div class="tm-cert-modules-title">Módulos aprobados</div>
+            <ol class="tm-cert-modules" id="tmCertModules"></ol>
+            <div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Prueba final aprobada</span></div>
+          </div>
+          <div class="tm-cert-footer">
+            <div class="tm-cert-date" id="tmCertDate">Santiago, —</div>
+            <div class="tm-cert-seal">
+              <div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div>
+              <div class="tm-cert-seal-label">Sello de<br>reconocimiento</div>
+            </div>
+            <div class="tm-cert-sign">
+              <div class="tm-cert-stamp">
+                <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="tm-cert-stamp-svg">
+                  <defs><path id="tmStampArcTopCRM" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmStampArcBottomCRM" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs>
+                  <circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/>
+                  <circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/>
+                  <circle cx="120" cy="120" r="100" fill="none" stroke="#2563EB" stroke-width="2.2"/>
+                  <circle cx="120" cy="120" r="76" fill="none" stroke="#0D1B2A" stroke-width="1" stroke-dasharray="1 3"/>
+                  <text font-family="Cinzel, serif" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmStampArcTopCRM" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text>
+                  <text font-family="Cinzel, serif" font-size="9" font-weight="700" letter-spacing="5" fill="#1E40AF"><textPath href="#tmStampArcBottomCRM" startOffset="50%" text-anchor="middle">COMISIONES · CRM · 2026</textPath></text>
+                  <text x="120" y="108" font-family="Cinzel, serif" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text>
+                  <text x="120" y="140" font-family="Cinzel, serif" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#2563EB">10/10</text>
+                  <text x="120" y="168" font-family="EB Garamond, serif" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text>
+                </svg>
+              </div>
+              <div class="tm-cert-sign-line"></div>
+              <div class="tm-cert-sign-name">Dirección de Taller</div>
+              <div class="tm-cert-sign-role">TuMatch Inmobiliario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-cert-actions">
+        <button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir certificado</button>
+        <button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar como PNG</button>
+      </div>
+    </div>
+
+    <div style="margin-top:60px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Reglas de oro</div>
+        <h2 class="sec-h2">10 reglas de comisión, contrato y CRM</h2>
+      </div>
+      <div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div>
+    </div>
+
+    <div class="crm-msg">
+      <span style="font-size:56px;display:block;margin-bottom:12px">📊</span>
+      <h3>Aplícalo hoy en tu CRM</h3>
+      <p>Abre <strong>tumatch-leads.vercel.app</strong> y completa el perfil-comprador-section de tus 5 leads más calientes con los campos del Módulo 4. Documenta el canal de origen y etiqueta la temperatura.</p>
+      <div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <a href="https://tumatch-leads.vercel.app/leads" target="_blank" rel="noopener" class="btn btn-light">👥 Abrir CRM Leads</a>
+        <a href="../" class="btn btn-light">🎓 Otros talleres avanzados</a>
+        <button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar taller</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
+
+<script src="../app-core.js"></script>
+<script src="quiz-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

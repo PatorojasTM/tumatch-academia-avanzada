@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Subsidios Habitacionales Chile 2026</title>
+<meta name="description" content="Taller avanzado TuMatch sobre subsidios habitacionales vigentes en Chile 2026: DS1 (T1/T2/T3), DS49, DS19, Subsidio al Crédito Hipotecario y Arriendo con Promesa de Compra.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>(function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();</script>
+<style>
+  :root{--coral:#7C3AED;--coralDk:#5B21B6;--pink:#8B5CF6;--mag:#A78BFA;--gold:#D4A017;--purple:#6D28D9;--teal:#0EA5A0;--orange:#7C3AED}
+  .grad-stripe{background:linear-gradient(90deg,#5B21B6,#7C3AED,#A78BFA,#D4A017)!important}
+  .progress-fill{background:linear-gradient(90deg,#5B21B6,#7C3AED,#A78BFA)!important}
+  .taller-badge{color:#5B21B6!important;background:rgba(124,58,237,.08)!important;border-color:rgba(124,58,237,.35)!important}
+  .brand-tagline-l1{color:#D4A017!important}
+  .hero-eyebrow-line{color:#7C3AED!important}
+  .hero-title em{color:#7C3AED!important}
+  .sec-tag .dot{background:#7C3AED!important}
+</style>
+</head>
+<body>
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+<header class="hdr"><div class="grad-stripe"></div><div class="hdr-row">
+  <a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;"><img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"><div class="brand-tagline"><div class="brand-tagline-l1">Academia de Corredores</div><div class="brand-tagline-l2">Subsidios Habitacionales Chile · Taller Avanzado · 2026</div></div></a>
+  <div class="hdr-actions"><a href="../" style="font-size:12px;text-decoration:none;color:#5B21B6;font-weight:700;letter-spacing:.5px">← Hub Avanzado</a><span class="taller-badge">Taller 04 · Avanzado</span><button class="theme-toggle" id="themeToggle"><svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/></g></svg><svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg></button></div>
+</div></header>
+<div class="progress-wrap"><div class="progress-inner"><span class="progress-label">Progreso del taller</span><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><span class="progress-num" id="progressNum">0 / 7</span></div></div>
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<section class="module active" id="mod-0"><div class="hero-new"><div class="hero-new-inner">
+  <div class="hero-academy-mark">Academia · Taller Avanzado</div>
+  <img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch">
+  <div class="hero-eyebrow-line">Comprador Primera Vivienda · 2026</div>
+  <h1 class="hero-title">Subsidios<br><em>Habitacionales Chile 2026</em></h1>
+  <p class="hero-lead">Dominar los subsidios MINVU transforma al corredor en asesor estratégico. Cubre DS1 (Tramos 1/2/3), DS49, DS19, Subsidio al Crédito Hipotecario y DS116 con montos UF actualizados y calendario de postulación 2026.</p>
+  <div class="hero-meta"><div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado</div></div></div>
+  <div id="resumeBanner" class="resume-banner" style="display:none"><div class="resume-banner-icon">📖</div><div class="resume-banner-body"><div class="resume-banner-title">Avance guardado</div><div class="resume-banner-text" id="resumeBannerText">Continúa donde quedaste.</div></div><button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button></div>
+  <div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar →</button></div>
+  <div class="hero-save-hint"><span class="save-dot"></span><span>5 errores acumulados bloquean el taller 10 minutos.</span></div>
+</div></div>
+<div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · subsidios de MINVU aplicados al corretaje</h2></div>
+<div class="mod-timeline">
+  <div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Arquitectura del sistema de subsidios MINVU</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>MINVU</span><span>SERVIU</span><span>RSH</span><span>Calendario</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">DS49 · Fondo Solidario de Elección de Vivienda</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Vulnerable</span><span>Hasta 950 UF</span><span>Sin crédito</span><span>RSH 40%</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">DS1 Tramo 1 · Sector medio-vulnerable</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Hasta UF 1.600</span><span>Ahorro 30 UF</span><span>Con crédito</span><span>RSH 60%</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">DS1 Tramo 2 y 3 · Sector medio</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>T2: UF 2.200</span><span>T3: UF 2.600</span><span>Ahorro 50-80 UF</span><span>RSH 70-90%</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">DS19 · Integración social y territorial</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Conjuntos mixtos</span><span>Llamados CEIS</span><span>Proyectos</span><span>DS19 T1/T2</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Subsidio al Crédito Hipotecario (DS116) y Recuperación</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>DS116</span><span>Rebaja tasa</span><span>Arriendo-promesa</span><span>Reparación</span></div></div></div>
+  <div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Postulación, documentos y manejo de objeciones</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Carpeta</span><span>Plazos</span><span>Rechazos</span><span>Apelaciones</span></div></div></div>
+  <div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+</div>
+<div class="info-box info" style="margin-top:24px"><span class="info-icon">🏛️</span><div class="info-text"><strong>Fuentes oficiales citadas:</strong> MINVU (Ministerio de Vivienda y Urbanismo), Registro Social de Hogares (MIDESO), Biblioteca del Congreso Nacional (bcn.cl) para los Decretos Supremos, chileatiende.gob.cl. Montos UF actualizados al llamado 2026; revisar calendario vigente en <a href="https://www.minvu.cl" target="_blank" rel="noopener">minvu.cl</a>.</div></div>
+</div>
+</section>
+
+<section class="module" id="mod-1"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 1 · Arquitectura del Sistema de Subsidios</div><h2 class="sec-h2">Cómo se organiza el subsidio habitacional chileno</h2><p class="sec-desc">El Estado chileno entrega subsidios habitacionales a través del MINVU. Los subsidios se operan territorialmente vía los SERVIU regionales. El Registro Social de Hogares (MIDESO) determina la vulnerabilidad. Los llamados se abren en fechas específicas cada año y la postulación es por ventanas acotadas.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Organismo</th><th>Rol</th><th>Plataforma</th></tr></thead><tbody>
+<tr><td><strong>MINVU</strong></td><td>Diseña política habitacional y decretos supremos</td><td>minvu.cl</td></tr>
+<tr><td><strong>SERVIU regional</strong></td><td>Opera postulaciones, paga subsidios y supervisa construcción</td><td>serviu.cl por región</td></tr>
+<tr><td><strong>MIDESO</strong></td><td>Administra RSH que define tramos de vulnerabilidad</td><td>registrosocial.gob.cl</td></tr>
+<tr><td><strong>ChileAtiende</strong></td><td>Canal integrado de consulta al ciudadano</td><td>chileatiende.gob.cl</td></tr>
+<tr><td><strong>Bancos / Mutuarias / Leasing</strong></td><td>Complementan subsidio con crédito o arriendo-promesa</td><td>Privado</td></tr>
+</tbody></table></div>
+<div class="info-box info"><span class="info-icon">📅</span><div class="info-text"><strong>Ventanas típicas 2026:</strong> DS49 llamado anual abril-junio · DS1 llamados semestrales marzo y agosto · DS19 por proyecto (sin calendario fijo). Siempre verifica el calendario oficial del año vigente en minvu.cl/postulaciones antes de orientar al cliente.</div></div>
+<div id="quiz-1" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-2"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 2 · DS49 · Fondo Solidario de Elección de Vivienda</div><h2 class="sec-h2">El subsidio del 40% más vulnerable</h2><p class="sec-desc">DS49 (Decreto Supremo 49 · 2011) es el subsidio para sectores vulnerables con RSH hasta 40% más vulnerable. Financia hasta ~950 UF sin crédito hipotecario — es subsidio directo del Estado a la vivienda social. Es la ruta de cliente que sin ayuda no accedería al mercado.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:28px">
+<div class="card" style="border-left:4px solid #7C3AED"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5B21B6;margin-bottom:16px">Requisitos DS49 (2026)</div><ul class="checklist">
+<li><strong>RSH:</strong> hasta 40% más vulnerable (tramos 0-40%)</li>
+<li><strong>Ahorro mínimo:</strong> 10 UF en cuenta vivienda</li>
+<li><strong>No tener otra vivienda</strong> inscrita a nombre del postulante</li>
+<li><strong>No haber recibido antes</strong> subsidio habitacional</li>
+<li>Chileno, extranjero con residencia definitiva o permiso permanente</li>
+<li>Mayor de 18 años con CI vigente</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Montos DS49 · referencias 2026</div><ul class="checklist">
+<li>Monto subsidio varía por región y tipo propiedad (nueva / usada / construida en sitio propio)</li>
+<li>Urbana RM: hasta <strong>~950 UF</strong> (monto depende llamado)</li>
+<li>Rural / extremas: montos más altos por ruralidad o aislamiento</li>
+<li><strong>No combina con crédito hipotecario</strong> — es pago directo al SERVIU</li>
+<li>Vivienda debe inscribirse a nombre del subsidiado con prohibición 5 años</li>
+</ul></div></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Rol del corredor en DS49:</strong> este cliente compra vivienda social o construcción en sitio propio, no propiedad de mercado libre. El corredor acompaña el proceso pero rara vez genera comisión directa por esta operación — su valor es asesoría al cliente y derivación a otras oportunidades.</div></div>
+<div id="quiz-2" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-3"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 3 · DS1 Tramo 1 · Sector medio-vulnerable</div><h2 class="sec-h2">El subsidio del primer comprador del sector medio-bajo</h2><p class="sec-desc">DS1 (Decreto Supremo 1 · 2011) es el subsidio de mayor volumen para primera vivienda sector medio. Tramo 1 atiende al sector medio-vulnerable, con RSH hasta 60% y combinación obligatoria con crédito hipotecario.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Concepto</th><th>DS1 Tramo 1 (2026 referencial)</th></tr></thead><tbody>
+<tr><td>RSH máximo</td><td>60% más vulnerable</td></tr>
+<tr><td>Ahorro mínimo</td><td>30 UF</td></tr>
+<tr><td>Precio vivienda máximo</td><td>hasta <strong>UF 1.600</strong></td></tr>
+<tr><td>Monto subsidio</td><td>~UF 500 a 700 (variable)</td></tr>
+<tr><td>Financiamiento</td><td>Subsidio + ahorro + crédito hipotecario obligatorio</td></tr>
+<tr><td>Exención impuesto timbres</td><td>Aplica parcial</td></tr>
+<tr><td>Prohibición de venta</td><td>5 años desde inscripción</td></tr>
+</tbody></table></div>
+<div class="info-box info"><span class="info-icon">🧮</span><div class="info-text"><strong>Cálculo típico DS1 T1:</strong> vivienda UF 1.400 = subsidio UF 600 + ahorro UF 50 + crédito UF 750. Dividendo mensual a 25 años 5%: ~UF 4,4/mes ≈ $171.000. Carga 25% exige renta ≥ $684.000 → probable empleado formal con 1+ año de antigüedad.</div></div>
+<div id="quiz-3" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-4"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 4 · DS1 Tramo 2 y Tramo 3 · Sector medio</div><h2 class="sec-h2">La ruta mayoritaria del primer comprador del sector medio</h2><p class="sec-desc">DS1 T2 y T3 son los subsidios más usados por el primer comprador de empleo formal. Cubren propiedades de mayor valor con menor subsidio pero mayor capacidad crediticia. Es el perfil principal del joven profesional y la pareja consolidando.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Concepto</th><th>DS1 T2</th><th>DS1 T3</th></tr></thead><tbody>
+<tr><td>RSH máximo</td><td>hasta 70% vulnerable</td><td>hasta 90% vulnerable</td></tr>
+<tr><td>Ahorro mínimo</td><td>50 UF</td><td>80 UF</td></tr>
+<tr><td>Precio vivienda máximo</td><td><strong>UF 2.200</strong></td><td><strong>UF 2.600</strong></td></tr>
+<tr><td>Monto subsidio</td><td>~UF 300-500</td><td>~UF 200-350</td></tr>
+<tr><td>Compatible con leasing</td><td>Sí (Tanner, Caja Los Andes)</td><td>Sí (Tanner, Caja Los Andes)</td></tr>
+<tr><td>Sub-urbano</td><td>Sí</td><td>Sí</td></tr>
+</tbody></table></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Subsidio y prohibición de venta:</strong> DS1 T1/T2/T3 genera prohibición de venta por 5 años contados desde la inscripción de la vivienda a nombre del subsidiado. Vender antes requiere autorización SERVIU y devolver el subsidio actualizado. Es cláusula que el corredor debe explicar claramente.</div></div>
+<div id="quiz-4" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-5"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 5 · DS19 · Integración Social y Territorial</div><h2 class="sec-h2">Proyectos mixtos en zonas de alta demanda</h2><p class="sec-desc">DS19 (Decreto Supremo 19 · 2016) creó el Programa de Integración Social y Territorial. Se aplica a proyectos inmobiliarios aprobados como DS19 por MINVU que mezclan viviendas subsidiadas y de mercado. El comprador postula al proyecto específico, no al subsidio genérico.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:22px">
+<div class="card" style="border-left:4px solid #7C3AED"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5B21B6;margin-bottom:16px">Cómo opera</div><ul class="checklist">
+<li>Inmobiliarias postulan <strong>proyecto completo</strong> a MINVU</li>
+<li>MINVU lo califica como DS19 si cumple mezcla social (50% con subsidio + 50% libre típico)</li>
+<li>Postulantes con subsidio DS1 compran las unidades reservadas</li>
+<li>Mercado libre compra las otras unidades sin subsidio</li>
+<li>Beneficia al inmobiliario con incentivos MINVU (aporte al proyecto)</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Rol del corredor</div><ul class="checklist">
+<li>Identifica proyectos DS19 vigentes en su zona (consulta SERVIU y portales)</li>
+<li>Perfila clientes con subsidio y postula al proyecto específico</li>
+<li>Acompaña trámites adicionales de calificación MINVU del comprador</li>
+<li>Puede trabajar tanto el lado subsidiado como el de mercado libre</li>
+</ul></div></div>
+<div id="quiz-5" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-6"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 6 · Subsidio al Crédito Hipotecario (DS116) y otros</div><h2 class="sec-h2">Complemento al crédito bancario: rebaja de tasa</h2><p class="sec-desc">DS116 es un subsidio que rebaja la tasa del crédito hipotecario del comprador, complementando DS1. Se aplica vía banco adherido (habitualmente BancoEstado) durante los primeros años del crédito. También existen Arriendo con Promesa de Compra y Subsidio de Reparación.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Instrumento</th><th>Qué hace</th><th>Cuándo aplica</th></tr></thead><tbody>
+<tr><td><strong>DS116 · Subsidio al Crédito Hipotecario</strong></td><td>Rebaja tasa del crédito en 0,61-1,16 pp durante los primeros años</td><td>Complemento al DS1; contratado al solicitar crédito con banco adherido</td></tr>
+<tr><td><strong>Arriendo con Promesa de Compra (subsidio)</strong></td><td>Financia arriendo-promesa con leasing habitacional</td><td>DS1 T2/T3 con sociedad leasing (Tanner, Caja Los Andes)</td></tr>
+<tr><td><strong>Subsidio de Reparación</strong></td><td>Financia ampliación, mejoramiento o reparación de vivienda existente</td><td>Propietarios que ya tienen vivienda y la quieren mejorar</td></tr>
+<tr><td><strong>Subsidio de Arriendo DS52</strong></td><td>Apoyo al arriendo (no a la compra) por 5-8 años</td><td>Familias vulnerables que aún no pueden comprar</td></tr>
+<tr><td><strong>Protege a la Clase Media</strong></td><td>Línea específica para familias con ingresos del tramo medio que no califican a DS1 estricto</td><td>Programas 2023-2026 del MINVU</td></tr>
+</tbody></table></div>
+<div id="quiz-6" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-7"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 7 · Postulación, Documentos y Manejo de Objeciones</div><h2 class="sec-h2">Cómo acompañas al cliente en el trámite real</h2><p class="sec-desc">El corredor profesional acompaña al cliente durante la postulación, revisa la carpeta y gestiona eventuales rechazos o apelaciones. Esta es la dimensión operativa que transforma al corredor en aliado del cliente y diferencia al asesor del mediador.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:22px">
+<div class="card" style="border-left:4px solid #7C3AED"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5B21B6;margin-bottom:16px">Checklist de postulación DS1</div><ul class="checklist">
+<li>Cédula identidad vigente</li>
+<li>Certificado RSH actualizado (registrosocial.gob.cl)</li>
+<li>Certificado ahorro mínimo en cuenta vivienda (BancoEstado, cooperativas)</li>
+<li>Declaración jurada de no tener vivienda propia</li>
+<li>Certificado dominio vigente CBR (negativo propiedad)</li>
+<li>Certificado de matrimonio/conviviente (si aplica)</li>
+<li>Liquidaciones de sueldo últimas 3 meses (si aplica)</li>
+<li>Pre-aprobación bancaria (para validar capacidad crédito complementario)</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Plazos y apelaciones</div><ul class="checklist">
+<li><strong>Postulación:</strong> ventana de 10-30 días hábiles desde apertura llamado</li>
+<li><strong>Evaluación MINVU:</strong> 2-4 meses desde cierre postulación</li>
+<li><strong>Publicación de resultados:</strong> nómina de seleccionados en SERVIU y minvu.cl</li>
+<li><strong>Vigencia del subsidio:</strong> 21 meses desde el certificado para comprar propiedad</li>
+<li><strong>Apelación:</strong> si te rechazan, puedes apelar en plazo y postular en siguiente llamado</li>
+<li><strong>Prórroga:</strong> vigencia del subsidio puede prorrogarse previa solicitud justificada a SERVIU</li>
+</ul></div></div>
+<div class="info-box info"><span class="info-icon">💬</span><div class="info-text"><strong>Objeciones frecuentes del cliente:</strong>
+<br>• <em>"No voy a ganar"</em> → "La postulación no tiene costo y dura 20 min. Es riesgo cero con alto upside."
+<br>• <em>"El trámite es complicado"</em> → "Yo te acompaño con checklist claro. 90 min totales de gestión."
+<br>• <em>"Y si no me dan el subsidio?"</em> → "Postulas siguiente llamado. O vamos directo a leasing sin subsidio. Siempre tenemos plan B."</div></div>
+<div id="quiz-7" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-final"><div class="page"><div class="final-test-intro"><h2>Prueba final · 10 preguntas</h2><p>Dominio de subsidios MINVU. 10/10 para aprobar. Preguntas rotan banco de 50.</p><div class="test-stats"><div class="test-stat"><div class="num">10</div><div class="lbl">Mostradas</div></div><div class="test-stat"><div class="num">50</div><div class="lbl">Banco</div></div><div class="test-stat"><div class="num">10/10</div><div class="lbl">Aprobar</div></div></div></div><div id="final-quiz"></div></div></section>
+
+<section class="module" id="mod-done"><div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas el sistema de subsidios 2026</h2></div>
+<div class="cert-section" style="margin-top:50px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Certificado</div><h2 class="sec-h2">Descarga tu certificado</h2></div>
+<div class="cert-name-form"><label for="tmCertNameInput">Nombre completo del corredor:</label><input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name"></div>
+<div class="tm-cert" id="tmCert"><div class="tm-cert-border"><div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+  <div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"></div>
+  <div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+  <h1 class="tm-cert-title">Subsidios Habitacionales Chile 2026<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+  <div class="tm-cert-divider"></div>
+  <div class="tm-cert-subtitle">Taller Avanzado 04 · Academia TuMatch · 2026</div>
+  <p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+  <div class="tm-cert-name" id="tmCertName">_______________________________</div>
+  <p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre subsidios habitacionales vigentes en Chile 2026, demostrando dominio del sistema MINVU/SERVIU, DS49, DS1 (Tramos 1/2/3), DS19, DS116 Subsidio al Crédito Hipotecario, Arriendo con Promesa, postulación con RSH y acompañamiento del primera vivienda.</p>
+  <div class="tm-cert-modules-block"><div class="tm-cert-modules-title">Módulos aprobados</div><ol class="tm-cert-modules" id="tmCertModules"></ol><div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Aprobada</span></div></div>
+  <div class="tm-cert-footer"><div class="tm-cert-date" id="tmCertDate">Santiago, —</div><div class="tm-cert-seal"><div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div><div class="tm-cert-seal-label">Sello de<br>reconocimiento</div></div><div class="tm-cert-sign"><div class="tm-cert-stamp"><svg viewBox="0 0 240 240" class="tm-cert-stamp-svg"><defs><path id="tmAT4" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmAB4" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs><circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/><circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/><circle cx="120" cy="120" r="100" fill="none" stroke="#7C3AED" stroke-width="2.2"/><text font-family="Cinzel" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmAT4" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text><text font-family="Cinzel" font-size="9" font-weight="700" letter-spacing="5" fill="#5B21B6"><textPath href="#tmAB4" startOffset="50%" text-anchor="middle">SUBSIDIOS · 2026</textPath></text><text x="120" y="108" font-family="Cinzel" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text><text x="120" y="140" font-family="Cinzel" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#7C3AED">10/10</text><text x="120" y="168" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text></svg></div><div class="tm-cert-sign-line"></div><div class="tm-cert-sign-name">Dirección de Taller</div><div class="tm-cert-sign-role">TuMatch Inmobiliario</div></div></div>
+</div></div>
+<div class="tm-cert-actions"><button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir</button><button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar PNG</button></div>
+</div>
+<div style="margin-top:60px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Reglas de oro</div><h2 class="sec-h2">10 reglas del subsidio habitacional</h2></div><div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div></div>
+<div class="crm-msg"><span style="font-size:56px;display:block;margin-bottom:12px">🏛️</span><h3>Aplica hoy</h3><p>Verifica el calendario MINVU 2026 en <strong>minvu.cl/postulaciones</strong>. Perfila en CRM los clientes RSH y agenda ventanas de postulación.</p>
+<div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a href="https://www.minvu.cl" target="_blank" rel="noopener" class="btn btn-light">🏛️ MINVU</a><a href="../" class="btn btn-light">🎓 Otros talleres</a><button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar</button></div></div>
+</div></section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="../app-core.js"></script>
+<script src="quiz-data.js"></script>
+<script src="app.js"></script>
+</body></html>

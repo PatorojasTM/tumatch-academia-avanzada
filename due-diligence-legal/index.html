@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Due Diligence Legal y Técnica</title>
+<meta name="description" content="Taller avanzado TuMatch sobre due diligence legal y técnica antes de la compraventa: ROL SII, CBR, estudio de títulos, certificados DOM, tasación, vicios redhibitorios, Ley 19.472 y seguros.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>(function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();</script>
+<style>
+:root{--coral:#B45309;--coralDk:#92400E;--pink:#D97706;--mag:#F59E0B;--gold:#D4A017;--purple:#92400E;--teal:#0EA5A0;--orange:#B45309}
+.grad-stripe{background:linear-gradient(90deg,#92400E,#B45309,#D97706,#D4A017)!important}
+.progress-fill{background:linear-gradient(90deg,#92400E,#B45309,#D97706)!important}
+.taller-badge{color:#92400E!important;background:rgba(180,83,9,.08)!important;border-color:rgba(180,83,9,.35)!important}
+.brand-tagline-l1{color:#D4A017!important}.hero-eyebrow-line{color:#B45309!important}.hero-title em{color:#B45309!important}.sec-tag .dot{background:#B45309!important}
+</style>
+</head>
+<body>
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+<header class="hdr"><div class="grad-stripe"></div><div class="hdr-row">
+<a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;"><img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"><div class="brand-tagline"><div class="brand-tagline-l1">Academia de Corredores</div><div class="brand-tagline-l2">Due Diligence Legal y Técnica · 2026</div></div></a>
+<div class="hdr-actions"><a href="../" style="font-size:12px;text-decoration:none;color:#92400E;font-weight:700">← Hub</a><span class="taller-badge">Taller 05</span><button class="theme-toggle" id="themeToggle"><svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/></g></svg><svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg></button></div>
+</div></header>
+<div class="progress-wrap"><div class="progress-inner"><span class="progress-label">Progreso del taller</span><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><span class="progress-num" id="progressNum">0 / 7</span></div></div>
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<section class="module active" id="mod-0"><div class="hero-new"><div class="hero-new-inner">
+<div class="hero-academy-mark">Academia · Taller Avanzado</div>
+<img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch">
+<div class="hero-eyebrow-line">Comprador Primera Vivienda · 2026</div>
+<h1 class="hero-title">Due Diligence<br><em>Legal y Técnica</em></h1>
+<p class="hero-lead">Antes de firmar la promesa, hay 9 verificaciones que separan al corredor profesional del improvisado. Este taller cubre ROL SII, CBR, estudio de títulos 10 años, certificados municipales, DOM, tasación, vicios redhibitorios (Art. 1.858 CC), Ley 19.472 y seguros obligatorios.</p>
+<div class="hero-meta"><div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos</div></div><div class="hero-meta-sep"></div><div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado</div></div></div>
+<div id="resumeBanner" class="resume-banner" style="display:none"><div class="resume-banner-icon">📖</div><div class="resume-banner-body"><div class="resume-banner-title">Avance guardado</div><div class="resume-banner-text" id="resumeBannerText">Continúa donde quedaste.</div></div><button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button></div>
+<div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar →</button></div>
+<div class="hero-save-hint"><span class="save-dot"></span><span>5 errores = 10 min bloqueo.</span></div>
+</div></div>
+<div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · verificaciones críticas antes de firmar</h2></div>
+<div class="mod-timeline">
+<div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">ROL SII y contribuciones</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>ROL</span><span>Avalúo fiscal</span><span>Contribuciones</span><span>Tesorería</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Conservador de Bienes Raíces (CBR)</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Dominio vigente</span><span>Hipotecas</span><span>Gravámenes</span><span>Prohibiciones</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Estudio de títulos 10 años</div><div class="mod-t-time">≈ 11 min</div></div><div class="mod-t-keys"><span>Tracto sucesivo</span><span>Escrituras</span><span>Adquisiciones</span><span>Acciones reivindicatorias</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Certificados municipales y DOM</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Recepción final</span><span>Número oficial</span><span>Deuda aseo</span><span>Patentes</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Tasación técnica CMF</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Tasador CMF</span><span>Comparables</span><span>Método costo</span><span>Método renta</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Vicios redhibitorios y Ley 19.472</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Art 1.858 CC</span><span>Ley calidad construcción</span><span>Garantía 5-10 años</span><span>Plazo prescripción</span></div></div></div>
+<div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Copropiedad y Reglamento</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Ley 21.442</span><span>Reglamento</span><span>Gastos comunes</span><span>Asamblea</span></div></div></div>
+<div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+</div></div></section>
+
+<section class="module" id="mod-1"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 1 · ROL SII y contribuciones</div><h2 class="sec-h2">El ROL es la ID fiscal de la propiedad</h2><p class="sec-desc">El ROL es el código SII que identifica cada propiedad. Se usa para pagar contribuciones (impuesto territorial), calcular avalúo fiscal y verificar el estado tributario. Antes de firmar promesa, obtén el ROL y verifica que las contribuciones estén al día (www.sii.cl o Tesorería).</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Verificación</th><th>Plataforma</th><th>Qué muestra</th></tr></thead><tbody>
+<tr><td><strong>ROL de la propiedad</strong></td><td>sii.cl sección Avalúos</td><td>ROL, avalúo fiscal, superficie, calidad, destino</td></tr>
+<tr><td><strong>Contribuciones al día</strong></td><td>tesoreria.cl</td><td>Pagos vigentes, deuda si la hay</td></tr>
+<tr><td><strong>Certificado de avalúo fiscal</strong></td><td>sii.cl</td><td>Valor fiscal referencial (base para impuesto territorial)</td></tr>
+<tr><td><strong>Exención contribuciones</strong></td><td>sii.cl</td><td>Primera vivienda con avalúo bajo tope tiene exención total o parcial</td></tr>
+</tbody></table></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Red flag:</strong> si las contribuciones están impagas, el comprador puede ser solidariamente responsable post-transferencia por las del año en curso. Debe regularizarse antes de firmar escritura o retenerse del precio.</div></div>
+<div id="quiz-1" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-2"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 2 · Conservador de Bienes Raíces</div><h2 class="sec-h2">El CBR es el registro público de la propiedad inmueble</h2><p class="sec-desc">El CBR (uno por comuna o jurisdicción) inscribe todo acto que afecta la propiedad: compraventa, hipoteca, prohibición, gravamen. Sin inscripción no hay efectos frente a terceros (Art. 2.410 CC). Los certificados clave antes de comprar son Dominio Vigente, Hipotecas y Gravámenes, y Prohibiciones e Interdicciones.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:28px">
+<div class="card" style="border-left:4px solid #B45309"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Certificados del CBR obligatorios</div><ul class="checklist">
+<li><strong>Certificado de Dominio Vigente</strong> — muestra quién es el actual dueño</li>
+<li><strong>Certificado de Hipotecas y Gravámenes</strong> — muestra deudas garantizadas con la propiedad</li>
+<li><strong>Certificado de Prohibiciones e Interdicciones</strong> — muestra restricciones (subsidio DS1, embargos, medidas precautorias)</li>
+<li><strong>Certificado de Litigios</strong> — muestra si hay juicios que afectan la propiedad</li>
+<li><strong>Copia de inscripción de dominio</strong> — con notas marginales (historia reciente)</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Plazos y costos (2026 referencial)</div><ul class="checklist">
+<li>Certificados online en varios CBR (incluido CBR Santiago): 1-3 días hábiles</li>
+<li>Costo por certificado: aproximadamente $3.000 a $6.000</li>
+<li>Copia de inscripción con 5 años marginales: $8.000-$15.000</li>
+<li>Estudio de títulos completo 10 años: $150.000-$400.000 según abogado</li>
+</ul></div></div>
+<div class="info-box info"><span class="info-icon">📋</span><div class="info-text"><strong>Tip:</strong> solicita todos los certificados con fecha cercana a la promesa (máximo 30 días antes). Si la propiedad está en otra comuna, verifica cuál es el CBR competente — a veces una misma comuna tiene 2.</div></div>
+<div id="quiz-2" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-3"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 3 · Estudio de Títulos 10 años</div><h2 class="sec-h2">Verificar tracto sucesivo inatacable</h2><p class="sec-desc">El estudio de títulos revisa la cadena de transferencias de la propiedad durante los últimos 10 años (plazo de prescripción adquisitiva extraordinaria, Art. 2.511 CC). Un título con observaciones puede generar acción reivindicatoria futura contra el comprador. Siempre lo ejecuta un abogado especialista.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Hito en la cadena</th><th>Qué se verifica</th><th>Riesgo si falla</th></tr></thead><tbody>
+<tr><td><strong>Compraventa inicial (10+ años atrás)</strong></td><td>Escritura válida · partes con capacidad · objeto lícito · precio real</td><td>Nulidad absoluta heredable</td></tr>
+<tr><td><strong>Transferencias intermedias</strong></td><td>Cada escritura válida · inscripción CBR correcta</td><td>Interrumpe cadena · riesgo reivindicatoria</td></tr>
+<tr><td><strong>Sucesiones por causa de muerte</strong></td><td>Posesión efectiva inscrita + adjudicaciones · todos los herederos</td><td>Herederos omitidos pueden reclamar</td></tr>
+<tr><td><strong>Divisiones / fusiones</strong></td><td>Subdivisión DOM + adjudicación notaría · todos firman</td><td>Cuotas sin transferir correctamente</td></tr>
+<tr><td><strong>Hipotecas y alzamientos</strong></td><td>Inscripción + alzamiento en CBR · correlación temporal</td><td>Hipotecas 'olvidadas' = gravamen vigente</td></tr>
+</tbody></table></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Regla:</strong> nunca compres con observaciones no resueltas en el estudio de títulos. Si el abogado encuentra una observación material, se resuelve antes de firmar promesa o se abandona la operación. No hay atajos.</div></div>
+<div id="quiz-3" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-4"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 4 · Certificados Municipales y DOM</div><h2 class="sec-h2">La municipalidad valida que la construcción sea legal</h2><p class="sec-desc">La Dirección de Obras Municipales (DOM) verifica que la edificación cumpla la normativa urbana. Sin Recepción Final Municipal, la propiedad tiene problemas para inscribirse correctamente, tasar y calificar bancariamente.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:22px">
+<div class="card" style="border-left:4px solid #B45309"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Certificados DOM imprescindibles</div><ul class="checklist">
+<li><strong>Certificado de Recepción Final</strong> — la obra está terminada y cumple normativa</li>
+<li><strong>Certificado de Informaciones Previas (CIP)</strong> — normas urbanísticas del predio</li>
+<li><strong>Número Municipal</strong> — dirección oficial del inmueble</li>
+<li><strong>Certificado de No Expropiación</strong> — el predio no está en plan de expropiación</li>
+<li><strong>Línea Oficial</strong> — deslinde legal del predio (si aplica)</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Otros certificados clave</div><ul class="checklist">
+<li><strong>Deuda de aseo y ornato</strong> — municipalidad puede cobrar pendientes</li>
+<li><strong>Patentes comerciales</strong> (si hubo negocio en el inmueble)</li>
+<li><strong>Deuda cuentas servicios básicos</strong> — agua, luz, gas al día</li>
+<li><strong>Certificado gastos comunes</strong> (si es departamento) — sin deuda con administración</li>
+</ul></div></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Red flag:</strong> propiedad sin Recepción Final de ampliaciones (muy común). Antes de firmar, verifica que los metros construidos coincidan con el DOM. Si hay ampliación sin regularizar, negocia con vendedor que la regularice o asume costo tú con descuento en precio.</div></div>
+<div id="quiz-4" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-5"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 5 · Tasación Técnica CMF</div><h2 class="sec-h2">El valor real según un perito registrado</h2><p class="sec-desc">La tasación bancaria la realiza un tasador independiente registrado en CMF. Usa tres métodos complementarios (comparables, costo, renta). El valor tasación es la base para el crédito — no el precio. Aprender a interpretar un informe te permite negociar con conocimiento.</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Método de tasación</th><th>Cómo funciona</th><th>Cuándo se usa</th></tr></thead><tbody>
+<tr><td><strong>Comparables (datos de mercado)</strong></td><td>Valores recientes de propiedades similares en la zona</td><td>Residencial estándar · método principal</td></tr>
+<tr><td><strong>Costo de reposición</strong></td><td>Costo de reconstruir + valor terreno - depreciación</td><td>Propiedades únicas o sin comparables cercanos</td></tr>
+<tr><td><strong>Capitalización de renta</strong></td><td>Renta de arriendo anual / tasa de capitalización</td><td>Inversión y propiedades con renta demostrable</td></tr>
+</tbody></table></div>
+<div class="info-box info"><span class="info-icon">🧮</span><div class="info-text"><strong>Tip:</strong> el valor de tasación suele ser conservador (90-105% del precio pactado). Si el precio pactado excede la tasación, el banco solo financia sobre tasación. El comprador debe aportar la diferencia o renegociar precio con vendedor.</div></div>
+<div id="quiz-5" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-6"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 6 · Vicios Redhibitorios y Ley 19.472</div><h2 class="sec-h2">Protección legal del comprador tras recibir la vivienda</h2><p class="sec-desc">Los vicios redhibitorios (Art. 1.858 y sgtes. Código Civil) son defectos ocultos existentes al momento de la compraventa que hacen la cosa inadecuada para su uso. La Ley 19.472 (1997, modificada) protege adicionalmente al comprador de vivienda nueva con garantía de la constructora (3, 5 y 10 años según tipo de vicio).</p></div>
+<div style="overflow-x:auto;margin-bottom:20px"><table class="barrio-table"><thead><tr><th>Tipo de vicio / falla</th><th>Marco legal</th><th>Plazo prescripción</th></tr></thead><tbody>
+<tr><td><strong>Vicio redhibitorio (vivienda usada)</strong></td><td>Art. 1.858 CC</td><td>6 meses desde entrega (rebaja precio) · 1 año (rescisión)</td></tr>
+<tr><td><strong>Terminaciones defectuosas (vivienda nueva)</strong></td><td>Ley 19.472 Art. 18 letra c)</td><td>3 años desde recepción municipal</td></tr>
+<tr><td><strong>Instalaciones (elect., agua, gas)</strong></td><td>Ley 19.472 Art. 18 letra b)</td><td>5 años desde recepción municipal</td></tr>
+<tr><td><strong>Estructural (cimientos, muros resistentes)</strong></td><td>Ley 19.472 Art. 18 letra a)</td><td>10 años desde recepción municipal</td></tr>
+</tbody></table></div>
+<div class="info-box warn"><span class="info-icon">⚠️</span><div class="info-text"><strong>Para el corredor:</strong> deja acta de entrega con inventario y fotos. Informa al comprador los plazos de garantía legal (especialmente en vivienda nueva). Si aparece vicio, el comprador debe reclamar por escrito a la constructora antes del plazo. Documenta todo.</div></div>
+<div id="quiz-6" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-7"><div class="page"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Módulo 7 · Copropiedad y Reglamento</div><h2 class="sec-h2">Lo que el comprador hereda al comprar un departamento</h2><p class="sec-desc">Al comprar un departamento, el comprador adquiere también derechos y obligaciones del régimen de copropiedad inmobiliaria regulado por la Ley 21.442 (2022, que reemplazó la 19.537). Antes de firmar, lee el Reglamento de Copropiedad, verifica gastos comunes al día y pregunta por fondo de reserva.</p></div>
+<div class="grid-2" style="gap:22px;margin-bottom:22px">
+<div class="card" style="border-left:4px solid #B45309"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Documentos copropiedad</div><ul class="checklist">
+<li><strong>Reglamento de Copropiedad</strong> inscrito en CBR</li>
+<li><strong>Certificado gastos comunes al día</strong> del administrador</li>
+<li><strong>Acta última asamblea</strong> de copropietarios</li>
+<li><strong>Estado del fondo de reserva</strong> (obligatorio por ley)</li>
+<li><strong>Presupuesto anual</strong> y derramas pendientes</li>
+<li><strong>Copia de los Estatutos</strong> (si la comunidad está constituida con personalidad jurídica)</li>
+</ul></div>
+<div class="card" style="border-left:4px solid #D4A017"><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Puntos críticos a revisar</div><ul class="checklist">
+<li>¿Hay <strong>derramas pendientes</strong> (gastos extra aprobados) no pagadas?</li>
+<li>¿Se permite <strong>arriendo de corta estadía</strong>? (Airbnb restringido en muchos edificios)</li>
+<li>¿<strong>Mascotas</strong> permitidas?</li>
+<li>¿<strong>Uso comercial</strong> permitido?</li>
+<li>¿Hay <strong>obras mayores</strong> aprobadas o en curso?</li>
+<li>¿Cómo se maneja el <strong>fondo de reserva</strong>? (mínimo 5% de gastos comunes por ley)</li>
+</ul></div></div>
+<div class="info-box info"><span class="info-icon">📖</span><div class="info-text"><strong>Ley 21.442:</strong> modernizó el régimen de copropiedad en 2022. Incluye fondo operacional obligatorio, reglas claras de asambleas, protección al copropietario minoritario y procedimientos de cobro de gastos comunes. Familiariza al corredor con ella.</div></div>
+<div id="quiz-7" class="quiz-gate"></div></div></section>
+
+<section class="module" id="mod-final"><div class="page"><div class="final-test-intro"><h2>Prueba final · 10 preguntas</h2><p>Dominio completo de due diligence. 10/10 para aprobar. Banco rotativo de 50 preguntas.</p><div class="test-stats"><div class="test-stat"><div class="num">10</div><div class="lbl">Mostradas</div></div><div class="test-stat"><div class="num">50</div><div class="lbl">Banco</div></div><div class="test-stat"><div class="num">10/10</div><div class="lbl">Aprobar</div></div></div></div><div id="final-quiz"></div></div></section>
+
+<section class="module" id="mod-done"><div class="page"><div class="sec-header" style="text-align:center"><div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión</div><h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas la due diligence profesional</h2></div>
+<div class="cert-section" style="margin-top:50px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Certificado</div><h2 class="sec-h2">Descarga tu certificado</h2></div>
+<div class="cert-name-form"><label for="tmCertNameInput">Nombre completo:</label><input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name"></div>
+<div class="tm-cert" id="tmCert"><div class="tm-cert-border"><div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+<div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch"></div>
+<div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+<h1 class="tm-cert-title">Due Diligence Legal y Técnica<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+<div class="tm-cert-divider"></div><div class="tm-cert-subtitle">Taller Avanzado 05 · Academia TuMatch · 2026</div>
+<p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+<div class="tm-cert-name" id="tmCertName">_______________________________</div>
+<p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre due diligence legal y técnica aplicada a la compraventa de primera vivienda, demostrando dominio en ROL SII y contribuciones, registros CBR, estudio de títulos 10 años, certificados DOM y municipales, tasación CMF, vicios redhibitorios del Código Civil y Ley 19.472 de calidad de la construcción, y copropiedad inmobiliaria bajo Ley 21.442.</p>
+<div class="tm-cert-modules-block"><div class="tm-cert-modules-title">Módulos aprobados</div><ol class="tm-cert-modules" id="tmCertModules"></ol><div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Aprobada</span></div></div>
+<div class="tm-cert-footer"><div class="tm-cert-date" id="tmCertDate">Santiago, —</div><div class="tm-cert-seal"><div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div><div class="tm-cert-seal-label">Sello de<br>reconocimiento</div></div><div class="tm-cert-sign"><div class="tm-cert-stamp"><svg viewBox="0 0 240 240" class="tm-cert-stamp-svg"><defs><path id="tmAT5" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmAB5" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs><circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/><circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/><circle cx="120" cy="120" r="100" fill="none" stroke="#B45309" stroke-width="2.2"/><text font-family="Cinzel" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmAT5" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text><text font-family="Cinzel" font-size="9" font-weight="700" letter-spacing="5" fill="#92400E"><textPath href="#tmAB5" startOffset="50%" text-anchor="middle">DUE DILIGENCE · 2026</textPath></text><text x="120" y="108" font-family="Cinzel" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text><text x="120" y="140" font-family="Cinzel" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#B45309">10/10</text><text x="120" y="168" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text></svg></div><div class="tm-cert-sign-line"></div><div class="tm-cert-sign-name">Dirección de Taller</div><div class="tm-cert-sign-role">TuMatch Inmobiliario</div></div></div>
+</div></div>
+<div class="tm-cert-actions"><button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir</button><button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar PNG</button></div>
+</div>
+<div style="margin-top:60px"><div class="sec-header"><div class="sec-tag"><span class="dot"></span>Reglas de oro</div><h2 class="sec-h2">10 reglas de due diligence</h2></div><div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div></div>
+<div class="crm-msg"><span style="font-size:56px;display:block;margin-bottom:12px">📋</span><h3>Aplica hoy</h3><p>Arma un checklist de due diligence para cada cliente: ROL + CBR + estudio títulos + DOM + tasación + copropiedad. Asegúralo antes de la promesa.</p><div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a href="../" class="btn btn-light">🎓 Otros talleres</a><button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar</button></div></div>
+</div></section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="../app-core.js"></script><script src="quiz-data.js"></script><script src="app.js"></script>
+</body></html>

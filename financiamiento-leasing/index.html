@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch · Taller Avanzado · Financiamiento Hipotecario y Leasing Habitacional</title>
+<meta name="description" content="Taller avanzado TuMatch sobre financiamiento del comprador primera vivienda: mutuo hipotecario, tasas, CAE, leasing habitacional con Tanner, ForUm y Caja Los Andes, mutuarias y bancos, scoring y pre-aprobación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>
+  (function(){ try{ var s = localStorage.getItem('tumatch_theme'); if (s === 'dark' || s === 'light') document.documentElement.setAttribute('data-theme', s); }catch(e){} })();
+</script>
+<style>
+  :root{--coral:#0D7C78;--coralDk:#0A5D5A;--pink:#0E9488;--mag:#14B8A6;--gold:#D4A017;--purple:#0F766E;--teal:#0EA5A0;--orange:#0D9488}
+  .grad-stripe{background:linear-gradient(90deg,#0D7C78,#0EA5A0,#14B8A6,#D4A017)!important}
+  .progress-fill{background:linear-gradient(90deg,#0D7C78,#0EA5A0,#14B8A6)!important}
+  .taller-badge{color:#0A5D5A!important;background:rgba(13,124,120,.08)!important;border-color:rgba(13,124,120,.35)!important}
+  .brand-tagline-l1{color:#D4A017!important}
+  .hero-eyebrow-line{color:#0D7C78!important}
+  .hero-title em{color:#0D7C78!important}
+  .sec-tag .dot{background:#0D7C78!important}
+</style>
+</head>
+<body>
+
+<div class="academy-bar"><span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario</span></div>
+
+<header class="hdr">
+  <div class="grad-stripe"></div>
+  <div class="hdr-row">
+    <a class="brand-logo" href="#" onclick="TMApp.goToModule(0);return false;" aria-label="Inicio">
+      <img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="brand-tagline">
+        <div class="brand-tagline-l1">Academia de Corredores</div>
+        <div class="brand-tagline-l2">Financiamiento y Leasing · Taller Avanzado · 2026</div>
+      </div>
+    </a>
+    <div class="hdr-actions">
+      <a href="../" style="font-size:12px;text-decoration:none;color:#0D7C78;font-weight:700;letter-spacing:.5px">← Hub Avanzado</a>
+      <span class="taller-badge">Taller 02 · Avanzado</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro">
+        <svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="4.9" y1="4.9" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.1" y2="4.9"/></g></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progreso del taller</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-num" id="progressNum">0 / 7</span>
+  </div>
+</div>
+
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<!-- ===== MÓDULO 0: INTRO ===== -->
+<section class="module active" id="mod-0">
+  <div class="hero-new">
+    <div class="hero-new-inner">
+      <div class="hero-academy-mark">Academia de Corredores · Taller Avanzado</div>
+      <img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="hero-eyebrow-line">Taller Avanzado sobre Comprador Primera Vivienda · 2026</div>
+      <h1 class="hero-title">Financiamiento<br><em>Hipotecario y Leasing</em></h1>
+      <p class="hero-lead">El corredor que domina el financiamiento duplica su tasa de cierre. Este taller cubre mutuo hipotecario, tasas (fija/variable/mixta), CAE, leasing habitacional (Tanner, ForUm, Caja Los Andes), mutuarias y banca, scoring y pre-aprobación con datos oficiales actualizados a 2026.</p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="hero-meta-num">7</div><div class="hero-meta-lbl">Módulos</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">190</div><div class="hero-meta-lbl">Preguntas rotativas</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">140</div><div class="hero-meta-lbl">Puntos máx.</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado oficial</div></div>
+      </div>
+
+      <div id="resumeBanner" class="resume-banner" style="display:none">
+        <div class="resume-banner-icon">📖</div>
+        <div class="resume-banner-body">
+          <div class="resume-banner-title">Tienes avance guardado</div>
+          <div class="resume-banner-text" id="resumeBannerText">Puedes continuar donde quedaste.</div>
+        </div>
+        <button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button>
+      </div>
+
+      <div class="hero-cta-row"><button class="hero-cta-new" onclick="TMApp.startModule(1)" id="heroStartBtn">Comenzar taller avanzado →</button></div>
+      <div class="hero-save-hint"><span class="save-dot"></span><span>Tu avance se guarda automáticamente. 5 errores acumulados bloquean el taller por 10 minutos.</span></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:760px">7 módulos · financiamiento aplicado al primera vivienda</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Cada módulo cierra con 5 preguntas rotativas (banco de 20 por módulo · 20 pts c/u). Prueba final de 10 preguntas sobre banco de 50. Requiere 10/10 para certificar.</p>
+    </div>
+
+    <div class="mod-timeline">
+      <div class="mod-t-item" onclick="TMApp.startModule(1)"><div class="mod-t-num">01</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Fundamentos del mutuo hipotecario en Chile</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Mutuo endosable</span><span>No endosable</span><span>UF vs pesos</span><span>CMF</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(2)"><div class="mod-t-num">02</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Tasa fija, variable y mixta · CAE</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>TNA/TNM</span><span>TPM</span><span>CAE vs tasa</span><span>TAB</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(3)"><div class="mod-t-num">03</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Leasing habitacional: cuándo, cómo y con quién</div><div class="mod-t-time">≈ 11 min</div></div><div class="mod-t-keys"><span>Ley 19.281</span><span>Tanner</span><span>ForUm</span><span>Caja Los Andes</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(4)"><div class="mod-t-num">04</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Mutuarias, Bancos y Cooperativas</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Tanner</span><span>Metlife</span><span>Santander</span><span>Coopeuch</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(5)"><div class="mod-t-num">05</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Scoring, renta y DICOM</div><div class="mod-t-time">≈ 9 min</div></div><div class="mod-t-keys"><span>Carga 25%</span><span>Antigüedad</span><span>Dicom plataforma</span><span>Avales</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(6)"><div class="mod-t-num">06</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Seguros hipotecarios obligatorios</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>Desgravamen</span><span>Incendio</span><span>Sismo</span><span>Licitación CMF</span></div></div></div>
+      <div class="mod-t-item" onclick="TMApp.startModule(7)"><div class="mod-t-num">07</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Pre-aprobación estratégica: el arma del corredor</div><div class="mod-t-time">≈ 10 min</div></div><div class="mod-t-keys"><span>Carpeta</span><span>3 bancos</span><span>Simulaciones</span><span>Evaluación</span></div></div></div>
+      <div class="mod-t-item mod-t-final"><div class="mod-t-num">★</div><div class="mod-t-body"><div class="mod-t-head"><div class="mod-t-title">Prueba final + Certificado</div><div class="mod-t-time">≈ 8 min</div></div><div class="mod-t-keys"><span>10 preguntas</span><span>Banco 50</span><span>10/10</span><span>Certificado</span></div></div></div>
+    </div>
+
+    <div class="info-box info" style="margin-top:32px">
+      <span class="info-icon">🎓</span>
+      <div class="info-text"><strong>Pre-requisito sugerido:</strong> haber completado los talleres <em>Comprador Primera Vivienda (base)</em> y <em>Psicología del Cliente Comprador (avanzado)</em>. Este taller profundiza en la dimensión financiera sin repetir lo cubierto.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 1: MUTUO HIPOTECARIO ===== -->
+<section class="module" id="mod-1">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 1 · Fundamentos del Mutuo Hipotecario en Chile</div>
+      <h2 class="sec-h2">El instrumento que financia el 85% de las primeras viviendas</h2>
+      <p class="sec-desc">El mutuo hipotecario es el contrato por el cual un banco, cooperativa o mutuaria presta una suma de dinero al comprador para adquirir una vivienda, dejando el inmueble en garantía mediante hipoteca. En Chile se expresa típicamente en UF (Unidad de Fomento) para proteger al prestamista de la inflación, y está regulado por la Ley General de Bancos y la CMF (Comisión para el Mercado Financiero).</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="card" style="border-left:4px solid #0D7C78">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0A5D5A;margin-bottom:16px">Mutuo Hipotecario Endosable</div>
+        <ul class="checklist">
+          <li><strong>Emisor:</strong> mutuarias (Tanner, Metlife, Consorcio) y algunos bancos</li>
+          <li><strong>Cesión:</strong> el crédito puede endosarse a terceros (compañías de seguros)</li>
+          <li><strong>Plazo típico:</strong> 10 a 30 años</li>
+          <li><strong>Financiamiento:</strong> hasta 90% del valor de tasación (según scoring)</li>
+          <li><strong>Tasa:</strong> suele ser competitiva y fija en UF</li>
+          <li><strong>Regulación:</strong> DL 3.500 + DFL 251 + CMF</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Mutuo No Endosable (crédito hipotecario bancario)</div>
+        <ul class="checklist">
+          <li><strong>Emisor:</strong> bancos comerciales (BancoEstado, Santander, BCI, Chile)</li>
+          <li><strong>Cesión:</strong> permanece en el banco — no se cede</li>
+          <li><strong>Plazo típico:</strong> 5 a 30 años</li>
+          <li><strong>Financiamiento:</strong> habitualmente hasta 80% del valor (90% con subsidio)</li>
+          <li><strong>Tasa:</strong> fija, variable o mixta — UF o pesos</li>
+          <li><strong>Ventaja:</strong> productos complementarios (CuentaRUT, seguros, líneas de crédito)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Moneda del crédito · UF vs pesos</div>
+      <h2 class="sec-h2" style="font-size:26px">¿Por qué casi todo mutuo se pacta en UF?</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Dimensión</th><th>Crédito en UF</th><th>Crédito en Pesos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Capital</strong></td><td>Se expresa en UF, convertible diariamente a $ según valor UF publicado por el BCCh</td><td>Se expresa en pesos nominales fijos</td></tr>
+          <tr><td><strong>Inflación</strong></td><td>Se traspasa al deudor (UF se reajusta con IPC)</td><td>La asume el banco (tasa suele compensar IPC esperado)</td></tr>
+          <tr><td><strong>Tasa típica 2025-2026</strong></td><td>4,3% a 5,7% anual en UF (histórica: promedio 4%)</td><td>10% a 14% anual (compensa IPC)</td></tr>
+          <tr><td><strong>Dividendo</strong></td><td>Sube con la inflación cada mes (en pesos)</td><td>Estable en pesos, tasa nominal fija</td></tr>
+          <tr><td><strong>Disponibilidad</strong></td><td>95% del mercado hipotecario</td><td>Muy residual, solo productos promocionales</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">💡</span>
+      <div class="info-text"><strong>Explicación al cliente:</strong> "Su dividendo está pactado en UF, lo que significa que cada mes se ajusta con la inflación. Si la UF vale $39.000 hoy y su dividendo es UF 12, paga $468.000. En un año, si la UF sube 4%, el dividendo en pesos subirá proporcionalmente — pero también suben los arriendos, sueldos y patrimonio. Es la regla de oro del crédito hipotecario chileno desde 1967."</div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:12px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Error grave:</strong> decirle al cliente "el dividendo es fijo en pesos" cuando es UF. A los 3 meses el cliente ve una diferencia y pierde la confianza. Siempre muestra dividendo en UF + proyección en $ a 6/12 meses usando IPC esperado del BCCh.</div>
+    </div>
+
+    <div id="quiz-1" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 2: TASAS ===== -->
+<section class="module" id="mod-2">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 2 · Tasa fija, variable, mixta y CAE</div>
+      <h2 class="sec-h2">La diferencia entre 4,5% y 5,2% son $30 millones en 25 años</h2>
+      <p class="sec-desc">La tasa es el costo del dinero en el tiempo. El comprador promedio se fija solo en el número nominal, pero el corredor profesional explica tres dimensiones: estructura (fija / variable / mixta), CAE (Carga Anual Equivalente) y relación con la TPM del Banco Central. Dominar esto te permite elegir el producto correcto y negociar con criterio.</p>
+    </div>
+
+    <div class="grid-3" style="gap:18px;margin-bottom:24px">
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">📌</div>
+        <div class="tip-title">Tasa Fija</div>
+        <div class="tip-text">Se mantiene idéntica durante toda la vida del crédito. Ofrece certeza total del dividendo en UF. <strong>Producto más contratado</strong> por el primer comprador chileno (78% del mercado 2025, ABIF). Recomendable cuando tasas están bajas y se esperan alzas.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">📈</div>
+        <div class="tip-title">Tasa Variable</div>
+        <div class="tip-text">Se reajusta periódicamente según un índice (TAB, TPM o Euribor en productos especiales). Habitualmente <strong>0,5 a 1,2 pp más baja al inicio</strong> que la fija. Riesgo: si sube la TPM, sube el dividendo. Tiene sentido cuando hay convicción de caída de tasas.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🔀</div>
+        <div class="tip-title">Tasa Mixta</div>
+        <div class="tip-text">Fija durante un periodo inicial (típicamente 3, 5 o 10 años) y luego variable. Usada por perfiles que esperan vender o refinanciar en ese plazo. <strong>Producto de nicho:</strong> &lt;10% del mercado pero crece en el inversionista.</div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>CAE · Carga Anual Equivalente</div>
+      <h2 class="sec-h2" style="font-size:26px">La tasa real que está pagando el cliente</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Concepto</th><th>Incluye</th><th>Ejemplo (crédito UF 3.000, 25 años)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tasa nominal</strong></td><td>Solo el interés del capital</td><td>4,80% anual</td></tr>
+          <tr><td><strong>CAE</strong></td><td>Tasa + seguros + comisiones + gastos operacionales + impuesto de timbres (0,8% saldo financiado, sube cada 6 meses)</td><td>5,42% (Δ +0,62 pp)</td></tr>
+          <tr><td><strong>Dividendo mensual típico</strong></td><td>Capital + interés + seguros + contribuciones (si banco las paga)</td><td>UF 17,2 ≈ $672.000 (UF $39.000)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🔍</span>
+      <div class="info-text"><strong>Regla de oro:</strong> siempre compara CAE, no tasa nominal. Dos bancos pueden ofrecer "4,5%" pero uno con CAE 5,1% y otro con 5,7%. Diferencia: ~UF 180 en 25 años = ~$7 millones. La CAE está obligada a informarse desde la Ley 19.496 y su reglamento (SERNAC).</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Relación con la TPM · Banco Central de Chile</div>
+      <h2 class="sec-h2" style="font-size:26px">Por qué las tasas hipotecarias suben o bajan</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Indicador</th><th>Qué es</th><th>Impacto en tasa hipotecaria</th></tr></thead>
+        <tbody>
+          <tr><td><strong>TPM</strong></td><td>Tasa de Política Monetaria del BCCh. Actualmente (abril 2026) en 4,75%</td><td>Sube TPM → sube costo de fondeo de bancos → sube tasa hipotecaria a los 2-4 meses</td></tr>
+          <tr><td><strong>TAB nominal</strong></td><td>Tasa Activa Bancaria promedio (ABIF, 90/180/360 días)</td><td>Base para créditos a tasa variable</td></tr>
+          <tr><td><strong>UF</strong></td><td>Unidad reajustable diaria (IPC mes anterior)</td><td>Protege al banco de inflación</td></tr>
+          <tr><td><strong>Premio por plazo</strong></td><td>Spread que paga el crédito hipotecario sobre TPM</td><td>Habitualmente 1,5 a 2,5 pp sobre TPM en UF</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Antipatrón:</strong> prometerle al cliente "las tasas van a bajar, espera". No lo sabes. El BCCh ajusta TPM según inflación observada y proyectada, y mover el timing de compra por especulación de tasa es un error costoso (especialmente con UF que sigue subiendo). Recomienda comprar cuando el cliente está listo, no cuando las tasas están "óptimas".</div>
+    </div>
+
+    <div id="quiz-2" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 3: LEASING HABITACIONAL ===== -->
+<section class="module" id="mod-3">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 3 · Leasing Habitacional</div>
+      <h2 class="sec-h2">La puerta alternativa cuando el banco dice no</h2>
+      <p class="sec-desc">El <strong>leasing habitacional</strong> es un contrato regulado por la <strong>Ley 19.281 (1993)</strong> por el cual una sociedad inmobiliaria (de leasing) compra la propiedad que elige el cliente y se la arrienda con promesa de compraventa. El cliente paga una "renta de leasing" mensual durante 10 a 25 años y al final puede ejercer la opción de compra por un valor residual simbólico. Es el instrumento clave para compradores con ingresos informales, dependientes recientes o historial crediticio complejo.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="card" style="border-left:4px solid #0D7C78">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0A5D5A;margin-bottom:16px">Cómo funciona (paso a paso)</div>
+        <ul class="checklist">
+          <li>El cliente elige la propiedad (nueva o usada) en el mercado</li>
+          <li>La <strong>Sociedad Inmobiliaria de Leasing</strong> (Tanner, ForUm, Caja Los Andes) la compra</li>
+          <li>Se firma el contrato de leasing con promesa de compraventa</li>
+          <li>El cliente paga <strong>renta de leasing mensual</strong> (capital + interés + seguros) durante 10-25 años</li>
+          <li>El cliente debe haber acumulado en su <strong>Cuenta de Ahorro de Arrendamiento con Promesa de Compra (CAAPC)</strong> un monto mínimo equivalente al 10-20% del precio</li>
+          <li>Al final del plazo, ejerce opción de compra por valor residual simbólico (≈ 1 UF)</li>
+          <li>La propiedad se transfiere al cliente</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Cuándo recomendarlo vs crédito bancario</div>
+        <ul class="checklist warn">
+          <li><strong>Cliente con boletas de honorarios</strong> sin F22 demostrable a 2 años</li>
+          <li>Cliente que trabaja <strong>menos de 6 meses en empleo formal</strong></li>
+          <li>Cliente con <strong>Dicom activo pero con capacidad de pago</strong> real</li>
+          <li>Cliente con <strong>ahorro irregular</strong> pero ingresos actuales consistentes</li>
+          <li><strong>Migrante con RUT reciente</strong> (menos de 2 años) o sin historial bancario</li>
+          <li>Postulante a <strong>Subsidio de Arriendo con Promesa de Compra DS1 T2/T3</strong></li>
+          <li>Propiedad <strong>fuera del perfil bancario</strong> (irregular, con objeciones de tasación)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Sociedades de leasing habitacional operativas en Chile 2026</div>
+      <h2 class="sec-h2" style="font-size:26px">Las 4 más reconocidas y activas</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Sociedad</th><th>Plazos</th><th>Ahorro mínimo (CAAPC)</th><th>Propiedades aceptadas</th><th>Tasa referencial 2026</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tanner Leasing Habitacional</strong></td><td>10-25 años</td><td>10% del precio</td><td>Nuevas y usadas hasta 10 años</td><td>UF + 6,0 a 6,8%</td></tr>
+          <tr><td><strong>ForUm Servicios Financieros</strong></td><td>12-25 años</td><td>10-15%</td><td>Nuevas preferentemente</td><td>UF + 5,9 a 6,5%</td></tr>
+          <tr><td><strong>Caja Los Andes (Leasing Habitacional)</strong></td><td>10-20 años</td><td>10% (afiliados)</td><td>Nuevas, usadas y viviendas con subsidio</td><td>UF + 6,1 a 6,9%</td></tr>
+          <tr><td><strong>Coopeuch Habitacional</strong></td><td>10-20 años</td><td>10% (socios)</td><td>Nuevas y usadas</td><td>UF + 6,3 a 7,1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📖</span>
+      <div class="info-text"><strong>Leasing vs crédito · regla práctica:</strong> la tasa de leasing es ~1 a 1,8 pp más alta que el crédito bancario. Pero es <em>aprobado cuando el banco rechaza</em>. El dividendo mensual es ligeramente superior al del crédito — pero el costo de NO comprar (seguir arrendando) es mayor. Úsalo como plan B cuando el banco rechaza o como plan A en perfiles sin historial.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Combinación con subsidios</div>
+      <h2 class="sec-h2" style="font-size:26px">Leasing + DS1 = acceso con menor pie</h2>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">🏛️</span>
+      <div class="info-text"><strong>DS1 Tramo 2 / 3 compatible con leasing:</strong> el postulante puede aplicar subsidio para financiar parte del <strong>ahorro mínimo CAAPC</strong>. Esto reduce el pie efectivo del cliente de UF 150-300 a UF 50-80. Requiere coordinación anticipada con la sociedad de leasing (Tanner y Caja Los Andes tienen convenios formales con MINVU).</div>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Desventaja real a explicar al cliente:</strong> durante el contrato de leasing, la propiedad <strong>no está a nombre del cliente</strong>. No puede hipotecarla, venderla ni usarla como aval. Hasta que ejerce la opción de compra final, es formalmente arrendatario. Algunos clientes lo viven como "no es mío del todo" — el corredor debe manejar esta emoción con datos: "cada mes acumulas patrimonio; la propiedad se inscribe a tu nombre cuando pagas la última cuota".</div>
+    </div>
+
+    <div id="quiz-3" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 4: ENTIDADES ===== -->
+<section class="module" id="mod-4">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 4 · Mutuarias, Bancos y Cooperativas</div>
+      <h2 class="sec-h2">Conocer el ecosistema te hace negociar mejor</h2>
+      <p class="sec-desc">El mercado hipotecario chileno lo componen <strong>bancos comerciales</strong> (~78% del stock), <strong>mutuarias</strong> (~15%), <strong>cooperativas</strong> (~5%) y <strong>sociedades de leasing</strong> (~2%). Cada tipo de institución tiene políticas, velocidades y especialidades distintas. El corredor profesional presenta al cliente en 2 o 3 instituciones en paralelo — nunca en una sola — y así eleva su probabilidad de aprobación.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0F766E,#0D7C78)"><span>🏦</span> Bancos comerciales</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Stock hipotecario: 78%</div>
+          <div class="prop-item"><strong>BancoEstado</strong><span>Líder absoluto en primera vivienda. Único banco con tasas DS1 preferenciales. Convenios con MINVU para subsidio. Scoring más flexible para funcionarios públicos.</span></div>
+          <div class="prop-item"><strong>Santander</strong><span>Oferta potente para empleados dependientes. Tasa competitiva y buena velocidad de evaluación. Fuerte en ticket UF 2.500+.</span></div>
+          <div class="prop-item"><strong>BCI</strong><span>Excelente producto mixto. Aprobación rápida para profesionales con renta líquida alta.</span></div>
+          <div class="prop-item"><strong>Banco de Chile</strong><span>Conservador en scoring. Bueno para clientes con patrimonio previo o relación comercial.</span></div>
+          <div class="prop-item"><strong>Falabella · Itaú · Scotiabank · Security</strong><span>Nichos específicos; útiles como tercera opción de respaldo.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#92400E,#D97706)"><span>📊</span> Mutuarias</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Stock hipotecario: 15% · emiten mutuos endosables</div>
+          <div class="prop-item"><strong>Tanner</strong><span>Líder en mutuarias. Ofrece mutuo hipotecario y leasing habitacional. Plazos hasta 30 años. Bueno para independientes con F22.</span></div>
+          <div class="prop-item"><strong>Metlife Seguros / Hipotecaria</strong><span>Mutuo endosable con cesión a compañía de seguros. Tasa muy competitiva para tickets UF 3.000+.</span></div>
+          <div class="prop-item"><strong>Consorcio</strong><span>Filial Hipotecaria; similar a Metlife. Evaluación ligeramente más rápida.</span></div>
+          <div class="prop-item"><strong>Euroamerica · PrincipaI · Ohio National</strong><span>Tamaños menores, productos específicos; útiles como respaldo.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#0D9488,#14B8A6)"><span>🤝</span> Cooperativas</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Stock hipotecario: 5%</div>
+          <div class="prop-item"><strong>Coopeuch</strong><span>Líder del segmento. Scoring más humano: considera antigüedad y aportes en cooperativa. Tasa competitiva para socios.</span></div>
+          <div class="prop-item"><strong>Capual</strong><span>Fuerza en regiones. Buena para socios FF.AA. y funcionarios públicos.</span></div>
+          <div class="prop-item"><strong>Detacoop · Coocretal · Ahorrocoop</strong><span>Nichos sectoriales específicos.</span></div>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-header" style="background:linear-gradient(135deg,#B45309,#F59E0B)"><span>🗝️</span> Sociedades de leasing habitacional</div>
+        <div class="prop-body">
+          <div class="prop-body-intro">Stock hipotecario: 2% · Ley 19.281</div>
+          <div class="prop-item"><strong>Tanner Leasing Habitacional</strong><span>Líder absoluto. Más rápido en evaluación. Acepta propiedades usadas hasta 10 años.</span></div>
+          <div class="prop-item"><strong>ForUm Servicios Financieros</strong><span>Especialista en propiedades nuevas y de inversión. Respaldado por grupo Euroamerica.</span></div>
+          <div class="prop-item"><strong>Caja Los Andes</strong><span>Fuerte en convenio MINVU para DS1 T2/T3. Compatibles con subsidio habitacional.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Estrategia del corredor · Presentar a 3 instituciones en paralelo</div>
+      <h2 class="sec-h2" style="font-size:26px">Multiplica la probabilidad de aprobación del cliente</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Perfil del cliente</th><th>1ª opción</th><th>2ª opción</th><th>3ª opción (plan B)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Empleado dependiente 5+ años</strong></td><td>Santander</td><td>BancoEstado</td><td>BCI</td></tr>
+          <tr><td><strong>Independiente (F22, 2+ años)</strong></td><td>BancoEstado</td><td>Tanner (mutuo)</td><td>Metlife</td></tr>
+          <tr><td><strong>Funcionario público</strong></td><td>BancoEstado</td><td>Coopeuch</td><td>Santander</td></tr>
+          <tr><td><strong>Postulante DS1 T1/T2</strong></td><td>BancoEstado</td><td>Caja Los Andes (leasing)</td><td>Tanner Leasing</td></tr>
+          <tr><td><strong>Migrante residencia definitiva</strong></td><td>Santander</td><td>Tanner</td><td>Metlife</td></tr>
+          <tr><td><strong>Con Dicom pero capacidad real</strong></td><td>Tanner Leasing</td><td>Caja Los Andes Leasing</td><td>ForUm</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">⚡</span>
+      <div class="info-text"><strong>Efecto palanca:</strong> presentar a 3 bancos eleva la probabilidad de aprobación de ~55% (un solo banco) a ~88% (tres). Y te da poder de negociación: el que mejor tasa ofrezca gana. Nunca presentes a un solo banco "porque es mi amigo". Le quitas 33 pp de probabilidad a tu cliente.</div>
+    </div>
+
+    <div id="quiz-4" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 5: SCORING Y RENTA ===== -->
+<section class="module" id="mod-5">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 5 · Scoring, Renta y DICOM</div>
+      <h2 class="sec-h2">Las 6 variables que deciden la aprobación</h2>
+      <p class="sec-desc">El scoring hipotecario bancario no es aleatorio: son 6 variables auditables que el corredor puede estimar antes de presentar al banco. Aprender a leerlas te convierte en el asesor que <strong>anticipa</strong> la respuesta, no el que espera noticias.</p>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Variable</th><th>Criterio bancario típico 2026</th><th>Cómo lo verifica el corredor antes</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Carga financiera total</strong></td><td>≤ 25% de renta líquida (regla oro) · excepcionalmente hasta 30%</td><td>Simulador CMF · calculadora hipotecaria TuMatch</td></tr>
+          <tr><td><strong>2. Renta líquida demostrable</strong></td><td>Dependiente: 3 últimas liquidaciones · Independiente: F22 + boletas 12 meses</td><td>Solicita documentos al cliente en primera reunión</td></tr>
+          <tr><td><strong>3. Antigüedad laboral</strong></td><td>Dependiente: ≥ 6 meses contrato indefinido · Independiente: ≥ 24 meses de boletas</td><td>Pregunta directa sin floritura en discovery</td></tr>
+          <tr><td><strong>4. DICOM y protestos</strong></td><td>Sin Dicom vigente · morosidades banco cerradas (no protestadas)</td><td>Cliente imprime informe en www.equifax.cl o app plataforma.cl</td></tr>
+          <tr><td><strong>5. Pie ahorrado</strong></td><td>10-20% del valor tasación (menor con subsidio)</td><td>Cartola 6 meses · valida origen lícito (antilavado)</td></tr>
+          <tr><td><strong>6. Valor tasación vs precio</strong></td><td>Financia hasta 80-90% del valor tasación (no del precio)</td><td>Tasación referencial CMF previa · conoce comparables zona</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Cálculo práctico del dividendo máximo</div>
+      <h2 class="sec-h2" style="font-size:26px">La regla del 25% aplicada</h2>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">🧮</span>
+      <div class="info-text"><strong>Ejemplo real:</strong> cliente con renta líquida $1.400.000 + pareja $900.000 = $2.300.000.
+      Dividendo máximo: 25% × $2.300.000 = <strong>$575.000</strong>.
+      Con UF $39.000 y tasa 4,8% a 25 años, esto equivale a crédito de <strong>UF ~2.800</strong>.
+      Con pie UF 500 (17%), puede aspirar a propiedad de UF 3.300 (≈ $129 millones).
+      Esto lo calculas en reunión con la <a href="https://tumatch-leads.vercel.app/herramientas/calculadora-hipotecaria" target="_blank" rel="noopener"><strong>Calculadora Hipotecaria TuMatch</strong></a> en 2 minutos.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>DICOM: qué mira el banco realmente</h2>
+      <h2 class="sec-h2" style="font-size:26px">Leer un informe Dicom como profesional</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Tipo de morosidad</th><th>Impacto bancario</th><th>Estrategia del corredor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sin morosidades</strong></td><td>Aprobación fácil</td><td>Presentar 2-3 bancos y negociar tasa</td></tr>
+          <tr><td><strong>Morosidad cerrada (hasta 5 años atrás)</strong></td><td>Depende: si está "cerrada con pago", no bloquea. Si es "protestada", sí bloquea</td><td>Solicita certificado de cierre del acreedor antes</td></tr>
+          <tr><td><strong>Morosidad vigente pequeña (&lt; $500.000)</strong></td><td>Banco probablemente rechaza</td><td>Pagar + pedir certificado de cierre antes de presentar</td></tr>
+          <tr><td><strong>Protesto de cheque o pagaré</strong></td><td>Rechazo inmediato en banca tradicional</td><td>Rehabilitación legal 5 años o derivar a leasing</td></tr>
+          <tr><td><strong>Informe limpio pero sin historial (thin file)</strong></td><td>Scoring medio-bajo</td><td>Co-deudor solidario o refuerzo con pie mayor</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Importante:</strong> la Ley Dicom (19.628 modificada por 20.575) establece que las morosidades cerradas caducan a los 5 años. Pero la <strong>plataforma.cl</strong> (Boletín Comercial) contiene también registros privados que el banco consulta. Siempre hazle al cliente revisar <em>ambos</em> (equifax.cl + plataforma.cl) antes de presentar al banco.</div>
+    </div>
+
+    <div id="quiz-5" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 6: SEGUROS ===== -->
+<section class="module" id="mod-6">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 6 · Seguros Hipotecarios Obligatorios</div>
+      <h2 class="sec-h2">Los seguros son el 8-12% del costo total del crédito</h2>
+      <p class="sec-desc">Todo crédito hipotecario en Chile incluye seguros obligatorios exigidos por la Ley General de Bancos y la CMF. El corredor que entiende la estructura puede <strong>ayudar al cliente a ahorrar entre $3 y $6 millones en 25 años</strong> participando en la <strong>licitación CMF de seguros asociados</strong>, vigente desde 2012.</p>
+    </div>
+
+    <div class="grid-3" style="gap:18px;margin-bottom:24px">
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🪦</div>
+        <div class="tip-title">Seguro de Desgravamen</div>
+        <div class="tip-text">Cubre el saldo del crédito si fallece el deudor. Obligatorio. Prima anual: <strong>0,05% a 0,18%</strong> del saldo (según edad y % cobertura). A más edad, más cara. Con la licitación CMF puedes bajar hasta 40% vs prima banco.</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🔥</div>
+        <div class="tip-title">Seguro de Incendio</div>
+        <div class="tip-text">Cubre daños físicos de la propiedad por incendio, rayo, explosión. Obligatorio. Prima anual: <strong>0,03% a 0,08%</strong> del valor de tasación. Varía según zona y tipo de construcción (casa / departamento / mixta).</div>
+      </div>
+      <div class="tip-card" style="flex-direction:column">
+        <div style="font-size:34px;margin-bottom:12px">🌍</div>
+        <div class="tip-title">Seguro de Sismo (adicional)</div>
+        <div class="tip-text">Cubre daños por sismo, tsunami, erupción volcánica. Obligatorio en Chile. Prima: <strong>0,02% a 0,06%</strong> del valor tasación según zona. En RM y V Región típico 0,04%.</div>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Licitación CMF de Seguros Hipotecarios</div>
+      <h2 class="sec-h2" style="font-size:26px">El ahorro que el banco no siempre te ofrece proactivamente</h2>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">📋</span>
+      <div class="info-text"><strong>Licitación CMF (Comisión para el Mercado Financiero):</strong> desde 2012, la ley obliga a los bancos a <strong>licitar los seguros hipotecarios</strong> asociados a créditos entre compañías de seguros. El cliente tiene derecho a <strong>elegir la aseguradora que ganó la licitación</strong> en lugar de la que recomienda el banco. Esto puede significar <strong>20% a 40% menos de prima</strong>.</div>
+    </div>
+
+    <div class="info-box info" style="margin-bottom:12px">
+      <span class="info-icon">💡</span>
+      <div class="info-text"><strong>Tip del corredor profesional:</strong> en la reunión del banco, pregunta explícitamente: "¿cuál compañía ganó la última licitación CMF para desgravamen?" Si el ejecutivo intenta colocar la suya "porque es más simple", insiste en el derecho del cliente a elegir la licitada. Ahorro promedio: <strong>UF 75-150 en el ciclo del crédito</strong>.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Seguros adicionales opcionales</div>
+      <h2 class="sec-h2" style="font-size:26px">Cuándo recomendar (y cuándo no)</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Seguro</th><th>Cubre</th><th>¿Recomendar?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cesantía / Incapacidad laboral</strong></td><td>Paga dividendos durante 3-12 meses si pierdes el empleo o sufres incapacidad</td><td>Sí a empleados dependientes con renta &gt; $1,5M y sin colchón emergencia</td></tr>
+          <tr><td><strong>Cobertura hogar amplia</strong></td><td>Contenido, responsabilidad civil, robo, daños por agua</td><td>Evaluar: valor bienes &gt; UF 200 sí; propiedades vacías no</td></tr>
+          <tr><td><strong>Seguro de tasa / prepago</strong></td><td>Permite prepagar sin multa si bajan tasas</td><td>No casi nunca: la prima es más cara que la multa esperada</td></tr>
+          <tr><td><strong>Garantía decenal (nuevas)</strong></td><td>Cubre vicios estructurales 5-10 años</td><td>Ya es obligatoria por Ley 19.472 para constructoras; no necesita extra</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Error común:</strong> aceptar el "paquete" de seguros que ofrece el ejecutivo del banco sin comparar. Siempre exige cotización licitada y rechaza paquetes que suman seguros no obligatorios. La CMF hace fiscalización al respecto y el cliente puede reclamar en SERNAC Financiero.</div>
+    </div>
+
+    <div id="quiz-6" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 7: PRE-APROBACIÓN ===== -->
+<section class="module" id="mod-7">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 7 · Pre-aprobación Estratégica</div>
+      <h2 class="sec-h2">La pre-aprobación es tu instrumento de cierre más poderoso</h2>
+      <p class="sec-desc">La <strong>pre-aprobación</strong> es una evaluación crediticia previa a la elección de la propiedad. El banco emite una carta vinculante con plazo (típicamente 60-90 días) donde compromete un monto máximo de crédito, tasa referencial y condiciones. Con ella en mano, el cliente <strong>negocia al vendedor como comprador calificado</strong> y el corredor <strong>cierra 3x más rápido</strong>.</p>
+    </div>
+
+    <div class="grid-2" style="gap:22px;margin-bottom:28px">
+      <div class="card" style="border-left:4px solid #0D7C78">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0A5D5A;margin-bottom:16px">Carpeta mínima para pre-aprobar</div>
+        <ul class="checklist">
+          <li><strong>Cédula de identidad</strong> vigente (ambas caras)</li>
+          <li><strong>Comprobante de domicilio</strong> (cuenta servicios últimos 3 meses)</li>
+          <li><strong>Liquidaciones de sueldo</strong> (3 últimas — dependientes)</li>
+          <li><strong>Contrato de trabajo</strong> vigente (dependientes)</li>
+          <li><strong>Certificado AFP · cotizaciones</strong> (12 meses)</li>
+          <li><strong>F22</strong> últimos 2 años (independientes)</li>
+          <li><strong>Carpeta tributaria SII</strong> completa (independientes)</li>
+          <li><strong>Cartola bancaria</strong> últimos 6 meses (todas las cuentas)</li>
+          <li><strong>Certificado de Dicom</strong> reciente (equifax.cl + plataforma.cl)</li>
+          <li><strong>Certificado deudas SBIF</strong> (CMF) actualizado</li>
+          <li><strong>Certificado RSH</strong> si postulará a subsidio</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid #D4A017">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400E;margin-bottom:16px">Proceso completo (pre-aprobación → pre-compromiso)</div>
+        <ul class="checklist">
+          <li><strong>Día 1:</strong> reunión de perfilamiento + checklist de carpeta</li>
+          <li><strong>Día 2-5:</strong> cliente junta documentos (tú acompañas)</li>
+          <li><strong>Día 6-8:</strong> ingresa carpeta a 3 bancos en paralelo (online)</li>
+          <li><strong>Día 9-15:</strong> bancos responden pre-aprobación (monto + tasa)</li>
+          <li><strong>Día 16-20:</strong> comparas ofertas, eliges banco principal</li>
+          <li><strong>Día 20+:</strong> carta pre-aprobación en mano + inicio de visitas</li>
+          <li><strong>Al elegir propiedad:</strong> tasación, evaluación, pre-compromiso</li>
+          <li><strong>Promesa → Escritura:</strong> 30-60 días</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:20px">
+      <div class="sec-tag"><span class="dot"></span>Objeciones frecuentes al pedir carpeta</div>
+      <h2 class="sec-h2" style="font-size:26px">Cómo responder como profesional</h2>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:20px">
+      <table class="barrio-table">
+        <thead><tr><th>Objeción del cliente</th><th>Respuesta del corredor</th></tr></thead>
+        <tbody>
+          <tr><td>"Es mucho papel, prefiero primero ver propiedades"</td><td>"Te entiendo. Pero si vemos una que te encanta y no tienes pre-aprobación, el vendedor puede aceptar a otro que sí la tiene. La carpeta toma 3 días; te ayudo con checklist."</td></tr>
+          <tr><td>"Me da lata que el banco vea mi Dicom"</td><td>"Es mejor que lo veamos juntos <em>antes</em>. Si hay algo vigente, lo pagamos y pedimos certificado de cierre. Meternos al banco con algo vigente rechaza la operación."</td></tr>
+          <tr><td>"Solo voy a ir a mi banco, confío en ellos"</td><td>"Perfecto, pero presentar a 3 en paralelo es el estándar profesional. Tu banco te conocerá mejor, pero otro puede ofrecer mejor tasa. Con 3 ofertas, tu banco mejora condiciones."</td></tr>
+          <tr><td>"¿Y si me rechazan?"</td><td>"Por eso vamos a 3, no a 1. Si dos dicen no, queda un plan. Y si ninguno da el monto que queremos, tenemos leasing como plan B."</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🎯</span>
+      <div class="info-text"><strong>Regla TuMatch:</strong> nunca muestres propiedades a un cliente sin pre-aprobación iniciada. Pierdes tiempo, creas falsas expectativas y te disparas el ciclo de venta. La pre-aprobación no es opcional; es el filtro de seriedad que separa comprador real de turista de propiedades.</div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:12px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Vigencia de la pre-aprobación:</strong> 60 a 90 días (varía por banco). Si el cliente tarda más, <strong>el banco re-evalúa</strong> y puede rebajar el monto o subir la tasa. Por eso: pre-aprobación → carta → visitas → oferta debe ocurrir en &lt; 60 días desde que la carta llega.</div>
+    </div>
+
+    <div id="quiz-7" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== PRUEBA FINAL ===== -->
+<section class="module" id="mod-final">
+  <div class="page">
+    <div class="final-test-intro">
+      <h2>Prueba final · 10 preguntas</h2>
+      <p>Evalúa tu dominio completo de financiamiento y leasing. Necesitas 10/10 para aprobar y obtener el certificado. Las preguntas rotan del banco de 50.</p>
+      <div class="test-stats">
+        <div class="test-stat"><div class="num">10</div><div class="lbl">Preguntas mostradas</div></div>
+        <div class="test-stat"><div class="num">50</div><div class="lbl">Banco de preguntas</div></div>
+        <div class="test-stat"><div class="num">10/10</div><div class="lbl">Para aprobar</div></div>
+      </div>
+    </div>
+    <div id="final-quiz"></div>
+  </div>
+</section>
+
+<!-- ===== CONCLUSIÓN Y CERTIFICADO ===== -->
+<section class="module" id="mod-done">
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Conclusión del taller</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:700px">Dominas el financiamiento del primera vivienda</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Ya tienes el conocimiento técnico para presentar a 3 bancos, negociar tasa, proponer leasing cuando el banco rechaza, y elegir seguros licitados. Es el diferencial entre 8 operaciones anuales y 22.</p>
+    </div>
+
+    <div class="cert-section" style="margin-top:50px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Certificado de Reconocimiento</div>
+        <h2 class="sec-h2">Descarga tu certificado oficial TuMatch</h2>
+        <p class="sec-desc">Escribe tu nombre completo tal como quieres que aparezca.</p>
+      </div>
+
+      <div class="cert-name-form">
+        <label for="tmCertNameInput">Nombre completo del corredor:</label>
+        <input type="text" id="tmCertNameInput" placeholder="Ej: María José Pérez González" maxlength="60" oninput="TMApp.updateCertName(this.value)" autocomplete="name">
+      </div>
+
+      <div class="tm-cert" id="tmCert">
+        <div class="tm-cert-border">
+          <div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>
+          <div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario"></div>
+          <div class="tm-cert-eyebrow">Certificado Oficial de Reconocimiento</div>
+          <h1 class="tm-cert-title">Financiamiento Hipotecario y Leasing<br><em>Taller Avanzado · Comprador Primera Vivienda</em></h1>
+          <div class="tm-cert-divider"></div>
+          <div class="tm-cert-subtitle">Taller Avanzado 02 · Academia de Corredores TuMatch · 2026</div>
+          <p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>
+          <div class="tm-cert-name" id="tmCertName">_______________________________</div>
+          <p class="tm-cert-body">Por haber completado satisfactoriamente los siete módulos del taller avanzado sobre financiamiento del comprador primera vivienda, demostrando dominio técnico en mutuo hipotecario, tasa fija/variable/mixta, CAE, leasing habitacional bajo Ley 19.281, mutuarias, bancos y cooperativas, scoring crediticio, DICOM, seguros hipotecarios bajo licitación CMF y pre-aprobación estratégica, aplicable al corretaje inmobiliario chileno actualizado a 2026.</p>
+          <div class="tm-cert-modules-block">
+            <div class="tm-cert-modules-title">Módulos aprobados</div>
+            <ol class="tm-cert-modules" id="tmCertModules"></ol>
+            <div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Prueba final aprobada</span></div>
+          </div>
+          <div class="tm-cert-footer">
+            <div class="tm-cert-date" id="tmCertDate">Santiago, —</div>
+            <div class="tm-cert-seal">
+              <div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div>
+              <div class="tm-cert-seal-label">Sello de<br>reconocimiento</div>
+            </div>
+            <div class="tm-cert-sign">
+              <div class="tm-cert-stamp">
+                <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="tm-cert-stamp-svg">
+                  <defs><path id="tmStampArcTopFL" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmStampArcBottomFL" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs>
+                  <circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/>
+                  <circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/>
+                  <circle cx="120" cy="120" r="100" fill="none" stroke="#0D7C78" stroke-width="2.2"/>
+                  <circle cx="120" cy="120" r="76" fill="none" stroke="#0D1B2A" stroke-width="1" stroke-dasharray="1 3"/>
+                  <text font-family="Cinzel, serif" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmStampArcTopFL" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text>
+                  <text font-family="Cinzel, serif" font-size="9" font-weight="700" letter-spacing="5" fill="#0A5D5A"><textPath href="#tmStampArcBottomFL" startOffset="50%" text-anchor="middle">FINANCIAMIENTO · 2026</textPath></text>
+                  <text x="120" y="108" font-family="Cinzel, serif" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text>
+                  <text x="120" y="140" font-family="Cinzel, serif" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#0D7C78">10/10</text>
+                  <text x="120" y="168" font-family="EB Garamond, serif" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">corredor certificado</text>
+                </svg>
+              </div>
+              <div class="tm-cert-sign-line"></div>
+              <div class="tm-cert-sign-name">Dirección de Taller</div>
+              <div class="tm-cert-sign-role">TuMatch Inmobiliario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-cert-actions">
+        <button class="btn btn-primary" onclick="TMApp.printCertificate()">🖨️ Imprimir certificado</button>
+        <button class="btn btn-success" onclick="TMApp.downloadCertificate(this)">⬇️ Descargar como PNG</button>
+      </div>
+    </div>
+
+    <div style="margin-top:60px">
+      <div class="sec-header">
+        <div class="sec-tag"><span class="dot"></span>Reglas de oro</div>
+        <h2 class="sec-h2">10 reglas del financiamiento para primera vivienda</h2>
+        <p class="sec-desc">Imprímelas. Pégalas al lado del CRM. Léelas antes de cada reunión.</p>
+      </div>
+      <div id="gold-rules" style="display:grid;grid-template-columns:1fr 1fr;gap:18px"></div>
+    </div>
+
+    <div class="crm-msg">
+      <span style="font-size:56px;display:block;margin-bottom:12px">🧮</span>
+      <h3>Aplícalo hoy con tus clientes</h3>
+      <p>Abre la <strong>Calculadora Hipotecaria TuMatch</strong> y simula tres escenarios para tu próximo lead. Presenta a 3 bancos en paralelo. Incluye leasing como plan B en clientes con historial complejo.</p>
+      <div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <a href="https://tumatch-leads.vercel.app/herramientas/calculadora-hipotecaria" target="_blank" rel="noopener" class="btn btn-light">🧮 Abrir calculadora</a>
+        <a href="../" class="btn btn-light">🎓 Otros talleres avanzados</a>
+        <button class="btn btn-light" onclick="TMApp.restart()">↻ Reiniciar taller</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
+
+<script src="../app-core.js"></script>
+<script src="quiz-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
