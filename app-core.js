@@ -18,15 +18,22 @@
     return shuffle(q.opts.map((_, i) => i)).map(i => ({text: q.opts[i], originalIdx: i}));
   }
 
-  function buildWhy(correctIdx, opts, whyCorrect, whyWrong){
-    const correctLetter = String.fromCharCode(65 + correctIdx);
+  function buildWhy(correctIdx, opts, whyCorrect, whyWrong, shuffledOpts){
+    // Si viene shuffledOpts, usamos el orden/letras mezclados que el usuario vio en pantalla
+    const display = shuffledOpts && shuffledOpts.length === opts.length
+      ? shuffledOpts.map(o => ({ text: o.text, originalIdx: o.originalIdx }))
+      : opts.map((text, i) => ({ text, originalIdx: i }));
+    const correctDisplayIdx = display.findIndex(o => o.originalIdx === correctIdx);
+    const correctLetter = String.fromCharCode(65 + correctDisplayIdx);
     const correctText = opts[correctIdx];
     let html = `<div class="qfb-correct"><strong>✓ ${correctLetter}) ${correctText}</strong> — ${whyCorrect}</div>`;
     html += `<div class="qfb-wrong-list"><strong>✗ Por qué las otras no:</strong>`;
-    (whyWrong||[]).forEach((reason, i) => {
-      if (i === correctIdx || !reason) return;
-      const letter = String.fromCharCode(65 + i);
-      html += `<span class="qfb-wrong-item"><strong>${letter})</strong> ${opts[i]} — ${reason}</span>`;
+    display.forEach((o, displayIdx) => {
+      if (o.originalIdx === correctIdx) return;
+      const reason = (whyWrong || [])[o.originalIdx];
+      if (!reason) return;
+      const letter = String.fromCharCode(65 + displayIdx);
+      html += `<span class="qfb-wrong-item"><strong>${letter})</strong> ${o.text} — ${reason}</span>`;
     });
     html += `</div>`;
     return html;
@@ -261,7 +268,7 @@
       });
       const fb = document.getElementById(`quiz-fb-${modN}`);
       fb.classList.add('show', correct ? 'correct' : 'wrong');
-      const richWhy = buildWhy(q.correct, q.opts, q.whyCorrect, q.whyWrong);
+      const richWhy = buildWhy(q.correct, q.opts, q.whyCorrect, q.whyWrong, q.shuffledOpts);
       fb.innerHTML = `<div class="quiz-feedback-title">${correct ? '✓ Correcto' : '✗ Incorrecto — revisa por qué:'}</div><div class="quiz-feedback-body">${richWhy}</div>`;
       const nextBox = document.getElementById(`quiz-next-${modN}`);
       if (correct){
@@ -458,7 +465,7 @@
         const sel = finalState.answers[qi];
         const orig = sel !== undefined ? q.shuffledOpts[sel].originalIdx : -1;
         const ok = orig === q.correct;
-        const richWhy = buildWhy(q.correct, q.opts, q.whyCorrect, q.whyWrong);
+        const richWhy = buildWhy(q.correct, q.opts, q.whyCorrect, q.whyWrong, q.shuffledOpts);
         return `
           <div class="quiz-gate quiz-gate-final">
             <div class="quiz-q-label ${ok?'ok':'ko'}">${ok ? '✓ Correcta' : '✗ Incorrecta'} · Pregunta ${qi+1}</div>
